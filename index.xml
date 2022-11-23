@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sapere Aude!</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Sapere Aude!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Nov 2022 20:46:15 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>往事与随想</title>
+      <link>http://example.org/post/bibiography/%E5%BE%80%E4%BA%8B%E4%B8%8E%E9%9A%8F%E6%83%B3/</link>
+      <pubDate>Sat, 19 Nov 2022 20:46:15 +0800</pubDate>
+      
+      <guid>http://example.org/post/bibiography/%E5%BE%80%E4%BA%8B%E4%B8%8E%E9%9A%8F%E6%83%B3/</guid>
+      <description>出生 我是剖腹产生下的，是个重八斤九两的男婴。出生的那天在正月，下大雪，于是就得了正瑞的名字。后来遇见好几个人夸我名字好听，我自己也挺喜欢这个</description>
+    </item>
+    
+  </channel>
+</rss>
