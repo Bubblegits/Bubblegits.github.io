@@ -8,6 +8,38 @@
       <url>https://bubblegits.github.io/papermod-cover.png</url>
       <link>https://bubblegits.github.io/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTeX使用指南</title>
+      <link>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+      <description>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;amp;表示分列，\\表示分行。例如矩阵
+$$ \begin{pmatrix} 1 &amp;amp; 2 &amp;amp; 3\ 4 &amp;amp; 5 &amp;amp; 6\ 7 &amp;amp; 8 &amp;amp; 9\ 10 &amp;amp; 11 &amp;amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
+\begin{pmatrix} 1 &amp;amp; 2 &amp;amp; 3\\ 4 &amp;amp; 5 &amp;amp; 6\\ 7 &amp;amp; 8 &amp;amp; 9\\ 10 &amp;amp; 11 &amp;amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。</description>
+    </item>
+    
+    <item>
+      <title>建站心路历程</title>
+      <link>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</guid>
+      <description>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。
+Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的，不挂梯子速度很慢，但还是被我下下来装好了。
+config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
+模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
+时间 逝者如斯夫！不舍昼夜。
+hugo中默认的时间参数有如下几种
+- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+默认date的表示方式为“YYYY-MM-DD”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
+frontmatter: date: - myDate - :default 表示有限</description>
+    </item>
+    
   </channel>
 </rss>

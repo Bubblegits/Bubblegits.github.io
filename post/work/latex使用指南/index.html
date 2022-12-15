@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>LaTeX使用指南 | 张珙的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
+$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。">
+<meta name="author" content="张珙">
+<link rel="canonical" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b183800e2cfbb62c3bce2b2ba56cdb2dd33af76c75cf4550173d5dfebd7c68a6.css" integrity="sha256-sYOADiz7tiw7zisrpWzbLdM692x1z0VQFz1d/r18aKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://bubblegits.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bubblegits.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bubblegits.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://bubblegits.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://bubblegits.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="LaTeX使用指南" />
+<meta property="og:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
+$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-12-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-14T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="LaTeX使用指南"/>
+<meta name="twitter:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
+$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://bubblegits.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "奇技淫巧",
+      "item": "https://bubblegits.github.io/post/work/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "LaTeX使用指南",
+      "item": "https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LaTeX使用指南",
+  "name": "LaTeX使用指南",
+  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。",
+  "keywords": [
+    
+  ],
+  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12 \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。\n",
+  "wordCount" : "65",
+  "inLanguage": "en",
+  "datePublished": "2022-12-14T00:00:00Z",
+  "dateModified": "2022-12-14T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "张珙"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "张珙的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bubblegits.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bubblegits.github.io/" accesskey="h" title="张珙的博客 (Alt + H)">张珙的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://bubblegits.github.io/post/reading" title="巨人肩膀">
+                    <span>巨人肩膀</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/essay" title="想到就写">
+                    <span>想到就写</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/work" title="奇技淫巧">
+                    <span>奇技淫巧</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/autobiography" title="关于自己">
+                    <span>关于自己</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://bubblegits.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/">Post</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/work/">奇技淫巧</a></div>
+    <h1 class="post-title">
+      LaTeX使用指南
+    </h1>
+    <div class="post-meta"><span title='2022-12-14 00:00:00 +0000 UTC'>December 14, 2022</span>&nbsp;·&nbsp;张珙
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#latex%e8%a1%a8%e6%a0%bc%e4%b8%8e%e7%9f%a9%e9%98%b5" aria-label="latex表格与矩阵">latex表格与矩阵</a></li>
+                <li>
+                    <a href="#latex%e5%9b%be%e7%89%87" aria-label="latex图片">latex图片</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。</p>
+<h2 id="latex表格与矩阵">latex表格与矩阵<a hidden class="anchor" aria-hidden="true" href="#latex表格与矩阵">#</a></h2>
+<p>表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵<br>
+$$
+\begin{pmatrix}
+1  &amp;  2  &amp; 3\
+4  &amp;  5  &amp; 6\
+7  &amp;  8  &amp; 9\
+10 &amp;  11 &amp; 12
+\end{pmatrix}\
+$$
+可以在amsmath,amssymb,amsfonts宏包下用如下代码写出</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">1  <span class="nb">&amp;</span>  2  <span class="nb">&amp;</span> 3<span class="k">\\</span>
+</span></span><span class="line"><span class="cl">4  <span class="nb">&amp;</span>  5  <span class="nb">&amp;</span> 6<span class="k">\\</span>
+</span></span><span class="line"><span class="cl">7  <span class="nb">&amp;</span>  8  <span class="nb">&amp;</span> 9<span class="k">\\</span>
+</span></span><span class="line"><span class="cl">10 <span class="nb">&amp;</span>  11 <span class="nb">&amp;</span> 12
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span>
+</span></span></code></pre></div><p>其中<code>pmatrix</code>代表以圆括号表示的矩阵。</p>
+<h2 id="latex图片">latex图片<a hidden class="anchor" aria-hidden="true" href="#latex图片">#</a></h2>
+<p>latex中插入图片常用graphicx宏包，有两种常见插入方式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
+</span></span><span class="line"><span class="cl"><span class="k">\centering</span>
+</span></span><span class="line"><span class="cl"><span class="k">\includegraphics</span><span class="na">[scale=0.2]</span><span class="nb">{</span>filename<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\caption</span><span class="nb">{</span>figure title<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\label</span><span class="nb">{</span>figure<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</span></span></code></pre></div><p>其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行<code>\includegraphic[scale = 0.5]{filename}</code>搞定。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://bubblegits.github.io/post/essay/%E7%96%AF%E7%8B%82/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>疯狂</span>
+  </a>
+  <a class="next" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/">
+    <span class="title">Next »</span>
+    <br>
+    <span>建站心路历程</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://bubblegits.github.io/">张珙的博客</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

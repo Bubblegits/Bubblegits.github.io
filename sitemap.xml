@@ -3,16 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bubblegits.github.io/post/</loc>
-  </url><url>
-    <loc>https://bubblegits.github.io/post/essay/%E4%B8%91%E6%81%B6%E7%9A%84%E8%AF%97/</loc>
-  </url><url>
-    <loc>https://bubblegits.github.io/post/reading/</loc>
+    <lastmod>2022-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/</loc>
+    <lastmod>2022-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/post/essay/</loc>
+    <lastmod>2022-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/essay/%E7%96%AF%E7%8B%82/</loc>
+    <lastmod>2022-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/work/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/essay/%E4%B8%91%E6%81%B6%E7%9A%84%E8%AF%97/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/reading/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/post/reading/%E9%9A%8F%E7%AC%94%E7%BA%B3%E5%B0%94%E9%BD%90%E6%96%AF%E4%B8%8E%E6%AD%8C%E5%B0%94%E5%BE%B7%E8%92%99/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/categories/</loc>
   </url><url>
@@ -21,7 +39,5 @@
     <loc>https://bubblegits.github.io/tags/</loc>
   </url><url>
     <loc>https://bubblegits.github.io/post/autobiography/</loc>
-  </url><url>
-    <loc>https://bubblegits.github.io/post/work/</loc>
   </url>
 </urlset>
