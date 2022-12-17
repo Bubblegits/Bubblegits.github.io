@@ -55,7 +55,41 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="奇技淫巧" />
+</noscript><script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style><meta property="og:title" content="奇技淫巧" />
 <meta property="og:description" content="空雕虫篆刻,缀断简残编。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/>
@@ -182,6 +216,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>biochemistry experiment
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Preparation &amp; Separation The target protein used in biochemistry experiment usually comes from three kinds of source, natural tissue, recombinant protein in certain expression system or cell culture.
+Our research target may be natural or recombinant. If it is natural, the situation looks like this: I have some cell, and things I want (proteins, nuclear acid, etc.) are in the cell. I don’t need to be a genius to see that I need to break the cell....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to biochemistry experiment" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>LaTeX使用指南
     </h2>
   </header>
@@ -189,7 +236,7 @@
     <p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
 \begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。</p>
   </div>
@@ -205,13 +252,15 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
   <div class="entry-content">
     <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的，不挂梯子速度很慢，但还是被我下下来装好了。
+初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv’s Blog (sulvblog.cn)
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
 模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
-默认date的表示方式为“YYYY-MM-DD”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-frontmatter: date: - myDate - :default 表示有限</p>
+默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
+frontmatter: date: - myDate - :default 表示有限
+数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong.name)</p>
   </div>
   <footer class="entry-footer"><span title='2022-12-14 00:00:00 +0000 UTC'>December 14, 2022</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>

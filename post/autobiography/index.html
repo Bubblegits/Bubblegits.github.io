@@ -55,7 +55,41 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="关于自己" />
+</noscript><script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style><meta property="og:title" content="关于自己" />
 <meta property="og:description" content="落在一个人一生中的雪，我们不能全部看见，&lt;br/&gt;每个人都在自己的生命里，孤独地过冬。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bubblegits.github.io/post/autobiography/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/>

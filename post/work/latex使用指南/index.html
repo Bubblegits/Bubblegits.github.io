@@ -10,7 +10,7 @@
 <meta name="description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
 \begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。">
 <meta name="author" content="张珙">
@@ -59,17 +59,51 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
         }
 
     </style>
-</noscript><meta property="og:title" content="LaTeX使用指南" />
+</noscript><script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style><meta property="og:title" content="LaTeX使用指南" />
 <meta property="og:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
 \begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-12-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-15T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
@@ -78,7 +112,7 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
 <meta name="twitter:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12 \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
+\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
 \begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。"/>
 
@@ -115,15 +149,15 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
   "@type": "BlogPosting",
   "headline": "LaTeX使用指南",
   "name": "LaTeX使用指南",
-  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。",
+  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。",
   "keywords": [
     
   ],
-  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12 \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。\n",
+  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。\n",
   "wordCount" : "65",
   "inLanguage": "en",
   "datePublished": "2022-12-14T00:00:00Z",
-  "dateModified": "2022-12-14T00:00:00Z",
+  "dateModified": "2022-12-15T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "张珙"
@@ -257,13 +291,13 @@ $$
 \end{pmatrix}\
 $$
 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span>
-</span></span><span class="line"><span class="cl">1  <span class="nb">&amp;</span>  2  <span class="nb">&amp;</span> 3<span class="k">\\</span>
-</span></span><span class="line"><span class="cl">4  <span class="nb">&amp;</span>  5  <span class="nb">&amp;</span> 6<span class="k">\\</span>
-</span></span><span class="line"><span class="cl">7  <span class="nb">&amp;</span>  8  <span class="nb">&amp;</span> 9<span class="k">\\</span>
-</span></span><span class="line"><span class="cl">10 <span class="nb">&amp;</span>  11 <span class="nb">&amp;</span> 12
-</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span>
-</span></span></code></pre></div><p>其中<code>pmatrix</code>代表以圆括号表示的矩阵。</p>
+<pre tabindex="0"><code>\begin{pmatrix}
+1  &amp;  2  &amp; 3\\
+4  &amp;  5  &amp; 6\\
+7  &amp;  8  &amp; 9\\
+10 &amp;  11 &amp; 12\\
+\end{pmatrix}
+</code></pre><p>其中<code>pmatrix</code>代表以圆括号表示的矩阵。</p>
 <h2 id="latex图片">latex图片<a hidden class="anchor" aria-hidden="true" href="#latex图片">#</a></h2>
 <p>latex中插入图片常用graphicx宏包，有两种常见插入方式</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
@@ -281,10 +315,10 @@ $$
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/">
+  <a class="prev" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/">
     <span class="title">« Prev</span>
     <br>
-    <span>自由</span>
+    <span>biochemistry experiment</span>
   </a>
   <a class="next" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/">
     <span class="title">Next »</span>
