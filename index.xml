@@ -9,7 +9,37 @@
       <link>https://bubblegits.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>更改账户名路径为英文</title>
+      <link>https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/</guid>
+      <description>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
+管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win+R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
+大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</description>
+    </item>
+    
+    <item>
+      <title>爱的艺术</title>
+      <link>https://bubblegits.github.io/post/reading/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/reading/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF/</guid>
+      <description>我们爱的对象不是想象中的，而是现实中的，因为我们只能想象出物，而不能想象出人。人们把爱当成一种束缚，所以大家小心翼翼，为了避免掉进某个监牢。</description>
+    </item>
+    
+    <item>
+      <title>biochemistry II</title>
+      <link>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/</guid>
+      <description>Chapter 25 DNA metabolism The deduced double helix structure indicated indicated that DNA has a semiconservative mechanism of replication. This is proved by a famous experiment conducted in E. coli cells. After labeling the DNA with $^{15}N$ which makes the chain heavier, they found that the newly synthesized DNA has H-H, H-L and L-L. Yet this is a rough understanding on DNA replication. Some details remains to be determined.
+Deepgoing study is carried out with autoadiography.</description>
+    </item>
+    
     <item>
       <title>biochemistry experiment</title>
       <link>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/</link>
@@ -18,6 +48,18 @@
       <guid>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/</guid>
       <description>Preparation &amp;amp; Separation The target protein used in biochemistry experiment usually comes from three kinds of source, natural tissue, recombinant protein in certain expression system or cell culture.
 Our research target may be natural or recombinant. If it is natural, the situation looks like this: I have some cell, and things I want (proteins, nuclear acid, etc.) are in the cell. I don&amp;rsquo;t need to be a genius to see that I need to break the cell.</description>
+    </item>
+    
+    <item>
+      <title>自由</title>
+      <link>https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/</guid>
+      <description>人生而自由，却无往不在锁链之中。
+卢梭觉得是锁链限制了人的自由，然而人们的肉体上并没有什么锁链，我们打破精神上的枷锁，为的只是再次被束缚着。自由简直是一种难以忍耐的，可怕的东西，试想一个人只有自己而没有他日常生活中习以为常的东西——没有谈天说地，没有娱乐，没有音乐，没有书籍。所以人们立刻要给自己找一个主人，不管它是多么面目狰狞或者如何慈眉善目。
+但不论我们怎么想，人是自在的，这是一条真理。所有控制我的或者我依附的都不属于我。我们爱的，寄托生活全部意义的东西某一天会消失——只要这个东西是外在的，它就逃不过这样的命运，恋爱的炽热只在恋人初识之时，温馨的家庭也有一天要面对亲人离世。与人的遇见和分离，对物的占有和失去，我们在这些其中领会到，我们只有自己。
+我们可以脱离这种自在状态的真理生活，因而我们可以不自由地生活，这算不上怪事。很少有人完全依照真理来生活，依照真理生活也不见得就是幸福的。但真理对于生活的重要之处在于，它是不以我们的意志为转移的。</description>
     </item>
     
     <item>
@@ -182,17 +224,6 @@ b. 某个特定的原因必然导致某个特定的结果
 “先天真理是必然为真的，而经验真理不是必然为真的；一个分析真理是单根据其术语含义就为真的，而一个综合真理还要根据世界存在的方式才为真的”语出G. 汤姆森：康德 = = On Kant，北京：中华书局，2014年，第9页&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
-    <item>
-      <title>自由</title>
-      <link>https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/</guid>
-      <description>人生而自由，却无往不在锁链之中。
-卢梭觉得是锁链限制了人的自由，然而人们的肉体上并没有什么锁链，我们打破精神上的枷锁，为的只是再次被束缚着。自由简直是一种难以忍耐的，可怕的东西，试想一个人只有自己而没有他日常生活中习以为常的东西——没有谈天说地，没有娱乐，没有音乐，没有书籍。所以人们立刻要给自己找一个主人，不管它是多么面目狰狞或者如何慈眉善目。
-但不论我们怎么想，人是自由的是一条真理。所有让我们不自由的东西都是短暂的。我们爱的，寄托生活全部意义的东西某一天会消失——只要这个东西是外在的，它就逃不过这样的命运，恋爱的炽热只在恋人初识之时，温馨的家庭也有一天要面对亲人离世。与人的遇见和分离，对物的占有和失去，我们在这些其中领会到，我们只有自己。
-我们可以脱离真理生活，因而我们可以不自由地生活，这算不上怪事。</description>
-    </item>
     
   </channel>
 </rss>

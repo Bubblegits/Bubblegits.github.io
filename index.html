@@ -158,13 +158,13 @@ code.has-jax {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://bubblegits.github.io/post/reading" title="巨人肩膀">
-                    <span>巨人肩膀</span>
+                <a href="https://bubblegits.github.io/post/reading" title="东读西读">
+                    <span>东读西读</span>
                 </a>
             </li>
             <li>
-                <a href="https://bubblegits.github.io/post/essay" title="想到就写">
-                    <span>想到就写</span>
+                <a href="https://bubblegits.github.io/post/essay" title="胡思乱想">
+                    <span>胡思乱想</span>
                 </a>
             </li>
             <li>
@@ -173,8 +173,8 @@ code.has-jax {
                 </a>
             </li>
             <li>
-                <a href="https://bubblegits.github.io/post/autobiography" title="关于自己">
-                    <span>关于自己</span>
+                <a href="https://bubblegits.github.io/post/autobiography" title="朝花夕拾">
+                    <span>朝花夕拾</span>
                 </a>
             </li>
             <li>
@@ -230,6 +230,45 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>更改账户名路径为英文
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
+管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win&#43;R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
+大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-20 00:00:00 +0000 UTC'>December 20, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 更改账户名路径为英文" href="https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>爱的艺术
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>我们爱的对象不是想象中的，而是现实中的，因为我们只能想象出物，而不能想象出人。人们把爱当成一种束缚，所以大家小心翼翼，为了避免掉进某个监牢。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-20 00:00:00 +0000 UTC'>December 20, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 爱的艺术" href="https://bubblegits.github.io/post/reading/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>biochemistry II
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chapter 25 DNA metabolism The deduced double helix structure indicated indicated that DNA has a semiconservative mechanism of replication. This is proved by a famous experiment conducted in E. coli cells. After labeling the DNA with $^{15}N$ which makes the chain heavier, they found that the newly synthesized DNA has H-H, H-L and L-L. Yet this is a rough understanding on DNA replication. Some details remains to be determined.
+Deepgoing study is carried out with autoadiography....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-18 00:00:00 +0000 UTC'>December 18, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to biochemistry II" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>biochemistry experiment
     </h2>
   </header>
@@ -243,72 +282,17 @@ Our research target may be natural or recombinant. If it is natural, the situati
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>LaTeX使用指南
+    <h2>自由
     </h2>
   </header>
   <div class="entry-content">
-    <p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
-latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
-$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
-latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。</p>
+    <p>人生而自由，却无往不在锁链之中。
+卢梭觉得是锁链限制了人的自由，然而人们的肉体上并没有什么锁链，我们打破精神上的枷锁，为的只是再次被束缚着。自由简直是一种难以忍耐的，可怕的东西，试想一个人只有自己而没有他日常生活中习以为常的东西——没有谈天说地，没有娱乐，没有音乐，没有书籍。所以人们立刻要给自己找一个主人，不管它是多么面目狰狞或者如何慈眉善目。
+但不论我们怎么想，人是自在的，这是一条真理。所有控制我的或者我依附的都不属于我。我们爱的，寄托生活全部意义的东西某一天会消失——只要这个东西是外在的，它就逃不过这样的命运，恋爱的炽热只在恋人初识之时，温馨的家庭也有一天要面对亲人离世。与人的遇见和分离，对物的占有和失去，我们在这些其中领会到，我们只有自己。
+我们可以脱离这种自在状态的真理生活，因而我们可以不自由地生活，这算不上怪事。很少有人完全依照真理来生活，依照真理生活也不见得就是幸福的。但真理对于生活的重要之处在于，它是不以我们的意志为转移的。</p>
   </div>
-  <footer class="entry-footer"><span title='2022-12-14 00:00:00 +0000 UTC'>December 14, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to LaTeX使用指南" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>建站心路历程
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。
-Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的，不挂梯子速度很慢，但还是被我下下来装好了。
-初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv’s Blog (sulvblog.cn)
-config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
-模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
-时间 逝者如斯夫！不舍昼夜。
-hugo中默认的时间参数有如下几种
-- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
-默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-frontmatter: date: - myDate - :default 表示有限
-数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong.name)</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-14 00:00:00 +0000 UTC'>December 14, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>疯狂
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>我们习惯于反复咀嚼无意义的符号许多次，沉溺于疯狂地堆砌各种激烈的字眼。狂欢仪式中失眠的患者越来越麻木。你在用一种并不高明的方式保护自己——你在这种麻木之上再加一层厌倦，对麻木的厌倦。各种定式束缚住你——你不知道还能怎么办。你在生活中面对的无非是各种各样的周期和循环，至多加上固定的套路。你试过撕开罩衫，但那个时候你的力量还太弱小，不过正因为弱小，他们并不怪罪你。但你现在变得强健了，你灵魂的残碎片段被你重新捡起来，插进自己的心脏里。你还愿意再试一次吗？你很害怕——你害怕撕开罩衫后筋疲力尽地躺在地上，发现外面是黑夜，害怕得不到原谅。罩衫，这罩衫还不错，温暖舒适，只不过模糊了你的轮廓。时间，时间不多了。
-你可以攻击我，说待在罩衫里是幼稚的。但幼稚又如何呢?我不需要做太多——那些都是唾手可得的，唾手可得。你又说那是假的。哎，假的，我勉强维持着自己的体温，不正是为了感受这些虚假的刺激吗？不然是为了什么？这是现在，你要和我说说未来。好吧，未来，我已经丧失想象力很久了，不太明白未来。幼稚，虚假，未来，这些词语还能感动我，但已经没法让我做什么了，我是一个瘫痪的病人。
-孤独。我们接下来就要谈到孤独。孤独也是麻木的一种——我们想出种种花招来粉饰自己的孤独。孤独是一种最粗暴的拒绝，像是把小说扔在一边，再也不想翻开。所以一切故事都没有了，一切庸俗的、低廉的情节和偶尔闪现的幽默与惊奇。你意识到这一切的情节前提都是你活着，于是你开始怀疑这个前提。生活意味着诗，生活停止于诗停止之处——这样说太煽情了，你万一自杀了可就不妙。不过生活意味着什么呢？我还算是在活着吗？
-这个问题要问时间。你又说回了时间，不过这也难怪，因为只有时间才能夺走一个人的生命。你死了，不意味着你在空间上消失了——实际上你所占的空间本来就微不足道。空间是个孤独的家伙，一个空间的微元容不下任何完整的存在。但是时间——一切都在时间的同一个微元里面。但时间是不可言说的。我说出现在这个词，现在就成为过去，未来又变成现在，过去和未来紧紧扼住现在的咽喉。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-10 00:00:00 +0000 UTC'>December 10, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 疯狂" href="https://bubblegits.github.io/post/essay/%E7%96%AF%E7%8B%82/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>新老葡萄酒问题
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>如果说从商品变成货币是“惊险的一跃”，那么生产老葡萄酒的资本家则有类于蹦极运动员，在空中急速下坠，直到葡萄酒被卖出才终于安全回到悬崖上。在较长的周转时间中，老葡萄酒反常地获得了较高的利润，这一现象可以从如下角度来解释。
-在这个问题上，我们考虑市场价格完全由生产价格决定的情形。在一个给定的社会生产力条件下，我们容易直接地认为生产新老葡萄酒所需要的社会必要劳动时间基本一致，因而其价值也相当。这一看法基本上是正确的，但没有考虑到老葡萄酒的发酵需要资本家在地窖的建造（或租用）、管理等方面投入保管费用，“这些费用在不同的生产领域是不同的，在同一生产领域，对不同的单个资本来说，有时也是不同的。这些费用追加到商品价格中时，会按照各个资本家分担这些费用的比例进行分配。”（《资本论》第二卷第六章）在葡萄酒发酵的过程中，地窖必须与搬运、维护等人类劳动相结合以进行生产，但总体而言，其闲置的时间远大于与劳动力结合的时间。“生产时间，即资本束缚在生产领域的时间。&#34;（《资本论》第二卷第十三章）从这一角度来看，发酵环节造成了老葡萄酒生产时间显著大于劳动时间。
-考虑到资本在不同生产部门中的流动，”虽然不同生产部门的资本家在出售自己的商品时收回了生产这些商品所用掉的资本价值，但是他们不是得到了本部门生产这些商品时所生产的剩余价值或利润，而只是得到了社会总资本在所有生产部门在一定时间内生产的总剩余价值或总利润均衡分配时归于总资本的每个相应部分的剩余价值或利润。“（《资本论》第三卷第九章）如果单独考虑老葡萄酒专门的利润率，较长的周转时间只会造成其利润的损失，然而这个较低的利润会加入利润率平均化过程，生产老葡萄酒的资本家最终获得的是经过平均后的利润，这也为老葡萄酒的价格身高提供了解释，因为”一般利润率是由每100预付资本在一定期间比如说一年内的不同利润率的平均数形成的。“（《资本论》第三卷第九章）依据平均利润率计算，老葡萄酒就会因其较长的周转时间而获得较高的利润。
-以上论述的前提是，老葡萄酒的较长周转时间不是由个别资本家的决策造成，而是由老葡萄酒这种商品的性质决定的。不过我们换个角度考虑，”资本周转期间往往可以通过生产时间的人为的缩短而或多或少地缩短“（《资本论》第二卷第十三章），葡萄酒发酵无非是一种微生物学的过程，然而在科学技术的飞速进步中，资本家并没有采用可以显著缩短发酵时间的技术手段，似乎是担心这些技术手段会破坏老葡萄酒的垄断地位。就其本质而言，一年葡萄酒和十年葡萄固然是两种不同商品，然而一般消费者往往无法仔细甄别其中差异，十年葡萄酒很大程度上成为一种被葡萄酒生产商塑造出来的奢侈品，在其实体背后还包含着文化价值和身份认同。这些物质上和精神上的使用价值被打包起来，使得高年份葡萄酒成为一种垄断商品，可以获得高于平均利润率的价格。
-参考文献 [1]《资本论》第二卷第六章、第十三章；第三卷第九章、第四十三章。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-06 00:00:00 +0000 UTC'>December 6, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 新老葡萄酒问题" href="https://bubblegits.github.io/post/reading/%E6%96%B0%E8%80%81%E8%91%A1%E8%90%84%E9%85%92%E9%97%AE%E9%A2%98/"></a>
+  <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 自由" href="https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
