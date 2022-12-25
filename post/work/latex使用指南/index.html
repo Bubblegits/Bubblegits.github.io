@@ -7,12 +7,12 @@
 <meta name="robots" content="index, follow">
 <title>LaTeX使用指南 | 张珙的博客</title>
 <meta name="keywords" content="">
-<meta name="description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+<meta name="description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
 \begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。">
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0.">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b183800e2cfbb62c3bce2b2ba56cdb2dd33af76c75cf4550173d5dfebd7c68a6.css" integrity="sha256-sYOADiz7tiw7zisrpWzbLdM692x1z0VQFz1d/r18aKY=" rel="preload stylesheet" as="style">
@@ -94,27 +94,27 @@ code.has-jax {
     color: #515151;
 }
 </style><meta property="og:title" content="LaTeX使用指南" />
-<meta property="og:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+<meta property="og:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
 \begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。" />
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-12-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-23T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
 
 <meta name="twitter:title" content="LaTeX使用指南"/>
-<meta name="twitter:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。
+<meta name="twitter:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
 latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
 $$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
 \begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
 latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\includegraphic[scale = 0.5]{filename}搞定。"/>
+\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0."/>
 
 
 <script type="application/ld+json">
@@ -149,15 +149,15 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
   "@type": "BlogPosting",
   "headline": "LaTeX使用指南",
   "name": "LaTeX使用指南",
-  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。",
+  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\\includegraphic[scale = 0.",
   "keywords": [
     
   ],
-  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行\\includegraphic[scale = 0.5]{filename}搞定。\n",
-  "wordCount" : "65",
+  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\\includegraphic[scale = 0.5]{filename}就完成了插入图片，剩下的不过是在排版、格式上做调整。scale处还可以增加其他参数，如width, height，angle等。\n其中使用minipage 可并排插入图片，如两张图片并排代码如下：\n\\begin{figure}[htbp] \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3a.png} \\centerline{(a) AA} \\end{minipage}% \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3b.png} \\centerline{(b) BB} \\end{minipage} \\caption{AABB} \\end{figure} 注意如果行尾不是以%结束的话， LATEX 会自动在两行之间加进一个字符的水平间距。所以如果希望得到无缝衔接的图片，记得加百分号。如果希望四张图片以四格漫画般的方式排列，只需要在\\begin{figure}和\\end{figure}里再加minipage就可以，如果不套begin和end，则要手动\\\\提示换行位置。PyMOL作业 - Online LaTeX Editor Overleaf可以作为示例。\n文字样式 LaTeX中常用于调整文字样式的命令如下\n命令 书写方式 文字样式 \\rmfamily \\textrm{…} roman 衬线字体（罗马体） \\sffamily \\textsf{…} sans serif 无衬线字体 \\ttfamily \\texttt{…} typewriter 等宽字体 \\mdseries \\textmd{…} medium 正常粗细（中等） \\bfseries \\textbf{…} bold face 粗体 \\upshape \\textup{…} upright 直立体 \\itshape \\textit{…} italic 意大利斜体 \\slshape \\textsl{…} slanted 倾斜体 \\scshape \\textsc{…} SMALL CAPS 小型大写字母 \\em \\emph{…} emphasized 强调，默认斜体 \\normalfont \\textnormal{…} normal font 默认字体 ",
+  "wordCount" : "154",
   "inLanguage": "en",
   "datePublished": "2022-12-14T00:00:00Z",
-  "dateModified": "2022-12-15T00:00:00Z",
+  "dateModified": "2022-12-23T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "张珙"
@@ -243,11 +243,6 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
                     <span>搜索</span>
                 </a>
             </li>
-            <li>
-                <a href="https://bubblegits.github.io/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -272,14 +267,16 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
                 <li>
                     <a href="#latex%e8%a1%a8%e6%a0%bc%e4%b8%8e%e7%9f%a9%e9%98%b5" aria-label="latex表格与矩阵">latex表格与矩阵</a></li>
                 <li>
-                    <a href="#latex%e5%9b%be%e7%89%87" aria-label="latex图片">latex图片</a>
+                    <a href="#latex%e5%9b%be%e7%89%87" aria-label="latex图片">latex图片</a></li>
+                <li>
+                    <a href="#%e6%96%87%e5%ad%97%e6%a0%b7%e5%bc%8f" aria-label="文字样式">文字样式</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。</p>
+  <div class="post-content"><p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考<a href="https://ctan.org/">CTAN: Comprehensive TeX Archive Network</a>，尤其是其中的<a href="https://cloud.tsinghua.edu.cn/lib/89e56068-5b35-402c-949b-bc9acfc87cbd/file/lshort-zh-cn.pdf">lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)</a>。所有操作都是在<a href="https://www.overleaf.com/">Overleaf, Online LaTeX Editor</a>中用XeLaTeX完成的。</p>
 <h2 id="latex表格与矩阵">latex表格与矩阵<a hidden class="anchor" aria-hidden="true" href="#latex表格与矩阵">#</a></h2>
 <p>表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵<br>
 $$
@@ -306,7 +303,90 @@ $$
 </span></span><span class="line"><span class="cl"><span class="k">\caption</span><span class="nb">{</span>figure title<span class="nb">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">\label</span><span class="nb">{</span>figure<span class="nb">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
-</span></span></code></pre></div><p>其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。对排版和图注要求不高的话也可以一行<code>\includegraphic[scale = 0.5]{filename}</code>搞定。</p>
+</span></span></code></pre></div><p>其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行<code>\includegraphic[scale = 0.5]{filename}</code>就完成了插入图片，剩下的不过是在排版、格式上做调整。<code>scale</code>处还可以增加其他参数，如<code>width</code>, <code>height</code>，<code>angle</code>等。</p>
+<p>其中使用<code>minipage </code>可并排插入图片，如两张图片并排代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.5<span class="k">\linewidth</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\centering</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\includegraphics</span><span class="na">[width=\textwidth]</span><span class="nb">{</span>Fig3a.png<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\centerline</span><span class="nb">{</span>(a) AA<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.5<span class="k">\linewidth</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\centering</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\includegraphics</span><span class="na">[width=\textwidth]</span><span class="nb">{</span>Fig3b.png<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\centerline</span><span class="nb">{</span>(b) BB<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\caption</span><span class="nb">{</span>AABB<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</span></span></code></pre></div><p>注意如果行尾不是以<code>%</code>结束的话， LATEX 会自动在两行之间加进一个字符的水平间距。所以如果希望得到无缝衔接的图片，记得加百分号。如果希望四张图片以四格漫画般的方式排列，只需要在<code>\begin{figure}</code>和<code>\end{figure}</code>里再加<code>minipage</code>就可以，如果不套<code>begin</code>和<code>end</code>，则要手动<code>\\</code>提示换行位置。<a href="https://www.overleaf.com/project/63a3176c834b1fae0d8b81c5">PyMOL作业 - Online LaTeX Editor Overleaf</a>可以作为示例。</p>
+<h2 id="文字样式">文字样式<a hidden class="anchor" aria-hidden="true" href="#文字样式">#</a></h2>
+<p>LaTeX中常用于调整文字样式的命令如下</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>书写方式</th>
+<th>文字样式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\rmfamily</td>
+<td>\textrm{…}</td>
+<td>roman 衬线字体（罗马体）</td>
+</tr>
+<tr>
+<td>\sffamily</td>
+<td>\textsf{…}</td>
+<td>sans serif 无衬线字体</td>
+</tr>
+<tr>
+<td>\ttfamily</td>
+<td>\texttt{…}</td>
+<td>typewriter 等宽字体</td>
+</tr>
+<tr>
+<td>\mdseries</td>
+<td>\textmd{…}</td>
+<td>medium 正常粗细（中等）</td>
+</tr>
+<tr>
+<td>\bfseries</td>
+<td>\textbf{…}</td>
+<td>bold face 粗体</td>
+</tr>
+<tr>
+<td>\upshape</td>
+<td>\textup{…}</td>
+<td>upright 直立体</td>
+</tr>
+<tr>
+<td>\itshape</td>
+<td>\textit{…}</td>
+<td>italic 意大利斜体</td>
+</tr>
+<tr>
+<td>\slshape</td>
+<td>\textsl{…}</td>
+<td>slanted 倾斜体</td>
+</tr>
+<tr>
+<td>\scshape</td>
+<td>\textsc{…}</td>
+<td>SMALL CAPS 小型大写字母</td>
+</tr>
+<tr>
+<td>\em</td>
+<td>\emph{…}</td>
+<td>emphasized 强调，默认斜体</td>
+</tr>
+<tr>
+<td>\normalfont</td>
+<td>\textnormal{…}</td>
+<td>normal font 默认字体</td>
+</tr>
+</tbody>
+</table>
 
 
   </div>
