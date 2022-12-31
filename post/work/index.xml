@@ -27,8 +27,7 @@
       <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/</guid>
-      <description>chapter 13 Bioenergetics and biochemical reaction types Recall basic formulas for chemical energy such as free energy G: $$ ΔG = ΔH-TΔS $$ catabolism represents the reactions that release energy, and anabolism includes reactions that needs energy.
-Chapter 25 DNA metabolism The deduced double helix structure indicated indicated that DNA has a semiconservative mechanism of replication. This is proved by a famous experiment conducted in E. coli cells. After labeling the DNA with $^{15}N$ which makes the chain heavier, they found that the newly synthesized DNA has H-H, H-L and L-L.</description>
+      <description>chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction).</description>
     </item>
     
     <item>
