@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>概率论与数理统计复习 | 张珙的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。
+关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？
+对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。
+对上面这个问题，可以采用两种样本空间：
+（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）
+（2）抛4次硬币出现的所有可能结果。(共16种)
+注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中 $$ A={HH,HTH,THH,HTTH,THTH,TTHH}\ $$ 而在样本空间（2）中 $$ A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH} $$ HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。
+最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：
+奥术飞弹打死精灵龙的概率是多少？
+条件概率 条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足： $$ P(A|B)=\frac{P(A\cap B)}{P(B)} $$ 但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。
+或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{&rsquo;}$满足 $$ Ω^{&rsquo;}=Ω\cap B\ so\space P_Ω(A|B)=P_{Ω^{&rsquo;}}(A) $$ 这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。
+这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。
+独立事件 从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是： $$ P(A\le x, B\le y)=P(A\le x)P(B\le y) $$ 表示成联合密度函数的形式则是：
+$$ \int^{y}{-\infin}\int^{x}{-\infin}f(u,v)dudv=\int^{\infin}{-\infin}\int^{x}{-\infin}f(u,v)dudv\int^{y}{-\infin}\int^{\infin}{-\infin}f(u,v)dudv $$
+等式两边同时求两次导可得
+$$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
+注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。
+分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子：">
+<meta name="author" content="张珙">
+<link rel="canonical" href="https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b183800e2cfbb62c3bce2b2ba56cdb2dd33af76c75cf4550173d5dfebd7c68a6.css" integrity="sha256-sYOADiz7tiw7zisrpWzbLdM692x1z0VQFz1d/r18aKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://bubblegits.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bubblegits.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bubblegits.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://bubblegits.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://bubblegits.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style><meta property="og:title" content="概率论与数理统计复习" />
+<meta property="og:description" content="概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。
+关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？
+对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。
+对上面这个问题，可以采用两种样本空间：
+（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）
+（2）抛4次硬币出现的所有可能结果。(共16种)
+注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中 $$ A={HH,HTH,THH,HTTH,THTH,TTHH}\ $$ 而在样本空间（2）中 $$ A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH} $$ HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。
+最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：
+奥术飞弹打死精灵龙的概率是多少？
+条件概率 条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足： $$ P(A|B)=\frac{P(A\cap B)}{P(B)} $$ 但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。
+或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{&rsquo;}$满足 $$ Ω^{&rsquo;}=Ω\cap B\ so\space P_Ω(A|B)=P_{Ω^{&rsquo;}}(A) $$ 这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。
+这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。
+独立事件 从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是： $$ P(A\le x, B\le y)=P(A\le x)P(B\le y) $$ 表示成联合密度函数的形式则是：
+$$ \int^{y}{-\infin}\int^{x}{-\infin}f(u,v)dudv=\int^{\infin}{-\infin}\int^{x}{-\infin}f(u,v)dudv\int^{y}{-\infin}\int^{\infin}{-\infin}f(u,v)dudv $$
+等式两边同时求两次导可得
+$$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
+注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。
+分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-12-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-02T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="概率论与数理统计复习"/>
+<meta name="twitter:description" content="概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。
+关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？
+对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。
+对上面这个问题，可以采用两种样本空间：
+（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）
+（2）抛4次硬币出现的所有可能结果。(共16种)
+注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中 $$ A={HH,HTH,THH,HTTH,THTH,TTHH}\ $$ 而在样本空间（2）中 $$ A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH} $$ HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。
+最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：
+奥术飞弹打死精灵龙的概率是多少？
+条件概率 条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足： $$ P(A|B)=\frac{P(A\cap B)}{P(B)} $$ 但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。
+或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{&rsquo;}$满足 $$ Ω^{&rsquo;}=Ω\cap B\ so\space P_Ω(A|B)=P_{Ω^{&rsquo;}}(A) $$ 这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。
+这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。
+独立事件 从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是： $$ P(A\le x, B\le y)=P(A\le x)P(B\le y) $$ 表示成联合密度函数的形式则是：
+$$ \int^{y}{-\infin}\int^{x}{-\infin}f(u,v)dudv=\int^{\infin}{-\infin}\int^{x}{-\infin}f(u,v)dudv\int^{y}{-\infin}\int^{\infin}{-\infin}f(u,v)dudv $$
+等式两边同时求两次导可得
+$$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
+注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。
+分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子："/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://bubblegits.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "奇技淫巧",
+      "item": "https://bubblegits.github.io/post/work/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "概率论与数理统计复习",
+      "item": "https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "概率论与数理统计复习",
+  "name": "概率论与数理统计复习",
+  "description": "概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。\n关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？\n对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。\n对上面这个问题，可以采用两种样本空间：\n（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）\n（2）抛4次硬币出现的所有可能结果。(共16种)\n注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中 $$ A={HH,HTH,THH,HTTH,THTH,TTHH}\\ $$ 而在样本空间（2）中 $$ A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH} $$ HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。\n最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：\n奥术飞弹打死精灵龙的概率是多少？\n条件概率 条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足： $$ P(A|B)=\\frac{P(A\\cap B)}{P(B)} $$ 但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。\n或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{\u0026rsquo;}$满足 $$ Ω^{\u0026rsquo;}=Ω\\cap B\\ so\\space P_Ω(A|B)=P_{Ω^{\u0026rsquo;}}(A) $$ 这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。\n这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。\n独立事件 从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是： $$ P(A\\le x, B\\le y)=P(A\\le x)P(B\\le y) $$ 表示成联合密度函数的形式则是：\n$$ \\int^{y}{-\\infin}\\int^{x}{-\\infin}f(u,v)dudv=\\int^{\\infin}{-\\infin}\\int^{x}{-\\infin}f(u,v)dudv\\int^{y}{-\\infin}\\int^{\\infin}{-\\infin}f(u,v)dudv $$\n等式两边同时求两次导可得\n$$ f(u,v)=\\int^{\\infin}{-\\infin}f(u,v)du\\int^{\\infin}{-\\infin}f(u,v)dv $$\n注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。\n分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子：",
+  "keywords": [
+    
+  ],
+  "articleBody": "概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。\n关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？\n对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。\n对上面这个问题，可以采用两种样本空间：\n（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）\n（2）抛4次硬币出现的所有可能结果。(共16种)\n注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中 $$ A={HH,HTH,THH,HTTH,THTH,TTHH}\\ $$ 而在样本空间（2）中 $$ A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH} $$ HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。\n最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：\n奥术飞弹打死精灵龙的概率是多少？\n条件概率 条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足： $$ P(A|B)=\\frac{P(A\\cap B)}{P(B)} $$ 但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。\n或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{’}$满足 $$ Ω^{’}=Ω\\cap B\\ so\\space P_Ω(A|B)=P_{Ω^{’}}(A) $$ 这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。\n这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。\n独立事件 从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是： $$ P(A\\le x, B\\le y)=P(A\\le x)P(B\\le y) $$ 表示成联合密度函数的形式则是：\n$$ \\int^{y}{-\\infin}\\int^{x}{-\\infin}f(u,v)dudv=\\int^{\\infin}{-\\infin}\\int^{x}{-\\infin}f(u,v)dudv\\int^{y}{-\\infin}\\int^{\\infin}{-\\infin}f(u,v)dudv $$\n等式两边同时求两次导可得\n$$ f(u,v)=\\int^{\\infin}{-\\infin}f(u,v)du\\int^{\\infin}{-\\infin}f(u,v)dv $$\n注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。\n分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子：\nAssume that a set of nn random variables X1,…,Xn,X1,…,Xn, are IID fXfX. with cdf FXFX. We can first form the cdf of the minimum Y=min(X1,…,Xn):Y=min(X1,…,Xn):\nFY(y)=p(Y≤y)=1−p(Y≥y)=1−∏i=1np(Xi≥y)=1−p(X≥y)n=1−[1−p(X≤y)]n=1−[1−FX(y)]n(1)(1)FY(y)=p(Y≤y)=1−p(Y≥y)=1−∏i=1np(Xi≥y)=1−p(X≥y)n=1−[1−p(X≤y)]n=1−[1−FX(y)]n\nThe pdf of YY can then be formed as:\n估计理论 在一个估计中，我们希望通过样本的状况得到总体的某一个参数，换言之，我们的问题是：在这样的样本条件下，我们认为总体分布的这个参数满足怎么样的分布？在区间估计中，我们需要一个枢轴量，这个量满足特定的分布，从而可以得到总体的参数a满足的分布θ。样本帮助我们确定θ的一些参数，或者更直接地说，样本帮助我们调整a以适应某些分布。\n在贝叶斯估计中，这个参数具有一个先验的分布，我们所观察到的（带有参数的）分布被认为是一个条件分布，它是一个给定参数条件样本随机变量的分布。从而可以得到样本随机变量的边际分布。而我们所希望得到的是一个“条件分布”，告诉我们在一个样本下参数的分布情况，这个分布的期望就构成我们所要的参数的点估计。这构成了贝叶斯分布的基本思路。\n可以看出，问题的核心在于贝叶斯公式： $$ f(a|x)=\\frac{h(x|a)g(a)}{\\int h(x|a)g(a)da} $$ 这是可数样本空间中贝叶斯公式： $$ P(A_n|B)=\\frac{P(B|A_n)P(A_n)}{\\sum_nP(B|A_n)P(A_n)} $$ 的直接推广。不难看出，贝叶斯公式实际上是一个密度函数（或者概率分布）除以其边际分布。在贝叶斯分布的计算中，我们并不知道最后要用到样本的什么统计量，所以随机变量x常常是一个联合随机变量，我们要求每一次抽样是从一个缺少参数的总体中得到的。\n在整个估计的过程中，我们的样本是什么并不重要，实际上如果我们过于关注我们的样本，就得不出什么结论。必须要把样本抽象地看成是一些随机变量。这使我们发现，重要的并不是每一次抽样所得到的数值，而是样本总体的一些特性，像是样本均值、样本方差。至于样本的具体数值是什么，这只是临门一脚的问题。\n",
+  "wordCount" : "124",
+  "inLanguage": "en",
+  "datePublished": "2022-12-19T00:00:00Z",
+  "dateModified": "2023-01-02T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "张珙"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "张珙的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bubblegits.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bubblegits.github.io/" accesskey="h" title="张珙的博客 (Alt + H)">张珙的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://bubblegits.github.io/post/reading" title="走马观花">
+                    <span>走马观花</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/essay" title="胡思乱想">
+                    <span>胡思乱想</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/work" title="奇技淫巧">
+                    <span>奇技淫巧</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/post/unfiction" title="朝花夕拾">
+                    <span>朝花夕拾</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bubblegits.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://bubblegits.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/">Post</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/work/">奇技淫巧</a></div>
+    <h1 class="post-title">
+      概率论与数理统计复习
+    </h1>
+    <div class="post-meta"><span title='2023-01-02 00:00:00 +0000 UTC'>January 2, 2023</span>&nbsp;·&nbsp;张珙
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%85%b3%e4%ba%8e%e8%b5%8c%e9%87%91%e5%88%86%e9%85%8d%e9%97%ae%e9%a2%98" aria-label="关于赌金分配问题">关于赌金分配问题</a></li>
+                <li>
+                    <a href="#%e6%9d%a1%e4%bb%b6%e6%a6%82%e7%8e%87" aria-label="条件概率">条件概率</a></li>
+                <li>
+                    <a href="#%e7%8b%ac%e7%ab%8b%e4%ba%8b%e4%bb%b6" aria-label="独立事件">独立事件</a></li>
+                <li>
+                    <a href="#%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0%e4%b8%8e%e5%af%86%e5%ba%a6%e5%87%bd%e6%95%b0" aria-label="分布函数与密度函数">分布函数与密度函数</a></li>
+                <li>
+                    <a href="#%e4%bc%b0%e8%ae%a1%e7%90%86%e8%ae%ba" aria-label="估计理论">估计理论</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。</p>
+<h2 id="关于赌金分配问题">关于赌金分配问题<a hidden class="anchor" aria-hidden="true" href="#关于赌金分配问题">#</a></h2>
+<blockquote>
+<p>抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？</p>
+</blockquote>
+<p>对于一个样本空间而言，其中的每一个元素（构成的集合）不一定是等概率的——直接的例子是一个包含“彩票中奖”和“彩票不中奖”这两个元素的。样本空间是被主观确定的，对于一个概率问题而言可以有多种样品空间。</p>
+<p>对上面这个问题，可以采用两种样本空间：</p>
+<p>（1）{HH, HTH, THH, TTT, HTTH, THTH, TTHH, HTTT, THTT, TTHT}（H表示正面，T表示反面，此为决出赢家的所有可能经过。）</p>
+<p>（2）抛4次硬币出现的所有可能结果。(共16种)</p>
+<p>注意在（1）中，HH与HTH的概率是不同的，前者为1/4，后者为1/8，HTTH的概率则为1/16。而在（2）中，样本空间的每一个元素概率都相等。这是因为我们认为对于一个硬币而言，抛出正面和反面的概率均为1/2。对于事件“甲获胜”，不妨把它记为A，在样本空间（1）中
+$$
+A={HH,HTH,THH,HTTH,THTH,TTHH}\
+$$
+而在样本空间（2）中
+$$
+A={HHTT,HHHT,HHTH,HHHH,HTHT,HTHH,THHT,THHH,HTTH,THTH,TTHH}
+$$
+HHHH这种情况，实际上是不可能出现的，因为早在第二次出现正面时，赌局就结束了。但是这并不妨碍我们把它作为A中的一个元素，因为在这个通过我们的想象扩展了的样本空间里面，规则是：如果出现多于一次正面，则甲获胜。这样做的好处是，我们可以构造出一个所有元素等概率的样本空间，两个事件的概率比就是其元素数目之比。</p>
+<p>最近惊闻炉石传说决定关服，想起小时候困扰我的一个问题：</p>
+<!-- raw HTML omitted -->
+<p>奥术飞弹打死精灵龙的概率是多少？</p>
+<h2 id="条件概率">条件概率<a hidden class="anchor" aria-hidden="true" href="#条件概率">#</a></h2>
+<p>条件概率实际上给我们日常语言中的“条件”二字作了数学上定义，当我们说A在事件B发生的条件下发生，我们其实构造了这样一个事件$A|B$，这个事件在与原来一致的样本空间$Ω$中满足：
+$$
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+$$
+但这最多只能算是一个记号，因为单靠概率值并不能唯一确定一个事件。$P(A|(B|C))$这样的记号是是非法的。</p>
+<p>或者我们也可以认为我们并没有构造一个新的事件，而只是把样本空间缩小了。我们新的样本空间$Ω^{&rsquo;}$满足
+$$
+Ω^{&rsquo;}=Ω\cap B\
+so\space P_Ω(A|B)=P_{Ω^{&rsquo;}}(A)
+$$
+这种理解更加符合我们的直觉。我们的意识总是注意个别事物，可以为个别事物而改造样本空间。在这种理解方式下，前面的分式形容了一种正规化的过程，也就是把B发生的概率视作1。</p>
+<p>这样我们可以定义$P(A|(B|C))$，它实际上就是$P(A|(B\cap C))$，我们考虑的是由B和C都发生的情形构成的样本空间。</p>
+<h2 id="独立事件">独立事件<a hidden class="anchor" aria-hidden="true" href="#独立事件">#</a></h2>
+<p>从而我们可以明白事件独立在样本空间上的含义。它是形容在老的样本空间和新的样本空间中，事件A发生的概率不变。如果我们拿可数的样本空间作为例子，可以说发生事件A的情形在所有情形中的占比和在发生事件B的情形中占比一致，当然这里所说的比例是以各情形的概率加权后的比例。对于不可数样本空间上的问题，可以借助联合密度函数思考。(两个)事件独立的定义是：
+$$
+P(A\le x, B\le y)=P(A\le x)P(B\le y)
+$$
+表示成联合密度函数的形式则是：</p>
+<p>$$
+\int^{y}<em>{-\infin}\int^{x}</em>{-\infin}f(u,v)dudv=\int^{\infin}<em>{-\infin}\int^{x}</em>{-\infin}f(u,v)dudv\int^{y}<em>{-\infin}\int^{\infin}</em>{-\infin}f(u,v)dudv
+$$</p>
+<p>等式两边同时求两次导可得</p>
+<p>$$
+f(u,v)=\int^{\infin}<em>{-\infin}f(u,v)du\int^{\infin}</em>{-\infin}f(u,v)dv
+$$</p>
+<p>注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。</p>
+<h2 id="分布函数与密度函数">分布函数与密度函数<a hidden class="anchor" aria-hidden="true" href="#分布函数与密度函数">#</a></h2>
+<p>我从<a href="https://www.quora.com/How-is-the-minimum-of-a-set-of-random-variables-distributed">How is the minimum of a set of random variables distributed</a>上找到一个关于分布函数和密度函数的有趣例子：</p>
+<blockquote>
+<p>Assume that a set of nn random variables X1,…,Xn,X1,…,Xn, are IID fXfX. with cdf FXFX. We can first form the cdf of the minimum Y=min(X1,…,Xn):Y=min(X1,…,Xn):</p>
+<p>FY(y)=p(Y≤y)=1−p(Y≥y)=1−∏i=1np(Xi≥y)=1−p(X≥y)n=1−[1−p(X≤y)]n=1−[1−FX(y)]n(1)(1)FY(y)=p(Y≤y)=1−p(Y≥y)=1−∏i=1np(Xi≥y)=1−p(X≥y)n=1−[1−p(X≤y)]n=1−[1−FX(y)]n</p>
+<p>The pdf of YY can then be formed as:</p>
+</blockquote>
+<h2 id="估计理论">估计理论<a hidden class="anchor" aria-hidden="true" href="#估计理论">#</a></h2>
+<p>在一个估计中，我们希望通过样本的状况得到总体的某一个参数，换言之，我们的问题是：在这样的样本条件下，我们认为总体分布的这个参数满足怎么样的分布？在区间估计中，我们需要一个枢轴量，这个量满足特定的分布，从而可以得到总体的参数a满足的分布θ。样本帮助我们确定θ的一些参数，或者更直接地说，样本帮助我们调整a以适应某些分布。</p>
+<p>在贝叶斯估计中，这个参数具有一个先验的分布，我们所观察到的（带有参数的）分布被认为是一个条件分布，它是一个给定参数条件样本随机变量的分布。从而可以得到样本随机变量的边际分布。而我们所希望得到的是一个“条件分布”，告诉我们在一个样本下参数的分布情况，这个分布的期望就构成我们所要的参数的点估计。这构成了贝叶斯分布的基本思路。</p>
+<p>可以看出，问题的核心在于贝叶斯公式：
+$$
+f(a|x)=\frac{h(x|a)g(a)}{\int h(x|a)g(a)da}
+$$
+这是可数样本空间中贝叶斯公式：
+$$
+P(A_n|B)=\frac{P(B|A_n)P(A_n)}{\sum_nP(B|A_n)P(A_n)}
+$$
+的直接推广。不难看出，贝叶斯公式实际上是一个密度函数（或者概率分布）除以其边际分布。在贝叶斯分布的计算中，我们并不知道最后要用到样本的什么统计量，所以随机变量x常常是一个联合随机变量，我们要求每一次抽样是从一个缺少参数的总体中得到的。</p>
+<p>在整个估计的过程中，我们的样本是什么并不重要，实际上如果我们过于关注我们的样本，就得不出什么结论。必须要把样本抽象地看成是一些随机变量。这使我们发现，重要的并不是每一次抽样所得到的数值，而是样本总体的一些特性，像是样本均值、样本方差。至于样本的具体数值是什么，这只是临门一脚的问题。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>biochemistry II</span>
+  </a>
+  <a class="next" href="https://bubblegits.github.io/post/essay/%E7%96%AF%E7%8B%82/">
+    <span class="title">Next »</span>
+    <br>
+    <span>呓语</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://bubblegits.github.io/">张珙的博客</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Post | 张珙的博客</title>
+<title>奇技淫巧 | 张珙的博客</title>
 <meta name="keywords" content="">
-<meta name="description" content="Post - 张珙的博客">
+<meta name="description" content="空雕虫篆刻，缀断简残编。">
 <meta name="author" content="张珙">
-<link rel="canonical" href="https://bubblegits.github.io/post/">
+<link rel="canonical" href="https://bubblegits.github.io/post/work/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b183800e2cfbb62c3bce2b2ba56cdb2dd33af76c75cf4550173d5dfebd7c68a6.css" integrity="sha256-sYOADiz7tiw7zisrpWzbLdM692x1z0VQFz1d/r18aKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://bubblegits.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://bubblegits.github.io/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://bubblegits.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://bubblegits.github.io/post/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://bubblegits.github.io/post/work/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -89,16 +89,16 @@ code.has-jax {
     border: inherit;
     color: #515151;
 }
-</style><meta property="og:title" content="Post" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+</style><meta property="og:title" content="奇技淫巧" />
+<meta property="og:description" content="空雕虫篆刻，缀断简残编。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bubblegits.github.io/post/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/>
+<meta property="og:url" content="https://bubblegits.github.io/post/work/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Post"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:title" content="奇技淫巧"/>
+<meta name="twitter:description" content="空雕虫篆刻，缀断简残编。"/>
 
 
 <script type="application/ld+json">
@@ -111,6 +111,12 @@ code.has-jax {
       "position":  1 ,
       "name": "Post",
       "item": "https://bubblegits.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "奇技淫巧",
+      "item": "https://bubblegits.github.io/post/work/"
     }
   ]
 }
@@ -169,7 +175,7 @@ code.has-jax {
             </li>
             <li>
                 <a href="https://bubblegits.github.io/post/work" title="奇技淫巧">
-                    <span>奇技淫巧</span>
+                    <span class="active">奇技淫巧</span>
                 </a>
             </li>
             <li>
@@ -186,9 +192,9 @@ code.has-jax {
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://bubblegits.github.io/">Home</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://bubblegits.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/">Post</a></div>
   <h1>
-    Post
+    奇技淫巧
     <a href="index.xml" title="RSS" aria-label="RSS">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" height="23">
@@ -198,55 +204,80 @@ code.has-jax {
       </svg>
     </a>
   </h1>
+  <div class="post-description">
+    空雕虫篆刻，缀断简残编。
+  </div>
 </header>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>朝花夕拾
+    <h2>LaTeX使用指南
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
+一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
+\documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.5} % 行间距 \title{} \author{} \date{} \begin{document} \maketitle %切换字体 % {\songti % } %添加图片 % \begin{figure}[htbp] % \centering % \includegraphics[scale = 0.6]{trans.png} % \caption{The Order of Transfer Electrophoresis} % \label{trans} % \end{figure} % 去section编号 % \section*{} % 图片并排排列 % \begin{minipage}[htbp]{0....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-02-19 00:00:00 +0000 UTC'>February 19, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 朝花夕拾" href="https://bubblegits.github.io/post/unfiction/"></a>
+  <footer class="entry-footer"><span title='2022-12-23 00:00:00 +0000 UTC'>December 23, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to LaTeX使用指南" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>奇技淫巧
+    <h2>更改账户名路径为英文
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
+管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win&#43;R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
+大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</p>
   </div>
-  <footer class="entry-footer"><span title='2023-02-01 00:00:00 +0000 UTC'>February 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 奇技淫巧" href="https://bubblegits.github.io/post/work/"></a>
+  <footer class="entry-footer"><span title='2022-12-20 00:00:00 +0000 UTC'>December 20, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 更改账户名路径为英文" href="https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>走马观花
+    <h2>biochemistry experiment
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>Preparation &amp; Separation The target protein used in biochemistry experiment usually comes from three kinds of source, natural tissue, recombinant protein in certain expression system or cell culture.
+Our research target may be natural or recombinant. If it is natural, the situation looks like this: I have some cell, and things I want (proteins, nuclear acid, etc.) are in the cell. I don’t need to be a genius to see that I need to break the cell....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-01-30 00:00:00 +0000 UTC'>January 30, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 走马观花" href="https://bubblegits.github.io/post/reading/"></a>
+  <footer class="entry-footer"><span title='2022-12-16 00:00:00 +0000 UTC'>December 16, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to biochemistry experiment" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>胡思乱想
+    <h2>建站心路历程
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
+Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的，不挂梯子速度很慢，但还是被我下下来装好了。
+初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv’s Blog (sulvblog.cn)
+config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
+模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
+时间 逝者如斯夫！不舍昼夜。
+hugo中默认的时间参数有如下几种
+- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
+frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。
+数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong.name)，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。</p>
   </div>
-  <footer class="entry-footer"><span title='2022-12-25 00:00:00 +0000 UTC'>December 25, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 胡思乱想" href="https://bubblegits.github.io/post/essay/"></a>
+  <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
 </article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://bubblegits.github.io/post/work/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

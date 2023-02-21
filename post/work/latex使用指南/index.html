@@ -8,11 +8,8 @@
 <title>LaTeX使用指南 | 张珙的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
-latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
-$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
-latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0.">
+一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
+\documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.5} % 行间距 \title{} \author{} \date{} \begin{document} \maketitle %切换字体 % {\songti % } %添加图片 % \begin{figure}[htbp] % \centering % \includegraphics[scale = 0.6]{trans.png} % \caption{The Order of Transfer Electrophoresis} % \label{trans} % \end{figure} % 去section编号 % \section*{} % 图片并排排列 % \begin{minipage}[htbp]{0.">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b183800e2cfbb62c3bce2b2ba56cdb2dd33af76c75cf4550173d5dfebd7c68a6.css" integrity="sha256-sYOADiz7tiw7zisrpWzbLdM692x1z0VQFz1d/r18aKY=" rel="preload stylesheet" as="style">
@@ -95,11 +92,8 @@ code.has-jax {
 }
 </style><meta property="og:title" content="LaTeX使用指南" />
 <meta property="og:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
-latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
-$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
-latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0." />
+一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
+\documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.5} % 行间距 \title{} \author{} \date{} \begin{document} \maketitle %切换字体 % {\songti % } %添加图片 % \begin{figure}[htbp] % \centering % \includegraphics[scale = 0.6]{trans.png} % \caption{The Order of Transfer Electrophoresis} % \label{trans} % \end{figure} % 去section编号 % \section*{} % 图片并排排列 % \begin{minipage}[htbp]{0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-14T00:00:00+00:00" />
@@ -110,11 +104,8 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
 
 <meta name="twitter:title" content="LaTeX使用指南"/>
 <meta name="twitter:description" content="自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
-latex表格与矩阵 表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵
-$$ \begin{pmatrix} 1 &amp; 2 &amp; 3\ 4 &amp; 5 &amp; 6\ 7 &amp; 8 &amp; 9\ 10 &amp; 11 &amp; 12 \end{pmatrix}\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出
-\begin{pmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\\ 10 &amp; 11 &amp; 12\\ \end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。
-latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式
-\begin{figure}[htbp] \centering \includegraphics[scale=0.2]{filename} \caption{figure title} \label{figure} \end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\includegraphic[scale = 0."/>
+一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
+\documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.5} % 行间距 \title{} \author{} \date{} \begin{document} \maketitle %切换字体 % {\songti % } %添加图片 % \begin{figure}[htbp] % \centering % \includegraphics[scale = 0.6]{trans.png} % \caption{The Order of Transfer Electrophoresis} % \label{trans} % \end{figure} % 去section编号 % \section*{} % 图片并排排列 % \begin{minipage}[htbp]{0."/>
 
 
 <script type="application/ld+json">
@@ -149,12 +140,12 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
   "@type": "BlogPosting",
   "headline": "LaTeX使用指南",
   "name": "LaTeX使用指南",
-  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026amp;表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\ 4 \u0026amp; 5 \u0026amp; 6\\ 7 \u0026amp; 8 \u0026amp; 9\\ 10 \u0026amp; 11 \u0026amp; 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026amp; 2 \u0026amp; 3\\\\ 4 \u0026amp; 5 \u0026amp; 6\\\\ 7 \u0026amp; 8 \u0026amp; 9\\\\ 10 \u0026amp; 11 \u0026amp; 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\\includegraphic[scale = 0.",
+  "description": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\n一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面\n\\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{geometry}[a4paper, total={2in, 3in}] \\usepackage{graphicx} \\usepackage{caption} \\newcommand{\\upcite}[1]{\\textsuperscript{\\cite{#1}}} % 标注参考文献为上标 \\usepackage{xeCJK} \\setCJKmainfont{AR PL UKai CN} % 修改字体 \\newCJKfontfamily\\songti{AR PL SungtiL GB} \\usepackage{wrapfig} \\linespread{1.5} % 行间距 \\title{} \\author{} \\date{} \\begin{document} \\maketitle %切换字体 % {\\songti % } %添加图片 % \\begin{figure}[htbp] % \\centering % \\includegraphics[scale = 0.6]{trans.png} % \\caption{The Order of Transfer Electrophoresis} % \\label{trans} % \\end{figure} % 去section编号 % \\section*{} % 图片并排排列 % \\begin{minipage}[htbp]{0.",
   "keywords": [
     
   ],
-  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$ 可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\\includegraphic[scale = 0.5]{filename}就完成了插入图片，剩下的不过是在排版、格式上做调整。scale处还可以增加其他参数，如width, height，angle等。\n其中使用minipage 可并排插入图片，如两张图片并排代码如下：\n\\begin{figure}[htbp] \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3a.png} \\centerline{(a) AA} \\end{minipage}% \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3b.png} \\centerline{(b) BB} \\end{minipage} \\caption{AABB} \\end{figure} 注意如果行尾不是以%结束的话， LATEX 会自动在两行之间加进一个字符的水平间距。所以如果希望得到无缝衔接的图片，记得加百分号。如果希望四张图片以四格漫画般的方式排列，只需要在\\begin{figure}和\\end{figure}里再加minipage就可以，如果不套begin和end，则要手动\\\\提示换行位置。PyMOL作业 - Online LaTeX Editor Overleaf可以作为示例。\n文字样式 LaTeX中常用于调整文字样式的命令如下\n命令 书写方式 文字样式 \\rmfamily \\textrm{…} roman 衬线字体（罗马体） \\sffamily \\textsf{…} sans serif 无衬线字体 \\ttfamily \\texttt{…} typewriter 等宽字体 \\mdseries \\textmd{…} medium 正常粗细（中等） \\bfseries \\textbf{…} bold face 粗体 \\upshape \\textup{…} upright 直立体 \\itshape \\textit{…} italic 意大利斜体 \\slshape \\textsl{…} slanted 倾斜体 \\scshape \\textsc{…} SMALL CAPS 小型大写字母 \\em \\emph{…} emphasized 强调，默认斜体 \\normalfont \\textnormal{…} normal font 默认字体 ",
-  "wordCount" : "154",
+  "articleBody": "自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。\n一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面\n\\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{geometry}[a4paper, total={2in, 3in}] \\usepackage{graphicx} \\usepackage{caption} \\newcommand{\\upcite}[1]{\\textsuperscript{\\cite{#1}}} % 标注参考文献为上标 \\usepackage{xeCJK} \\setCJKmainfont{AR PL UKai CN} % 修改字体 \\newCJKfontfamily\\songti{AR PL SungtiL GB} \\usepackage{wrapfig} \\linespread{1.5} % 行间距 \\title{} \\author{} \\date{} \\begin{document} \\maketitle %切换字体 % {\\songti % } %添加图片 % \\begin{figure}[htbp] % \\centering % \\includegraphics[scale = 0.6]{trans.png} % \\caption{The Order of Transfer Electrophoresis} % \\label{trans} % \\end{figure} % 去section编号 % \\section*{} % 图片并排排列 % \\begin{minipage}[htbp]{0.33\\linewidth} % \\centering % \\includegraphics[width=\\textwidth]{ala.png} % \\centerline{ala} % \\end{minipage}% % \\begin{minipage}[htbp]{0.33\\linewidth} % \\centering % \\includegraphics[width=\\textwidth]{cys.png} % \\centerline{cys} % \\end{minipage}% % \\begin{minipage}[htbp]{0.33\\linewidth} % \\centering % \\includegraphics[width=\\textwidth]{ile.png} % \\centerline{ile} % \\end{minipage}\\\\ % 直接插入图片 % \\includegraphics[scale=0.4]{hexo active.png} % 添加注释 % \\bibliographystyle{plain} % \\bibliography{bibfile} \\end{document} 中文输入 常见的ctex宏包适用于全中文的文档，会把图注等改成中文。如果是夹杂中文的英文文档，用xeCJP比较合适。\n\\usepackage{xeCJK} \\setCJKmainfont{AR PL UKai CN} 如上代码可以实现使用overleaf自带的楷体输入中文。关于此宏包的细节参考xeCJP文档。LaTeX支持的字体参考overleaf文档。\nlatex表格与矩阵 表格和矩阵格式排布逻辑相似，用\u0026表示分列，\\\\表示分行。例如矩阵\n$$ \\begin{pmatrix} 1 \u0026 2 \u0026 3\\ 4 \u0026 5 \u0026 6\\ 7 \u0026 8 \u0026 9\\ 10 \u0026 11 \u0026 12 \\end{pmatrix}\\ $$\n可以在amsmath,amssymb,amsfonts宏包下用如下代码写出\n\\begin{pmatrix} 1 \u0026 2 \u0026 3\\\\ 4 \u0026 5 \u0026 6\\\\ 7 \u0026 8 \u0026 9\\\\ 10 \u0026 11 \u0026 12\\\\ \\end{pmatrix} 其中pmatrix代表以圆括号表示的矩阵。\nlatex图片 latex中插入图片常用graphicx宏包，有两种常见插入方式\n\\begin{figure}[htbp] \\centering \\includegraphics[scale=0.2]{filename} \\caption{figure title} \\label{figure} \\end{figure} 其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行\\includegraphic[scale = 0.5]{filename}就完成了插入图片，剩下的不过是在排版、格式上做调整。scale处还可以增加其他参数，如width, height，angle等。\n使用ctex时会发现图注编号为中文，可以在导言区加入\\renewcommand{\\figurename}{Fig}改成英文。\n其中使用minipage 可并排插入图片，如两张图片并排代码如下：\n\\begin{figure}[htbp] \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3a.png} \\centerline{(a) AA} \\end{minipage}% \\begin{minipage}[t]{0.5\\linewidth} \\centering \\includegraphics[width=\\textwidth]{Fig3b.png} \\centerline{(b) BB} \\end{minipage} \\caption{AABB} \\end{figure} 注意如果行尾不是以%结束的话， LATEX 会自动在两行之间加进一个字符的水平间距。所以如果希望得到无缝衔接的图片，记得加百分号。如果希望四张图片以四格漫画般的方式排列，只需要在\\begin{figure}和\\end{figure}里再加minipage就可以，如果不套begin和end，则要手动\\\\提示换行位置。PyMOL作业 - Online LaTeX Editor Overleaf可以作为示例。\n文字样式 LaTeX中常用于调整文字样式的命令如下\n命令 书写方式 文字样式 \\rmfamily \\textrm{…} roman 衬线字体（罗马体） \\sffamily \\textsf{…} sans serif 无衬线字体 \\ttfamily \\texttt{…} typewriter 等宽字体 \\mdseries \\textmd{…} medium 正常粗细（中等） \\bfseries \\textbf{…} bold face 粗体 \\upshape \\textup{…} upright 直立体 \\itshape \\textit{…} italic 意大利斜体 \\slshape \\textsl{…} slanted 倾斜体 \\scshape \\textsc{…} SMALL CAPS 小型大写字母 \\em \\emph{…} emphasized 强调，默认斜体 \\normalfont \\textnormal{…} normal font 默认字体 引用文献 中文引用经验参考https://zhuanlan.zhihu.com/p/578494369\n页面布局 \\linespread{1.5}可以调整行间距。\n",
+  "wordCount" : "271",
   "inLanguage": "en",
   "datePublished": "2022-12-14T00:00:00Z",
   "dateModified": "2022-12-23T00:00:00Z",
@@ -234,7 +225,7 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
                 </a>
             </li>
             <li>
-                <a href="https://bubblegits.github.io/post/autobiography" title="朝花夕拾">
+                <a href="https://bubblegits.github.io/post/unfiction" title="朝花夕拾">
                     <span>朝花夕拾</span>
                 </a>
             </li>
@@ -254,7 +245,7 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
     <h1 class="post-title">
       LaTeX使用指南
     </h1>
-    <div class="post-meta"><span title='2022-12-14 00:00:00 +0000 UTC'>December 14, 2022</span>&nbsp;·&nbsp;张珙
+    <div class="post-meta"><span title='2022-12-23 00:00:00 +0000 UTC'>December 23, 2022</span>&nbsp;·&nbsp;张珙
 
 </div>
   </header> <div class="toc">
@@ -265,11 +256,19 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
 
         <div class="inner"><ul>
                 <li>
+                    <a href="#%e4%b8%80%e5%a5%97%e6%a8%a1%e6%9d%bf" aria-label="一套模板">一套模板</a></li>
+                <li>
+                    <a href="#%e4%b8%ad%e6%96%87%e8%be%93%e5%85%a5" aria-label="中文输入">中文输入</a></li>
+                <li>
                     <a href="#latex%e8%a1%a8%e6%a0%bc%e4%b8%8e%e7%9f%a9%e9%98%b5" aria-label="latex表格与矩阵">latex表格与矩阵</a></li>
                 <li>
                     <a href="#latex%e5%9b%be%e7%89%87" aria-label="latex图片">latex图片</a></li>
                 <li>
-                    <a href="#%e6%96%87%e5%ad%97%e6%a0%b7%e5%bc%8f" aria-label="文字样式">文字样式</a>
+                    <a href="#%e6%96%87%e5%ad%97%e6%a0%b7%e5%bc%8f" aria-label="文字样式">文字样式</a></li>
+                <li>
+                    <a href="#%e5%bc%95%e7%94%a8%e6%96%87%e7%8c%ae" aria-label="引用文献">引用文献</a></li>
+                <li>
+                    <a href="#%e9%a1%b5%e9%9d%a2%e5%b8%83%e5%b1%80" aria-label="页面布局">页面布局</a>
                 </li>
             </ul>
         </div>
@@ -277,17 +276,83 @@ latex图片 latex中插入图片常用graphicx宏包，有两种常见插入方�
 </div>
 
   <div class="post-content"><p>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考<a href="https://ctan.org/">CTAN: Comprehensive TeX Archive Network</a>，尤其是其中的<a href="https://cloud.tsinghua.edu.cn/lib/89e56068-5b35-402c-949b-bc9acfc87cbd/file/lshort-zh-cn.pdf">lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)</a>。所有操作都是在<a href="https://www.overleaf.com/">Overleaf, Online LaTeX Editor</a>中用XeLaTeX完成的。</p>
+<h2 id="一套模板">一套模板<a hidden class="anchor" aria-hidden="true" href="#一套模板">#</a></h2>
+<p>经过短期摸索，弄出了一套日常适用的模板，记在下面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>geometry<span class="nb">}</span>[a4paper, total=<span class="nb">{</span>2in, 3in<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>caption<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\newcommand</span><span class="nb">{</span><span class="k">\upcite</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\cite</span><span class="nb">{</span>#1<span class="nb">}}}</span> <span class="c">% 标注参考文献为上标
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="k">\usepackage</span><span class="nb">{</span>xeCJK<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setCJKmainfont</span><span class="nb">{</span>AR PL UKai CN<span class="nb">}</span> <span class="c">% 修改字体
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="k">\newCJKfontfamily\songti</span><span class="nb">{</span>AR PL SungtiL GB<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>wrapfig<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\linespread</span><span class="nb">{</span>1.5<span class="nb">}</span> <span class="c">% 行间距
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="k">\title</span><span class="nb">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\author</span><span class="nb">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\date</span><span class="nb">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\maketitle</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%切换字体
+</span></span></span><span class="line"><span class="cl"><span class="c">% {\songti
+</span></span></span><span class="line"><span class="cl"><span class="c">% }
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">%添加图片
+</span></span></span><span class="line"><span class="cl"><span class="c">% \begin{figure}[htbp]
+</span></span></span><span class="line"><span class="cl"><span class="c">% \centering
+</span></span></span><span class="line"><span class="cl"><span class="c">% \includegraphics[scale = 0.6]{trans.png}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \caption{The Order of Transfer Electrophoresis}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \label{trans}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \end{figure}
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">% 去section编号
+</span></span></span><span class="line"><span class="cl"><span class="c">% \section*{}
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">% 图片并排排列
+</span></span></span><span class="line"><span class="cl"><span class="c">% \begin{minipage}[htbp]{0.33\linewidth}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centering
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \includegraphics[width=\textwidth]{ala.png}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centerline{ala}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \end{minipage}%
+</span></span></span><span class="line"><span class="cl"><span class="c">% \begin{minipage}[htbp]{0.33\linewidth}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centering
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \includegraphics[width=\textwidth]{cys.png}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centerline{cys}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \end{minipage}%
+</span></span></span><span class="line"><span class="cl"><span class="c">% \begin{minipage}[htbp]{0.33\linewidth}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centering
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \includegraphics[width=\textwidth]{ile.png}
+</span></span></span><span class="line"><span class="cl"><span class="c">%     \centerline{ile}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \end{minipage}\\
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">% 直接插入图片
+</span></span></span><span class="line"><span class="cl"><span class="c">% \includegraphics[scale=0.4]{hexo active.png}
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">% 添加注释
+</span></span></span><span class="line"><span class="cl"><span class="c">% \bibliographystyle{plain}
+</span></span></span><span class="line"><span class="cl"><span class="c">% \bibliography{bibfile}
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></span></code></pre></div><h2 id="中文输入">中文输入<a hidden class="anchor" aria-hidden="true" href="#中文输入">#</a></h2>
+<p>常见的ctex宏包适用于全中文的文档，会把图注等改成中文。如果是夹杂中文的英文文档，用xeCJP比较合适。</p>
+<pre tabindex="0"><code>\usepackage{xeCJK}
+	\setCJKmainfont{AR PL UKai CN}
+</code></pre><p>如上代码可以实现使用overleaf自带的楷体输入中文。关于此宏包的细节参考<a href="http://mirrors.ibiblio.org/CTAN/macros/xetex/latex/xecjk/xeCJK.pdf">xeCJP文档</a>。LaTeX支持的字体参考<a href="https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese">overleaf文档</a>。</p>
 <h2 id="latex表格与矩阵">latex表格与矩阵<a hidden class="anchor" aria-hidden="true" href="#latex表格与矩阵">#</a></h2>
-<p>表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵<br>
-$$
+<p>表格和矩阵格式排布逻辑相似，用&amp;表示分列，\\表示分行。例如矩阵</p>
+<p>$$
 \begin{pmatrix}
 1  &amp;  2  &amp; 3\
 4  &amp;  5  &amp; 6\
 7  &amp;  8  &amp; 9\
 10 &amp;  11 &amp; 12
 \end{pmatrix}\
-$$
-可以在amsmath,amssymb,amsfonts宏包下用如下代码写出</p>
+$$</p>
+<p>可以在amsmath,amssymb,amsfonts宏包下用如下代码写出</p>
 <pre tabindex="0"><code>\begin{pmatrix}
 1  &amp;  2  &amp; 3\\
 4  &amp;  5  &amp; 6\\
@@ -304,6 +369,7 @@ $$
 </span></span><span class="line"><span class="cl"><span class="k">\label</span><span class="nb">{</span>figure<span class="nb">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </span></span></code></pre></div><p>其中htbp为图片的自动排版方式，分别表示here, top, bottom和浮动状态（忘了p代表哪个单词）。其实一行<code>\includegraphic[scale = 0.5]{filename}</code>就完成了插入图片，剩下的不过是在排版、格式上做调整。<code>scale</code>处还可以增加其他参数，如<code>width</code>, <code>height</code>，<code>angle</code>等。</p>
+<p>使用ctex时会发现图注编号为中文，可以在导言区加入<code>\renewcommand{\figurename}{Fig}</code>改成英文。</p>
 <p>其中使用<code>minipage </code>可并排插入图片，如两张图片并排代码如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
 </span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.5<span class="k">\linewidth</span><span class="nb">}</span>
@@ -387,6 +453,10 @@ $$
 </tr>
 </tbody>
 </table>
+<h2 id="引用文献">引用文献<a hidden class="anchor" aria-hidden="true" href="#引用文献">#</a></h2>
+<p>中文引用经验参考https://zhuanlan.zhihu.com/p/578494369</p>
+<h2 id="页面布局">页面布局<a hidden class="anchor" aria-hidden="true" href="#页面布局">#</a></h2>
+<p><code>\linespread{1.5}</code>可以调整行间距。</p>
 
 
   </div>
@@ -395,15 +465,15 @@ $$
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://bubblegits.github.io/post/essay/%E8%87%AA%E7%94%B1/">
+  <a class="prev" href="https://bubblegits.github.io/post/essay/%E7%96%AF%E7%8B%82/">
     <span class="title">« Prev</span>
     <br>
-    <span>自由</span>
+    <span>呓语</span>
   </a>
-  <a class="next" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/">
+  <a class="next" href="https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/">
     <span class="title">Next »</span>
     <br>
-    <span>建站心路历程</span>
+    <span>更改账户名路径为英文</span>
   </a>
 </nav>
 
