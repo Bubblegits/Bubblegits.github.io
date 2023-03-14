@@ -131,7 +131,8 @@ hugo中默认的时间参数有如下几种
 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。
-数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong.name)，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。</description>
+数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong.name)，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。
+页面布局 Hugo中，一个主题各部分的html样式位于themes\layouts\文件夹下，可以直接把layouts文件夹复制到根目录修改，hugo会自动根据根目录下的样式输出html。</description>
     </item>
     
   </channel>
