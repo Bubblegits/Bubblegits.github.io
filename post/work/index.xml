@@ -22,7 +22,10 @@
 独有南山桂花发，飞来飞去袭人裾。
 最近仓鼠症症状日渐加深，硬盘里存了一大堆学习资料，东一个西一个找起来很麻烦，于是就想着给它整理一下。正好室友装台式机，多出来了一个机箱，又从一个同学手上花800淘来了二手的主板和CPU，有了这些，要配齐一台简陋但能用的电脑花不了多少钱。专门用来做储存的话NAS（Net Attached Storage）再好不过了，偶然想到卢照邻在《长安古意》里写“寂寂寥寥扬子居，年年岁岁一床书”，鄙人的硬盘里学习资料何止一床，称之为扬子居应该算不上僭越。这句诗用了汉朝扬雄的典故，其人在《汉书》有传。
 雄少而好学，不为章句，训诂通而已，博览无所不见。为人简易佚荡，口吃不能剧谈，默而好深湛之思，清静亡为，少耆欲，不汲汲于富贵，不戚戚于贫贱，不修廉隅以徼名当世。家产不过十金，乏无儋石之储，晏如也。
-装机 从同学手里收的板U是微星B450M+AMD R5 3600，我又花了点钱给它配了两根4G内存条，一条256G固态，一张古董GT710显卡和一个400W的电源，总共加起来也就一千二三的样子。其实固态完全没必要，当时高估了校园网的速度想着做一个缓存。装机的时候有个失误，应该先把东西在主板上安好再拧主板螺丝，毕竟这个显卡也不大。宿舍地方还是太小，有点局促，把主板放到机箱里之后很多操作不好做。按部就班把电脑装好，一按开机键发现主板上CPU的debug灯亮着，重装CPU无果，网上找了一通发现短暂停电后恢复供电可以解决问题，不知道是什么原因，不过电脑总算是可以正常运行了。</description>
+值得一提的是，这首诗还是宝玉的丫鬟袭人名字的出处。
+装机 从同学手里收的板U是微星B450M+AMD R5 3600，我又花了点钱给它配了两根4G内存条，一条256G固态，一张古董GT710显卡和一个400W的电源，总共加起来也就一千二三的样子。其实固态完全没必要，当时高估了校园网的速度想着做一个缓存。装机的时候有个失误，应该先把东西在主板上安好再拧主板螺丝，毕竟这个显卡也不大。宿舍地方还是太小，有点局促，把主板放到机箱里之后很多操作不好做。按部就班把电脑装好，一按开机键发现主板上CPU的debug灯亮着，重装CPU无果，网上找了一通发现短暂停电后恢复供电可以解决问题，不知道是什么原因，不过电脑总算是可以正常运行了。
+安装黑群晖（Xpenology） 黑群最活跃的社区是Xpenology论坛，版本选择上可以参考https://xpenology.com/forum/topic/13333-tutorialreference-6x-loaders-and-platforms/，各个版本的差别主要在于是否支持NVMe缓存，CPU最大线程数等等。由于我没有集显，就选择了6.1.7版本的3617x。装系统首先要有个boot，也就是引导文件，论坛里最著名的引导文件是一个叫Jun的老哥制作的，安装教程参考https://xpenology.com/forum/topic/7973-tutorial-installmigrate-dsm-52-to-61x-juns-loader/。制作好引导U盘之后猛按del进入bios，把u盘设在boot第一位（不设可能也行，毕竟只有这一个boot），之后就可以远程操作了。
+网络相关问题 其实搭建过程中最折腾的是网络，倒逼我把各种网络知识又学了一遍。</description>
     </item>
     
     <item>
@@ -137,7 +140,7 @@ Our research target may be natural or recombinant. If it is natural, the situati
       
       <guid>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</guid>
       <description>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
-Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit, put可以通过alias合成一行
+Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
 git config --global alias.cm &amp;#39;!f() { git add -A &amp;amp;&amp;amp; git commit -m &amp;#34;$@&amp;#34;; }; f&amp;#39; 初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv&amp;rsquo;s Blog (sulvblog.cn)
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
 模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
