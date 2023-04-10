@@ -57,7 +57,7 @@
         }
 
     </style>
-</noscript><script type="text/javascript"
+</noscript><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script><script type="text/javascript"
         async
         src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 MathJax.Hub.Config({
@@ -198,12 +198,12 @@ Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只�
 git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv’s Blog (sulvblog.cn)
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
 关于yaml文件的使用还有一些需要注意的地方，可以参考https://www.jianshu.com/p/e407845a0758（不知道为什么这个网页总跳一刀999的广告）
-模板（Template） 主题的模板文件储存在themes\PaperMod\layouts路径，其中用.html文件管理不同
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。...</p>
+frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。
+数学公式 参考在Hugo中使用MathJax · 零壹軒·笔记 (qidong....</p>
   </div>
   <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
@@ -320,18 +320,17 @@ b. 某个特定的原因必然导致某个特定的结果
     
 <footer class="footer">
     <span>&copy; 2023 <a href="https://bubblegits.github.io/">张珙的博客</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">张珙</span>采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">4.0 国际许可协议</a>进行许可。
-    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">张珙</span>采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">4.0 国际许可协议</a>进行许可。
+    </span>
 
 <script>
     let menu = document.getElementById('menu')
