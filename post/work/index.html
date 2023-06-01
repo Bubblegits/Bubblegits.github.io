@@ -211,6 +211,26 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>影音相关
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>缘起 闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
+观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了（2023年6.1更新：已经有NAS了，见《赛博扬子居记》） 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
+kodi配置 kodi的前身是xbmc（Xbox media center），官网和插件库国内访问网络质量堪忧，即使扶墙也常常出问题，所以找个镜像比较方便。清华大学的镜像站用着总觉得没有中科大的顺手。访问Index of /xbmc/ (ustc.edu.cn)，在releases目录下下载安装包，安装完成后还要注意配置插件库，官方的插件库访问常常出问题，可以选择用镜像的插件库，或者用官方库霸王硬上弓，多试几次也能装上。
+kodi中可以通过PVR IPTV simple client来读m3u源，github上有一个可直连的m3u库https://github.com/fanmingming/live。iptv源可以搭配epg（electric program guide）使用，epg提供节目单从而在部分iptv源上实现回看功能。
+kodi变成中文需要先把字体改为arial base，否则无法显示汉字。
+iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来看，参考https://mozz.ie/posts/extracting-iptv-live-streams/
+影视信息刮削 此外kodi的一个非常拉风的功能是电影海报墙，通过刮削器获取电影简介、年代、海报、类型等相关信息并展示出来，有逼不装天理难容。但是kodi自带的刮削器常常遇到网络问题，可以选择3.x版本的tmm（tiny media manager）在影视文件夹中生成nfo文件，用kodi读取nfo文件从而生成海报墙。tmm的使用方法一目了然，除了刮削之外还可以用来整理电影文件，我的习惯是把电影放在以导演命名的文件夹下。
+与tmm相似的还有一个好东西叫Movie_Data_Capture,功能不便多说，一用便知。
+音乐库 人的生命是有限的，但折腾的事业是无限的，折腾完电影之后接着折腾音乐。mac上的music软件一大问题就是语言显示混乱，整理自己导入的音乐表现倒是不错，可以给专辑搜索封面，aiff格式用起来也挺顺耳。</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-01 00:00:00 +0000 UTC'>June 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 影音相关" href="https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>赛博扬子居记
     </h2>
   </header>
@@ -246,24 +266,6 @@ In North America and Europe, water used in industry accounts for nearly half of 
   </div>
   <footer class="entry-footer"><span title='2023-02-01 00:00:00 +0000 UTC'>February 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 雅思作文练习" href="https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>家庭影音相关
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
-观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
-kodi配置 kodi的前身是xbmc（Xbox media center）国内访问质量堪忧，即使扶墙也常常出问题，所以找个镜像比较方便。清华大学的镜像站用着总觉得没有中科大的顺手。访问Index of /xbmc/ (ustc.edu.cn)，在releases目录下下载安装包，安装完成后还要注意配置插件库，官方的插件库访问常常出问题，可以选择用镜像的插件库，或者硬试几次也能装上。
-kodi中可以通过PVR IPTV simple client来读m3u源，github上有一个可直连的m3u库https://github.com/fanmingming/live。iptv源可以搭配epg（electric program guide）使用，epg提供节目单从而在部分iptv源上实现回看功能。
-此外kodi的一个非常拉风的功能是电影海报墙，通过刮削器获取电影简介、年代、海报、类型等相关信息并展示出来。但是kodi自带的刮削器常常遇到网络问题，可以选择3.x版本的tmm（tiny media manager）在影视文件夹中生成nfo文件，用kodi读取nfo文件从而生成海报墙。
-kodi变成中文需要先把字体改为arial base，否则无法显示汉字。
-iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来看，参考https://mozz.ie/posts/extracting-iptv-live-streams/</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-01-25 00:00:00 +0000 UTC'>January 25, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 家庭影音相关" href="https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/"></a>
 </article>
 
 <article class="post-entry"> 
