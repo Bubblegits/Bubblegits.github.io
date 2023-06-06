@@ -151,7 +151,7 @@ Our research target may be natural or recombinant. If it is natural, the situati
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;amp;&amp;amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
 git config --global alias.cm &amp;#39;!f() { git add -A &amp;amp;&amp;amp; git commit -m &amp;#34;$@&amp;#34;; }; f&amp;#39; 初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv&amp;rsquo;s Blog (sulvblog.cn)
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
-关于yaml文件的使用还有一些需要注意的地方，可以参考https://www.jianshu.com/p/e407845a0758（不知道为什么这个网页总跳一刀999的广告）
+关于yaml文件的使用还有一些需要注意的地方，可以参考https://www.jianshu.com/p/e407845a0758（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
@@ -176,8 +176,11 @@ frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在�
       <guid>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</guid>
       <description>大家都知道我最喜欢的电子产品就是墨水屏了，现在握已经拥有墨水屏的手机，墨水屏的阅读器，墨水屏的显示器，但我还没有墨水屏的内裤&amp;hellip;
 我确实有墨水屏的手机，墨水屏的阅读器和墨水屏的显示器，对我娇嫩的双眼来说，墨水屏比LCD屏幕友好很多。而且热心的网友也开发了很多工具帮助提升墨水屏的使用体验，多数发布在https://www.mobileread.com/。
-KOBO libra 2 我的老kindle paperwrite用了四五年，虽说尚且能饭，但2021年惊闻kindle书城退出中国市场，顿生喜新厌旧之感，于是想着买一个高逼格的小众电子书阅读器，看中了KOBO libra 2。
-nickel menu koreader KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，这下连维基百科也能用啦</description>
+KOBO libra 2 我的老kindle paperwrite用了四五年，虽说尚且能饭，但2021年惊闻kindle书城退出中国市场，顿生喜新厌旧之感，于是想着买一个高逼格的小众电子书阅读器，看中了KOBO libra 2。kobo的系统基本上就是linux，很开放，适合折腾。
+nickel menu nickel menu可以用来管理kobo上安装的插件
+koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋想出来的需求，研究一下发现通过KOreader可以实现，比如页面滚动，自定义状态条等等，称得上是开源软件的模范。
+不过有几个小问题，比如翻译功能只支持调用谷歌翻译，导致在国内不能正常访问，之前可以通过改hosts解决，但现在国内也没有可用的ip了
+KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，这下连维基百科也能用啦</description>
     </item>
     
   </channel>
