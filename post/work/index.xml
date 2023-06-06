@@ -183,5 +183,14 @@ koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋
 KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，这下连维基百科也能用啦</description>
     </item>
     
+    <item>
+      <title>所以我放弃了linux</title>
+      <link>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</guid>
+      <description>人是铁逼是钢，一顿不装憋得慌，在装逼动力的驱使之下，我又开始研究在电脑上装linux。</description>
+    </item>
+    
   </channel>
 </rss>
