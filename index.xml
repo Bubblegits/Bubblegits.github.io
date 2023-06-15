@@ -10,7 +10,22 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>墨水屏阅读</title>
+      <link>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</guid>
+      <description>大家都知道我最喜欢的电子产品就是墨水屏了，现在握已经拥有墨水屏的手机，墨水屏的阅读器，墨水屏的显示器，但我还没有墨水屏的内裤&amp;hellip;
+我确实有墨水屏的手机，墨水屏的阅读器和墨水屏的显示器，对我娇嫩的双眼来说，墨水屏比LCD屏幕友好很多。而且热心的网友也开发了很多工具帮助提升墨水屏的使用体验，多数发布在https://www.mobileread.com/。
+KOBO libra 2 我的老kindle paperwrite用了四五年，虽说尚且能饭，但2021年惊闻kindle书城退出中国市场，顿生喜新厌旧之感，于是想着买一个高逼格的小众电子书阅读器，看中了KOBO libra 2。kobo的系统基本上就是linux，很开放，可以装不少有意思的东西。
+nickel menu nickel menu可以用来管理kobo上安装的插件，同时带有一些小功能，比如导出注释，白板和小游戏。导出注释的功能不尽如人意，我一般还是用koreader。
+koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋想出来的需求，研究一下发现KOreader靠集思广益的用户社区已经实现了，比如页面滚动，自定义状态条，甚至可以从程序内调用终端等等，称得上是开源软件的模范。
+不过有几个小问题，比如翻译功能只支持调用谷歌翻译，导致在国内不能正常访问，之前可以通过改hosts解决，但现在国内也没有可用的ip了。
+KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，但是普通的http代理翻墙很困难，shocks代理koreader似乎不支持。</description>
+    </item>
+    
     <item>
       <title>影音相关</title>
       <link>https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/</link>
@@ -480,21 +495,6 @@ b. 某个特定的原因必然导致某个特定的结果
       
       <guid>https://bubblegits.github.io/post/work/%E4%BB%8E%E4%BB%8A%E6%97%A5%E8%B5%B7%E6%88%92%E9%85%92/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</guid>
-      <description>大家都知道我最喜欢的电子产品就是墨水屏了，现在握已经拥有墨水屏的手机，墨水屏的阅读器，墨水屏的显示器，但我还没有墨水屏的内裤&amp;hellip;
-我确实有墨水屏的手机，墨水屏的阅读器和墨水屏的显示器，对我娇嫩的双眼来说，墨水屏比LCD屏幕友好很多。而且热心的网友也开发了很多工具帮助提升墨水屏的使用体验，多数发布在https://www.mobileread.com/。
-KOBO libra 2 我的老kindle paperwrite用了四五年，虽说尚且能饭，但2021年惊闻kindle书城退出中国市场，顿生喜新厌旧之感，于是想着买一个高逼格的小众电子书阅读器，看中了KOBO libra 2。kobo的系统基本上就是linux，很开放，适合折腾。
-nickel menu nickel menu可以用来管理kobo上安装的插件
-koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋想出来的需求，研究一下发现通过KOreader可以实现，比如页面滚动，自定义状态条等等，称得上是开源软件的模范。
-不过有几个小问题，比如翻译功能只支持调用谷歌翻译，导致在国内不能正常访问，之前可以通过改hosts解决，但现在国内也没有可用的ip了
-KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，这下连维基百科也能用啦</description>
     </item>
     
     <item>
