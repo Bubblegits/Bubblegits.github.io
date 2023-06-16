@@ -2,13 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bubblegits.github.io/post/reading/the-end-of-the-french-intellectual-from-zola-to-houellebecq/</loc>
+  </url><url>
     <loc>https://bubblegits.github.io/post/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bubblegits.github.io/post/essay/%E5%98%94%E5%90%90/</loc>
+    <loc>https://bubblegits.github.io/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bubblegits.github.io/</loc>
+    <loc>https://bubblegits.github.io/post/reading/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/reading/%E8%BF%87%E4%BA%8E%E5%96%A7%E5%9A%A3%E7%9A%84%E5%AD%A4%E7%8B%AC%E5%BA%95%E5%B1%82%E7%9A%84%E7%8F%8D%E7%8F%A0/</loc>
+  </url><url>
+    <loc>https://bubblegits.github.io/post/essay/%E5%98%94%E5%90%90/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/post/essay/</loc>
@@ -24,9 +31,6 @@
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/post/reading/%E5%B7%A5%E4%BD%9C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89%E5%92%8C%E6%96%B0%E7%A9%B7%E4%BA%BA/</loc>
-  </url><url>
-    <loc>https://bubblegits.github.io/post/reading/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bubblegits.github.io/post/work/%E8%B5%9B%E5%8D%9A%E6%89%AC%E5%AD%90%E5%B1%85%E8%AE%B0/</loc>
     <lastmod>2023-03-30T00:00:00+00:00</lastmod>

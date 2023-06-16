@@ -189,6 +189,43 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>建站心路历程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
+Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;&amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
+git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 初步搭建 参考【置顶】hugo博客搭建 | PaperMod主题 | Sulv’s Blog (sulvblog.cn)，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
+config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
+关于yaml文件的使用还有一些需要注意的地方，可以参考https://www.jianshu.com/p/e407845a0758（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
+时间 逝者如斯夫！不舍昼夜。
+hugo中默认的时间参数有如下几种
+- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
+frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>新老葡萄酒问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>如果说从商品变成货币是“惊险的一跃”，那么生产老葡萄酒的资本家则有类于蹦极运动员，在空中急速下坠，直到葡萄酒被卖出才终于安全回到悬崖上。在较长的周转时间中，老葡萄酒反常地获得了较高的利润，这一现象可以从如下角度来解释。
+在这个问题上，我们考虑市场价格完全由生产价格决定的情形。在一个给定的社会生产力条件下，我们容易直接地认为生产新老葡萄酒所需要的社会必要劳动时间基本一致，因而其价值也相当。这一看法基本上是正确的，但没有考虑到老葡萄酒的发酵需要资本家在地窖的建造（或租用）、管理等方面投入保管费用，“这些费用在不同的生产领域是不同的，在同一生产领域，对不同的单个资本来说，有时也是不同的。这些费用追加到商品价格中时，会按照各个资本家分担这些费用的比例进行分配。”（《资本论》第二卷第六章）在葡萄酒发酵的过程中，地窖必须与搬运、维护等人类劳动相结合以进行生产，但总体而言，其闲置的时间远大于与劳动力结合的时间。“生产时间，即资本束缚在生产领域的时间。&#34;（《资本论》第二卷第十三章）从这一角度来看，发酵环节造成了老葡萄酒生产时间显著大于劳动时间。
+考虑到资本在不同生产部门中的流动，”虽然不同生产部门的资本家在出售自己的商品时收回了生产这些商品所用掉的资本价值，但是他们不是得到了本部门生产这些商品时所生产的剩余价值或利润，而只是得到了社会总资本在所有生产部门在一定时间内生产的总剩余价值或总利润均衡分配时归于总资本的每个相应部分的剩余价值或利润。“（《资本论》第三卷第九章）如果单独考虑老葡萄酒专门的利润率，较长的周转时间只会造成其利润的损失，然而这个较低的利润会加入利润率平均化过程，生产老葡萄酒的资本家最终获得的是经过平均后的利润，这也为老葡萄酒的价格身高提供了解释，因为”一般利润率是由每100预付资本在一定期间比如说一年内的不同利润率的平均数形成的。“（《资本论》第三卷第九章）依据平均利润率计算，老葡萄酒就会因其较长的周转时间而获得较高的利润。
+以上论述的前提是，老葡萄酒的较长周转时间不是由个别资本家的决策造成，而是由老葡萄酒这种商品的性质决定的。不过我们换个角度考虑，”资本周转期间往往可以通过生产时间的人为的缩短而或多或少地缩短“（《资本论》第二卷第十三章），葡萄酒发酵无非是一种微生物学的过程，然而在科学技术的飞速进步中，资本家并没有采用可以显著缩短发酵时间的技术手段，似乎是担心这些技术手段会破坏老葡萄酒的垄断地位。就其本质而言，一年葡萄酒和十年葡萄固然是两种不同商品，然而一般消费者往往无法仔细甄别其中差异，十年葡萄酒很大程度上成为一种被葡萄酒生产商塑造出来的奢侈品，在其实体背后还包含着文化价值和身份认同。这些物质上和精神上的使用价值被打包起来，使得高年份葡萄酒成为一种垄断商品，可以获得高于平均利润率的价格。
+参考文献 [1]《资本论》第二卷第六章、第十三章；第三卷第九章、第四十三章。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 00:00:00 +0000 UTC'>December 6, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 新老葡萄酒问题" href="https://bubblegits.github.io/post/reading/%E6%96%B0%E8%80%81%E8%91%A1%E8%90%84%E9%85%92%E9%97%AE%E9%A2%98/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>大数据时代的计划经济
     </h2>
   </header>
@@ -268,35 +305,6 @@ b. 某个特定的原因必然导致某个特定的结果
   </div>
   <footer class="entry-footer"><span title='2022-09-26 00:00:00 +0000 UTC'>September 26, 2022</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 纳尔齐斯与歌尔德蒙" href="https://bubblegits.github.io/post/reading/%E9%9A%8F%E7%AC%94%E7%BA%B3%E5%B0%94%E9%BD%90%E6%96%AF%E4%B8%8E%E6%AD%8C%E5%B0%94%E5%BE%B7%E8%92%99/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer">张珙</footer>
-  <a class="entry-link" aria-label="post link to " href="https://bubblegits.github.io/post/work/%E4%BB%8E%E4%BB%8A%E6%97%A5%E8%B5%B7%E6%88%92%E9%85%92/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>我所见到的时代
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>我们的前人关于其时代已经说了很多，其中关于古代的看法不会有太多分歧，关于现代的看法则莫衷一是。现代是很复杂的一个东西，汪民安老师编过一个叫《现代性》的小册子，对有关现代性的看法作了很好的概括。里面收录了各位哲学家、社会学家、文学家的观点，并通过作者自己的洞察力梳理了各种思想的关联。然而“俱往矣，数风流人物，还看今朝”，我们的时代是什么样子，最终还是要由我们说出口，把这项任务交给思想史上死去的灵魂，是很不负责任的行为。
-确定性与迷茫 确定性fy
-大众伦理 一个留心观察我们的时代的人，首先会注意到这是一个分裂与对立的时代。人们的关系靠一种不加解释的共识被维系起来——这不算是当下的特点，因为几乎所有时代都是这样，但是这种共识与个性的张力在当今显得尤其强大。我们被要求具有个性，但这种个性只不过是对某种粗浅符号的认同。创造力成了一种可疑的东西——我们真的能够去创造新的东西吗？我们所生产的一切，要么是异己的、奄奄一息的东西，要么是过去已有事物的回响。种种流行仿佛早产的婴儿，病弱而早夭，传统则像是垂暮的老者，成了老而不死、徘徊在每个人心中的幽灵。个性不再是个人在历史中的坐标，而只是用来确证自我的一个框架。像西美尔所说“用一种完全拒绝与他人相通的方式来确证自我”
-我们并不信任这种个性，所以常常用平庸和个性的丧失来形容这个时代。从众是安全的——这种根植在人身体里的古老记忆成了我们追求确定性的工具。只要跟随大众，就不会出现大的错误，也可以避免道德上的煎熬。真正的个性是危险的，所以它只能被欣赏，而很少被实践，就像电影里从不会现实发生的刺激场面。
-工作伦理 去工作——工作在这个时代是生活的代名词，我们可以不生活，但不能不工作。
-孤独与对话 对话是一种奇妙的</p>
-  </div>
-  <footer class="entry-footer">张珙</footer>
-  <a class="entry-link" aria-label="post link to 我所见到的时代" href="https://bubblegits.github.io/post/essay/%E6%88%91%E6%89%80%E8%A7%81%E5%88%B0%E7%9A%84%E6%97%B6%E4%BB%A3/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
