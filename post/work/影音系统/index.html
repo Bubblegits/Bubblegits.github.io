@@ -315,6 +315,16 @@ iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来�
 
   </div>
 
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://your-domain.vercel.app',
+    });
+  </script>
+
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
