@@ -55,8 +55,13 @@ In North America and Europe, water used in industry accounts for nearly half of 
         }
 
     </style>
-</noscript><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" />
+</noscript>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" /> 
+
 <link rel="stylesheet" href="https://use.typekit.net/tyn8lot.css">
+
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"><script type="text/javascript"
         async
         src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -325,16 +330,6 @@ In North America and Europe, water used in industry accounts for nearly half of 
 
   </div>
 
-  <div id="waline"></div>
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-    init({
-      el: '#waline',
-      serverURL: 'https://your-domain.vercel.app',
-    });
-  </script>
-
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
@@ -351,7 +346,15 @@ In North America and Europe, water used in industry accounts for nearly half of 
   </a>
 </nav>
 
-  </footer>
+  </footer><div id="waline"></div>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+  init({
+    el: '#waline',
+    serverURL: 'https://your-domain.vercel.app',
+  });
+</script>
 </article>
     </main>
     
