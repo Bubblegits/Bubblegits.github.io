@@ -220,11 +220,9 @@ code.has-jax {
   </header>
   <div class="entry-content">
     <p>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-&lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
-每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
-**** -&gt; ** ** ^(space) -&gt; (null) ^\n -&gt; (null) \) -&gt; )\n #执行若干次以控制段间距 </p>
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。...</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0000 UTC'>July 6, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 爬邺架" href="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/"></a>
@@ -272,7 +270,7 @@ koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋
 不过有几个小问题，比如翻译功能只支持调用谷歌翻译，导致在国内不能正常访问，之前可以通过改hosts解决，但现在国内也没有可用的ip了。
 KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，但是普通的http代理翻墙很困难，shocks代理koreader似乎不支持。
 koreader的高亮可以直接导出成markdown，不过格式不好看，可以用正则表达式修改，一般用如下几条：
-###(.*) #匹配三级标题行 * #匹配斜体标志 </p>
+1 2 ###(.*) #匹配三级标题行 * #匹配斜体标志 </p>
   </div>
   <footer class="entry-footer"><span title='2023-06-14 00:00:00 +0000 UTC'>June 14, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 墨水屏阅读" href="https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/"></a>

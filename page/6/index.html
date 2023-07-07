@@ -215,15 +215,14 @@ Our research target may be natural or recombinant. If it is natural, the situati
   <div class="entry-content">
     <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;&amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
-git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
+1 git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
 关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
-- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。
-现在我的config里读取时间的方式是...</p>
+1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。...</p>
   </div>
   <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>

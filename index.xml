@@ -18,11 +18,9 @@
       
       <guid>https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/</guid>
       <description>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-&amp;lt;img src=&amp;#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&amp;#34; alt = &amp;#34;douyin&amp;#34; style=&amp;#34;height:400px;width:300px&amp;#34;/&amp;gt; 下面这段是设置粗体颜色和标题位置的
-strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
-每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
-**** -&amp;gt; ** ** ^(space) -&amp;gt; (null) ^\n -&amp;gt; (null) \) -&amp;gt; )\n #执行若干次以控制段间距 </description>
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &amp;lt;img src=&amp;#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&amp;#34; alt = &amp;#34;douyin&amp;#34; style=&amp;#34;height:400px;width:300px&amp;#34;/&amp;gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。</description>
     </item>
     
     <item>
@@ -61,7 +59,7 @@ koreader koreader是我用过的最优秀的软件之一，很多自己拍脑袋
 不过有几个小问题，比如翻译功能只支持调用谷歌翻译，导致在国内不能正常访问，之前可以通过改hosts解决，但现在国内也没有可用的ip了。
 KOReader是支持代理的，具体是在【上方菜单 - 齿轮图标 - 网络设置】里，如果自己有代理的话可以设置下，但是普通的http代理翻墙很困难，shocks代理koreader似乎不支持。
 koreader的高亮可以直接导出成markdown，不过格式不好看，可以用正则表达式修改，一般用如下几条：
-###(.*) #匹配三级标题行 * #匹配斜体标志 </description>
+1 2 ###(.*) #匹配三级标题行 * #匹配斜体标志 </description>
     </item>
     
     <item>
@@ -273,7 +271,7 @@ Bad conscience is certainly a mark of civilization and morality that has to be p
 安装黑群晖（Xpenology） 黑群最活跃的社区是Xpenology论坛，版本选择上可以参考https://xpenology.com/forum/topic/13333-tutorialreference-6x-loaders-and-platforms/，各个版本的差别主要在于是否支持NVMe缓存，CPU最大线程数等等。由于我没有集显，就选择了6.1.7版本的3617x。装系统首先要有个boot，也就是引导文件，论坛里最著名的引导文件是一个叫Jun的老哥制作的，安装教程参考https://xpenology.com/forum/topic/7973-tutorial-installmigrate-dsm-52-to-61x-juns-loader/。制作好引导U盘之后猛按del进入bios，把u盘设在boot第一位（不设可能也行，毕竟只有这一个boot），之后就可以远程操作了。
 网络相关问题 其实搭建过程中最折腾的是网络，倒逼我把各种网络知识学了一遍。配置ip地址的时候要用子网掩码确定网段，不在一个网段里的计算机不能相互通信，这点是最重要的，只要能把局域网上的计算机ping通，剩下的都好说。关于子网掩码的知识可以参考https://zh.wikipedia.org/wiki/%E5%AD%90%E7%BD%91。群晖初始化的原理估计是boot后的主机会在网络局域网上广播特定的包，synology assistant可以将其识别从而与之建立联系。由于寝室的有线网孔是坏的，我花40买了一个交换机，把自己的几台电脑连在一起。6.1.7版本的黑群晖比较老，支持的无线网卡大多停产了，淘了一张二手的D-link DWA-140显卡，下载最快也只有1Mb/s，不过够用就好，下载速度慢正好保护硬盘，秉持黄老之道，轻傜薄赋，与盘休息。
 初步使用 西数的紫盘是CMR，价格也不贵，买了一个装上，群晖会在每个硬盘里都装一套系统，所以硬盘要初始化一下，设置raid类型和分区等等，之后就可以使用了。在套件中心安装docker套件，按网上教程在docker中挂载transmission用来做BT下载，还挂载了calibre-web套件来管理书籍。calibre-web干净清爽，上传便捷，数据安全，支持书籍格式转换，几乎让我戒掉了买纸质书的陋习。有些epub可能没有封面，在其中加入cover.xhtml文件并输入
-&amp;lt;html xmlns=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34; xml:lang=&amp;#34;en&amp;#34;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;Cover&amp;lt;/title&amp;gt;&amp;lt;style type=&amp;#34;text/css&amp;#34; title=&amp;#34;override_css&amp;#34;&amp;gt; @page {padding: 0pt; margin:0pt} body { text-align: center; padding:0pt; margin: 0pt; } div { margin: 0pt; padding: 0pt; } &amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;div&amp;gt; &amp;lt;img src=&amp;#34;cover.jpg&amp;#34; alt=&amp;#34;cover&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt; 然后添加封面图片为cover.jpg即可。
+1 2 3 4 5 6 7 &amp;lt;html xmlns=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34; xml:lang=&amp;#34;en&amp;#34;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;Cover&amp;lt;/title&amp;gt;&amp;lt;style type=&amp;#34;text/css&amp;#34; title=&amp;#34;override_css&amp;#34;&amp;gt; @page {padding: 0pt; margin:0pt} body { text-align: center; padding:0pt; margin: 0pt; } div { margin: 0pt; padding: 0pt; } &amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;div&amp;gt; &amp;lt;img src=&amp;#34;cover.jpg&amp;#34; alt=&amp;#34;cover&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt; 然后添加封面图片为cover.jpg即可。
 寝室网络建设 前面说了，寝室的有线网孔只有一个是好的，无线校园网又不是很稳定，有了nas正好可以做软路由提升网络质量。和靠网口的室友交涉了一下，他惧怕我的淫威，给我让出了一块放主机的地方，接下来我还得在软件上接着折腾。</description>
     </item>
     
@@ -481,7 +479,7 @@ $$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
       <guid>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
       <description>自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
 一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
-\documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.5} % 行间距 \title{} \author{} \date{} \begin{document} \maketitle %切换字体 % {\songti % } %添加图片 % \begin{figure}[htbp] % \centering % \includegraphics[scale = 0.6]{trans.png} % \caption{The Order of Transfer Electrophoresis} % \label{trans} % \end{figure} % 去section编号 % \section*{} % 图片并排排列 % \begin{minipage}[htbp]{0.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 \documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.</description>
     </item>
     
     <item>
@@ -576,15 +574,14 @@ Our research target may be natural or recombinant. If it is natural, the situati
       <guid>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</guid>
       <description>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;amp;&amp;amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
-git config --global alias.cm &amp;#39;!f() { git add -A &amp;amp;&amp;amp; git commit -m &amp;#34;$@&amp;#34;; }; f&amp;#39; 初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
+1 git config --global alias.cm &amp;#39;!f() { git add -A &amp;amp;&amp;amp; git commit -m &amp;#34;$@&amp;#34;; }; f&amp;#39; 初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
 关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
-- date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。
-现在我的config里读取时间的方式是</description>
+1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。</description>
     </item>
     
     <item>

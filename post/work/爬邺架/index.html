@@ -8,11 +8,9 @@
 <title>爬邺架 | 张珙的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-&lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
-每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
-**** -&gt; ** ** ^(space) -&gt; (null) ^\n -&gt; (null) \) -&gt; )\n #执行若干次以控制段间距 ">
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.7c7524e44e3fa7dc1856b5eeddc73e6ba99bdd35abf450f259c871d6249b913c.css" integrity="sha256-fHUk5E4/p9wYVrXu3cc&#43;a6mb3TWr9FDyWchx1iSbkTw=" rel="preload stylesheet" as="style">
@@ -102,11 +100,9 @@ code.has-jax {
 }
 </style><meta property="og:title" content="爬邺架" />
 <meta property="og:description" content="邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-&lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
-每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
-**** -&gt; ** ** ^(space) -&gt; (null) ^\n -&gt; (null) \) -&gt; )\n #执行若干次以控制段间距 " />
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 
@@ -117,11 +113,9 @@ strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-t
 
 <meta name="twitter:title" content="爬邺架"/>
 <meta name="twitter:description" content="邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-&lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
-每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
-**** -&gt; ** ** ^(space) -&gt; (null) ^\n -&gt; (null) \) -&gt; )\n #执行若干次以控制段间距 "/>
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。"/>
 
 
 <script type="application/ld+json">
@@ -156,12 +150,12 @@ strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-t
   "@type": "BlogPosting",
   "headline": "爬邺架",
   "name": "爬邺架",
-  "description": "邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。\nimg { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了\n\u0026lt;img src=\u0026#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0\u0026#34; alt = \u0026#34;douyin\u0026#34; style=\u0026#34;height:400px;width:300px\u0026#34;/\u0026gt; 下面这段是设置粗体颜色和标题位置的\nstrong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。\n每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换\n**** -\u0026gt; ** ** ^(space) -\u0026gt; (null) ^\\n -\u0026gt; (null) \\) -\u0026gt; )\\n #执行若干次以控制段间距 ",
+  "description": "邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。\n1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了\n1 \u0026lt;img src=\u0026#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0\u0026#34; alt = \u0026#34;douyin\u0026#34; style=\u0026#34;height:400px;width:300px\u0026#34;/\u0026gt; 下面这段是设置粗体颜色和标题位置的\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。",
   "keywords": [
     
   ],
-  "articleBody": "邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。\nimg { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了\n\u003cimg src=\"http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0\" alt = \"douyin\" style=\"height:400px;width:300px\"/\u003e 下面这段是设置粗体颜色和标题位置的\nstrong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。\n每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换\n**** -\u003e ** ** ^(space) -\u003e (null) ^\\n -\u003e (null) \\) -\u003e )\\n #执行若干次以控制段间距 ",
-  "wordCount" : "63",
+  "articleBody": "邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。\n1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了\n1 \u003cimg src=\"http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0\" alt = \"douyin\" style=\"height:400px;width:300px\"/\u003e 下面这段是设置粗体颜色和标题位置的\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。\n每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换\n1 2 3 4 **** -\u003e ** ** ^(space) -\u003e (null) ^\\n -\u003e (null) \\) -\u003e )\\n #执行若干次以控制段间距 ",
+  "wordCount" : "92",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -268,16 +262,57 @@ strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-t
   </header> 
 
   <div class="post-content"><p>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">img</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">img</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34;</span> <span class="na">alt </span><span class="o">=</span> <span class="s">&#34;douyin&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height:400px;width:300px&#34;</span><span class="p">/&gt;</span>
-</span></span></code></pre></div><p>下面这段是设置粗体颜色和标题位置的</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">strong</span> <span class="p">{</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34;</span> <span class="na">alt </span><span class="o">=</span> <span class="s">&#34;douyin&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height:400px;width:300px&#34;</span><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>下面这段是设置粗体颜色和标题位置的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">strong</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">color</span><span class="p">:</span> <span class="mh">#FF992A</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -295,13 +330,25 @@ strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-t
 </span></span><span class="line"><span class="cl">    <span class="k">cursor</span><span class="p">:</span> <span class="kc">text</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。<a href="https://www.51cto.com/article/750173.html">这篇文章</a>给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。<a href="https://www.51cto.com/article/750173.html">这篇文章</a>给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。</p>
 <p>每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换</p>
-<pre tabindex="0"><code>**** -&gt; ** **
-^(space) -&gt; (null)
-^\n -&gt; (null)
-\) -&gt; )\n #执行若干次以控制段间距
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**** -&gt; ** **
+</span></span><span class="line"><span class="cl">^(space) -&gt; (null)
+</span></span><span class="line"><span class="cl">^\n -&gt; (null)
+</span></span><span class="line"><span class="cl">\) -&gt; )\n #执行若干次以控制段间距
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 
   </div>
 
