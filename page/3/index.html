@@ -196,23 +196,6 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>我所见到的时代
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>我们的前人关于其时代已经说了很多，其中关于古代的看法不会有太多分歧，关于现代的看法则莫衷一是。现代是很复杂的一个东西，汪民安老师编过一个叫《现代性》的小册子，对有关现代性的看法作了很好的概括。里面收录了各位哲学家、社会学家、文学家的观点，并通过作者自己的洞察力梳理了各种思想的关联。然而“俱往矣，数风流人物，还看今朝”，我们的时代是什么样子，最终还是要由我们说出口，把这项任务交给思想史上死去的灵魂，是很不负责任的行为。
-确定性与迷茫 确定性
-大众伦理 一个留心观察我们的时代的人，首先会注意到这是一个分裂与对立的时代。人们的关系靠一种不加解释的共识被维系起来——这不算是当下的特点，因为几乎所有时代都是这样，但是这种共识与个性的张力在当今显得尤其强大。我们被要求具有个性，但这种个性只不过是对某种粗浅符号的认同。创造力成了一种可疑的东西——我们真的能够去创造新的东西吗？我们所生产的一切，要么是异己的、奄奄一息的东西，要么是过去已有事物的回响。种种流行仿佛早产的婴儿，病弱而早夭，传统则像是垂暮的老者，成了老而不死、徘徊在每个人心中的幽灵。个性不再是个人在历史中的坐标，而只是用来确证自我的一个框架。像西美尔所说“用一种完全拒绝与他人相通的方式来确证自我”
-我们并不信任这种个性，所以常常用平庸和个性的丧失来形容这个时代。从众是安全的——这种根植在人身体里的古老记忆成了我们追求确定性的工具。只要跟随大众，就不会出现大的错误，也可以避免道德上的煎熬。真正的个性是危险的，所以它只能被欣赏，而很少被实践，就像电影里从不会现实发生的刺激场面。
-工作伦理 去工作——工作在这个时代是生活的代名词，我们可以不生活，但不能不工作。
-孤独与对话 对话是一种奇妙的</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-04-26 00:00:00 +0000 UTC'>April 26, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 我所见到的时代" href="https://bubblegits.github.io/post/essay/%E6%88%91%E6%89%80%E8%A7%81%E5%88%B0%E7%9A%84%E6%97%B6%E4%BB%A3/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2>荷尔德林诗的阐释
     </h2>
   </header>
@@ -302,6 +285,22 @@ In North America and Europe, water used in industry accounts for nearly half of 
   </div>
   <footer class="entry-footer"><span title='2023-02-01 00:00:00 +0000 UTC'>February 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 雅思作文练习" href="https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>修麦克风
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
+之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
+打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
+瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
+上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-17 00:00:00 +0000 UTC'>January 17, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 修麦克风" href="https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
