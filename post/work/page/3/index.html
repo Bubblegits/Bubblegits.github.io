@@ -218,6 +218,20 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>更改账户名路径为英文
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
+管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win&#43;R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
+大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-20 00:00:00 +0000 UTC'>December 20, 2022</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 更改账户名路径为英文" href="https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>biochemistry experiment
     </h2>
   </header>
@@ -248,18 +262,6 @@ hugo中默认的时间参数有如下几种
   </div>
   <footer class="entry-footer"><span title='2022-12-15 00:00:00 +0000 UTC'>December 15, 2022</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>所以我放弃了linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>人是铁逼是钢，一顿不装憋得慌，在装逼动力的驱使之下，我又开始研究在电脑上装linux。</p>
-  </div>
-  <footer class="entry-footer">张珙</footer>
-  <a class="entry-link" aria-label="post link to 所以我放弃了linux" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

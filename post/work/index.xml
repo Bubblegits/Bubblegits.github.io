@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>所以我放弃了linux</title>
+      <link>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</guid>
+      <description>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
+由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
+Windows卿卿如晤：吾今以此书与汝永别矣！</description>
+    </item>
+    
     <item>
       <title>爬邺架</title>
       <link>https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/</link>
@@ -186,15 +197,6 @@ hugo中默认的时间参数有如下几种
 1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
 1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。</description>
-    </item>
-    
-    <item>
-      <title>所以我放弃了linux</title>
-      <link>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86linux/</guid>
-      <description>人是铁逼是钢，一顿不装憋得慌，在装逼动力的驱使之下，我又开始研究在电脑上装linux。</description>
     </item>
     
   </channel>
