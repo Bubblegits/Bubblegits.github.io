@@ -675,6 +675,24 @@ b. 某个特定的原因必然导致某个特定的结果
 纳尔齐斯再见到歌尔德蒙时，已经在自己的神圣道路上走了许久。他的内心完全安宁和谐，凭借思维，他能认识人们的善良与丑恶，也能沉稳地担负起责任。但是他重新见到歌尔德蒙之时，发现他在诗性的道路上已经快要达到尽头，不由得羡慕他的勇敢与激情。最让纳尔齐斯感到震撼乃至动摇的，是歌尔德蒙面对死亡的安然。纳尔齐斯从没想过死亡——因为他的精神与死亡无关，苦修给他的身体带来了坚韧的耐力，然而即使他的肉体死亡了，也并非紧要之事，作为一个伟大的学者，他的事迹、他的书卷无疑会流传下去。但是，面对歌尔德蒙，这并不能使他感到坦然。纳尔齐斯该如何死？或者不如换一个问题，纳尔齐斯怎样活着？被困在永恒之中的纳尔齐斯，与从俗世闯入永恒的歌尔德蒙，这就是黑塞笔下的故事。</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D1/</guid>
+      <description>1 1 2 wc -l test_command.gtf wc -c test_command.gtf 2 1 grep &amp;#39;^chr_&amp;#39; test_command.gtf | grep &amp;#39;gene_id &amp;#34;YDL248W&amp;#34;&amp;#39; 3 1 sed &amp;#39;s/chr_/chromosome_/g&amp;#39; test_command.gtf | awk &amp;#39;{print $1, $3, $4, $5}&amp;#39; 4 1 2 awk &amp;#39;{temp = $1; $1 = $2; $2 = temp; print $0}&amp;#39; test_command.gtf | sort -n -k4,4 -k5,5 &amp;gt; result.gtf 5 1 chomd ug=rwx o=r </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D2/</guid>
+      <description>1 1 grep -w &amp;#39;XI&amp;#39; 1.gtf | sort -k5,5 -n | tail -n 10 2 1 awk &amp;#39;{print $3}&amp;#39;| sort | uniq -c 3 1 grep -v -w &amp;#39;IV&amp;#39; 1.gtf | awk &amp;#39;$7 ==&amp;#34;-&amp;#34;{print $0}&amp;#39; | awk &amp;#39;BEGIN{size=0;}$3 ==&amp;#34;CDS&amp;#34;{ len=$5-$4 + 1; size += len; print &amp;#34;Size:&amp;#34;, size } &amp;#39; | tail -n 2 4 1 grep -v -w &amp;#39;XV&amp;#39; 1.gtf | awk &amp;#39;BEGIN{size=0;}$3 ==&amp;#34;gene&amp;#34;{ len=$5-$4 + 1; size += len; {print $10} print &amp;#34;Size:&amp;#34;, size } &amp;#39; | tail -n 10 5 1 cat $1.</description>
+    </item>
+    
     
   </channel>
 </rss>

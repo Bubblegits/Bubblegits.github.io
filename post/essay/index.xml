@@ -101,5 +101,23 @@
 所以我们不能构造出一种完全稳定的状态来包裹自己，任何一种成见都包含冲突，继而也有被打破的危险。自由意味着对这种冲突的认识，意味着“战战兢兢，如临深渊，如履薄冰。”</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D1/</guid>
+      <description>1 1 2 wc -l test_command.gtf wc -c test_command.gtf 2 1 grep &amp;#39;^chr_&amp;#39; test_command.gtf | grep &amp;#39;gene_id &amp;#34;YDL248W&amp;#34;&amp;#39; 3 1 sed &amp;#39;s/chr_/chromosome_/g&amp;#39; test_command.gtf | awk &amp;#39;{print $1, $3, $4, $5}&amp;#39; 4 1 2 awk &amp;#39;{temp = $1; $1 = $2; $2 = temp; print $0}&amp;#39; test_command.gtf | sort -n -k4,4 -k5,5 &amp;gt; result.gtf 5 1 chomd ug=rwx o=r </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bubblegits.github.io/post/essay/%E8%A7%A3%E9%87%8D2/</guid>
+      <description>1 1 grep -w &amp;#39;XI&amp;#39; 1.gtf | sort -k5,5 -n | tail -n 10 2 1 awk &amp;#39;{print $3}&amp;#39;| sort | uniq -c 3 1 grep -v -w &amp;#39;IV&amp;#39; 1.gtf | awk &amp;#39;$7 ==&amp;#34;-&amp;#34;{print $0}&amp;#39; | awk &amp;#39;BEGIN{size=0;}$3 ==&amp;#34;CDS&amp;#34;{ len=$5-$4 + 1; size += len; print &amp;#34;Size:&amp;#34;, size } &amp;#39; | tail -n 2 4 1 grep -v -w &amp;#39;XV&amp;#39; 1.gtf | awk &amp;#39;BEGIN{size=0;}$3 ==&amp;#34;gene&amp;#34;{ len=$5-$4 + 1; size += len; {print $10} print &amp;#34;Size:&amp;#34;, size } &amp;#39; | tail -n 10 5 1 cat $1.</description>
+    </item>
+    
   </channel>
 </rss>
