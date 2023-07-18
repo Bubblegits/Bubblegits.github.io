@@ -9,7 +9,10 @@
 <meta name="keywords" content="">
 <meta name="description" content="人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
 由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
-Windows卿卿如晤：吾今以此书与汝永别矣！">
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. ">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.7c7524e44e3fa7dc1856b5eeddc73e6ba99bdd35abf450f259c871d6249b913c.css" integrity="sha256-fHUk5E4/p9wYVrXu3cc&#43;a6mb3TWr9FDyWchx1iSbkTw=" rel="preload stylesheet" as="style">
@@ -100,11 +103,14 @@ code.has-jax {
 </style><meta property="og:title" content="所以我放弃了Windows" />
 <meta property="og:description" content="人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
 由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
-Windows卿卿如晤：吾今以此书与汝永别矣！" />
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 
-<meta property="article:modified_time" content="2023-07-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-18T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
@@ -112,7 +118,10 @@ Windows卿卿如晤：吾今以此书与汝永别矣！" />
 <meta name="twitter:title" content="所以我放弃了Windows"/>
 <meta name="twitter:description" content="人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
 由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
-Windows卿卿如晤：吾今以此书与汝永别矣！"/>
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. "/>
 
 
 <script type="application/ld+json">
@@ -147,15 +156,15 @@ Windows卿卿如晤：吾今以此书与汝永别矣！"/>
   "@type": "BlogPosting",
   "headline": "所以我放弃了Windows",
   "name": "所以我放弃了Windows",
-  "description": "人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着\n由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。\nWindows卿卿如晤：吾今以此书与汝永别矣！",
+  "description": "人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着\n由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。\nWindows卿卿如晤：吾今以此书与汝永别矣！\nWSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。\n首先在命令行中做相关设置\n1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. ",
   "keywords": [
     
   ],
-  "articleBody": "人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着\n由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。\nWindows卿卿如晤：吾今以此书与汝永别矣！\n",
-  "wordCount" : "4",
+  "articleBody": "人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着\n由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。\nWindows卿卿如晤：吾今以此书与汝永别矣！\nWSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。\n首先在命令行中做相关设置\n1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. ",
+  "wordCount" : "45",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-07-07T00:00:00Z",
+  "dateModified": "2023-07-18T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "张珙"
@@ -252,19 +261,46 @@ Windows卿卿如晤：吾今以此书与汝永别矣！"/>
     <h1 class="post-title">
       所以我放弃了Windows
     </h1>
-    <div class="post-meta"><span title='2023-07-07 00:00:00 +0000 UTC'>July 7, 2023</span>&nbsp;·&nbsp;张珙
+    <div class="post-meta"><span title='2023-07-18 00:00:00 +0000 UTC'>July 18, 2023</span>&nbsp;·&nbsp;张珙
 
 </div>
     
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#wsl" aria-label="WSL">WSL</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
 
   <div class="post-content"><p>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着</p>
 <blockquote>
 <p>由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。</p>
 </blockquote>
 <p>Windows卿卿如晤：吾今以此书与汝永别矣！</p>
-<h2 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h2>
-
+<h2 id="wsl">WSL<a hidden class="anchor" aria-hidden="true" href="#wsl">#</a></h2>
+<p>其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“<em>Microsoft</em> ♥ <em>Linux</em>”。</p>
+<p>首先在命令行中做相关设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</span></span><span class="line"><span class="cl">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</span></span><span class="line"><span class="cl"># Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images.
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 
   </div>
 

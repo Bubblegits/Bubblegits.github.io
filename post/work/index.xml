@@ -10,16 +10,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>所以我放弃了Windows</title>
       <link>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/</guid>
       <description>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
 由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
-Windows卿卿如晤：吾今以此书与汝永别矣！</description>
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. </description>
     </item>
     
     <item>
