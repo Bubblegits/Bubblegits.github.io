@@ -218,6 +218,41 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Wasatch食单
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在盐湖城住上了带厨房的宿舍，再加上美国外面吃饭太贵，有条件也有动力自己做菜。把琢磨出的一些经验记录在下面。
+肉类 刚来没几天在Walmart买了一包鸡翅，本来以为是预处理好的，结果吃着总是有腥味。泡盐水和焯水都可以去腥，原理是让肉里的肌红蛋白变性，所以肉类焯水要冷水下锅，不必煮开，否则表面的肌纤维会收紧，把血水锁在里面。鸡翅和鸡腿焯水之前要划深一点的刀口，不然肉内外口感差别很大。烧肉记得多煮一段时间。肉一般比较难熟，至少要有十分钟，鸡蛋也至少要煮五分钟。
+调料 </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0000 UTC'>September 24, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to Wasatch食单" href="https://bubblegits.github.io/post/work/wasatch%E9%A3%9F%E5%8D%95/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>用户你说句话啊
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
+Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
+在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &#34;false&#34;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
+windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
+1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
+mac上可以用.command文件做批处理，比如这个git.command
+1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0000 UTC'>September 24, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 用户你说句话啊" href="https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>所以我放弃了Windows
     </h2>
   </header>
@@ -268,52 +303,6 @@ pdf阅读 koreader可以裁剪pdf并且自定义翻页方式，这样不需要�
   </div>
   <footer class="entry-footer"><span title='2023-06-14 00:00:00 +0000 UTC'>June 14, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 墨水屏阅读" href="https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>影音相关
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>缘起 闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
-观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了（2023年6.1更新：已经有NAS了，见《赛博扬子居记》） 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
-kodi配置 kodi的前身是xbmc（Xbox media center），官网和插件库国内访问网络质量堪忧，即使扶墙也常常出问题，所以找个镜像比较方便。清华大学的镜像站用着总觉得没有中科大的顺手。访问Index of /xbmc/ (ustc.edu.cn)，在releases目录下下载安装包，安装完成后还要注意配置插件库，官方的插件库访问常常出问题，可以选择用镜像的插件库，或者用官方库霸王硬上弓，多试几次也能装上。
-kodi中可以通过PVR IPTV simple client来读m3u源，github上有一个可直连的m3u库https://github.com/fanmingming/live。iptv源可以搭配epg（electric program guide）使用，epg提供节目单从而在部分iptv源上实现回看功能。
-kodi变成中文需要先把字体改为arial base，否则无法显示汉字。
-iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来看，参考https://mozz.ie/posts/extracting-iptv-live-streams/
-影视信息刮削 此外kodi的一个非常拉风的功能是电影海报墙，通过刮削器获取电影简介、年代、海报、类型等相关信息并展示出来，有逼不装天理难容。但是kodi自带的刮削器常常遇到网络问题，可以选择3.x版本的tmm（tiny media manager）在影视文件夹中生成nfo文件，用kodi读取nfo文件从而生成海报墙。tmm的使用方法一目了然，除了刮削之外还可以用来整理电影文件，我的习惯是把电影放在以导演命名的文件夹下。
-与tmm相似的还有一个好东西叫Movie_Data_Capture,功能不便多说，一用便知。
-音乐库 人的生命是有限的，但折腾的事业是无限的，折腾完电影之后接着折腾音乐。mac上的music软件一大问题就是语言显示混乱，整理自己导入的音乐表现倒是不错，可以给专辑搜索封面，aiff格式用起来也挺顺耳。</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-01 00:00:00 +0000 UTC'>June 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 影音相关" href="https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>赛博扬子居记
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>节物风光不相待，桑田碧海须臾改。
-昔时金阶白玉堂，即今惟见青松在。
-寂寂寥寥扬子居，年年岁岁一床书。
-独有南山桂花发，飞来飞去袭人裾。
-最近仓鼠症症状日渐加深，硬盘里存了一大堆学习资料，东一个西一个找起来很麻烦，于是就想着给它整理一下。正好室友装台式机，多出来了一个机箱，又从一个同学手上花800淘来了二手的主板和CPU，有了这些，要配齐一台简陋但能用的电脑花不了多少钱。专门用来做储存的话NAS（Net Attached Storage）再好不过了，偶然想到卢照邻在《长安古意》里写“寂寂寥寥扬子居，年年岁岁一床书”，鄙人的硬盘里学习资料何止一床，自比扬子倒也恰当。扬子名雄，其人在《汉书》有传。
-雄少而好学，不为章句，训诂通而已，博览无所不见。为人简易佚荡，口吃不能剧谈，默而好深湛之思，清静亡为，少耆欲，不汲汲于富贵，不戚戚于贫贱，不修廉隅以徼名当世。家产不过十金，乏无儋石之储，晏如也。
-值得一提的是，卢照邻这首诗或许还是宝玉的丫鬟袭人名字的出处。《红楼梦》第二十三回贾政问起袭人
-贾政问道：“袭人是何人？”王夫人道：“是个丫头。”贾政道：“丫头不管叫个什么罢了，是谁这样刁钻，起这样的名字？”王夫人见贾政不自在了，便替宝玉掩饰道：“是老太太起的。”贾政道：“老太太如何知道这话，一定是宝玉。”宝玉见瞒不过，只得起身回道：“因素日读诗，曾记古人有一句诗云：‘花气袭人知昼暖’。因这个丫头姓花，便随口起了这个名字。”王夫人忙又道：“宝玉，你回去改了罢。老爷也不用为这小事动气。”贾政道：“究竟也无碍，又何用改。只是可见宝玉不务正，专在这些秾词艳赋上作工夫。”
-“花气袭人知昼暖”出自陆游《村居喜书》，当然不是所谓“秾词艳赋”，如果说袭人出自《长安古意》“飞来飞去袭人裾”，倒还比较合理，毕竟其中有“鸦黄粉白车中出，含娇含态情非一。妖童宝马铁连钱，娼妇盘龙金屈膝。”这样的句子。这样说来，袭人这名字也很不单纯，查“裾”字的意思，有的说是前襟有的说是后襟，总之是上衣的衣襟，而卢照邻诗中说的是桂花袭人裾，这里的袭只能按钻入的意思理解，袭人裾也就是钻入人的衣襟。至于钻入谁的衣襟，如何钻如衣襟，书中已经写明，不在话下。不过又想到诗中“昔时金阶白玉堂，即今惟见青松在”，“袭人”二字或许也是曹雪芹埋下的伏笔。
-装机 从同学手里收的板U是微星B450M&#43;AMD R5 3600，我又花了点钱给它配了两根4G内存条，一条256G固态，一张古董GT710显卡和一个400W的电源，总共加起来也就一千二三的样子。其实固态完全没必要，当时高估了校园网的速度想着做一个缓存。装机的时候有个失误，应该先把东西在主板上安好再拧主板螺丝，毕竟这个显卡也不大。宿舍地方还是太小，有点局促，把主板放到机箱里之后很多操作不好做。按部就班把电脑装好，一按开机键发现主板上CPU的debug灯亮着，重装CPU无果，网上找了一通发现短暂停电后恢复供电可以解决问题，不知道是什么原因，不过电脑总算是可以正常运行了。
-安装黑群晖（Xpenology） 黑群最活跃的社区是Xpenology论坛，版本选择上可以参考https://xpenology.com/forum/topic/13333-tutorialreference-6x-loaders-and-platforms/，各个版本的差别主要在于是否支持NVMe缓存，CPU最大线程数等等。由于我没有集显，就选择了6.1.7版本的3617x。装系统首先要有个boot，也就是引导文件，论坛里最著名的引导文件是一个叫Jun的老哥制作的，安装教程参考https://xpenology.com/forum/topic/7973-tutorial-installmigrate-dsm-52-to-61x-juns-loader/。制作好引导U盘之后猛按del进入bios，把u盘设在boot第一位（不设可能也行，毕竟只有这一个boot），之后就可以远程操作了。
-网络相关问题 其实搭建过程中最折腾的是网络，倒逼我把各种网络知识学了一遍。配置ip地址的时候要用子网掩码确定网段，不在一个网段里的计算机不能相互通信，这点是最重要的，只要能把局域网上的计算机ping通，剩下的都好说。关于子网掩码的知识可以参考https://zh.wikipedia.org/wiki/%E5%AD%90%E7%BD%91。群晖初始化的原理估计是boot后的主机会在网络局域网上广播特定的包，synology assistant可以将其识别从而与之建立联系。由于寝室的有线网孔是坏的，我花40买了一个交换机，把自己的几台电脑连在一起。6.1.7版本的黑群晖比较老，支持的无线网卡大多停产了，淘了一张二手的D-link DWA-140显卡，下载最快也只有1Mb/s，不过够用就好，下载速度慢正好保护硬盘，秉持黄老之道，轻傜薄赋，与盘休息。
-初步使用 西数的紫盘是CMR，价格也不贵，买了一个装上，群晖会在每个硬盘里都装一套系统，所以硬盘要初始化一下，设置raid类型和分区等等，之后就可以使用了。在套件中心安装docker套件，按网上教程在docker中挂载transmission用来做BT下载，还挂载了calibre-web套件来管理书籍。calibre-web干净清爽，上传便捷，数据安全，支持书籍格式转换，几乎让我戒掉了买纸质书的陋习。有些epub可能没有封面，在其中加入cover.xhtml文件并输入
-1 2 3 4 5 6 7 &lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; xml:lang=&#34;en&#34;&gt;&lt;head&gt;&lt;title&gt;Cover&lt;/title&gt;&lt;style type=&#34;text/css&#34; title=&#34;override_css&#34;&gt; @page {padding: 0pt; margin:0pt} body { text-align: center; padding:0pt; margin: 0pt; } div { margin: 0pt; padding: 0pt; } &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt; &lt;img src=&#34;cover.jpg&#34; alt=&#34;cover&#34;/&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 然后添加封面图片为cover.jpg即可。
-寝室网络建设 前面说了，寝室的有线网孔只有一个是好的，无线校园网又不是很稳定，有了nas正好可以做软路由提升网络质量。和靠网口的室友交涉了一下，他惧怕我的淫威，给我让出了一块放主机的地方，接下来我还得在软件上接着折腾。</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-30 00:00:00 +0000 UTC'>March 30, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 赛博扬子居记" href="https://bubblegits.github.io/post/work/%E8%B5%9B%E5%8D%9A%E6%89%AC%E5%AD%90%E5%B1%85%E8%AE%B0/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

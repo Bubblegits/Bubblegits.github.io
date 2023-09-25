@@ -215,6 +215,41 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Wasatch食单
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在盐湖城住上了带厨房的宿舍，再加上美国外面吃饭太贵，有条件也有动力自己做菜。把琢磨出的一些经验记录在下面。
+肉类 刚来没几天在Walmart买了一包鸡翅，本来以为是预处理好的，结果吃着总是有腥味。泡盐水和焯水都可以去腥，原理是让肉里的肌红蛋白变性，所以肉类焯水要冷水下锅，不必煮开，否则表面的肌纤维会收紧，把血水锁在里面。鸡翅和鸡腿焯水之前要划深一点的刀口，不然肉内外口感差别很大。烧肉记得多煮一段时间。肉一般比较难熟，至少要有十分钟，鸡蛋也至少要煮五分钟。
+调料 </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0000 UTC'>September 24, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to Wasatch食单" href="https://bubblegits.github.io/post/work/wasatch%E9%A3%9F%E5%8D%95/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>用户你说句话啊
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
+Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
+在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &#34;false&#34;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
+windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
+1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
+mac上可以用.command文件做批处理，比如这个git.command
+1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0000 UTC'>September 24, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 用户你说句话啊" href="https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>酒吧长谈
     </h2>
   </header>
@@ -316,38 +351,6 @@ code.has-jax {
   </div>
   <footer class="entry-footer"><span title='2023-08-28 00:00:00 +0000 UTC'>August 28, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 鹿川有许多粪" href="https://bubblegits.github.io/post/reading/2023-08-29-09-26-08-%E9%B9%BF%E5%B7%9D%E6%9C%89%E8%AE%B8%E5%A4%9A%E7%B2%AA/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>所以我放弃了Windows
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
-由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
-Windows卿卿如晤：吾今以此书与汝永别矣！
-WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
-首先在命令行中做相关设置
-1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0000 UTC'>July 18, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 所以我放弃了Windows" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>爬邺架
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0000 UTC'>July 6, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 爬邺架" href="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
