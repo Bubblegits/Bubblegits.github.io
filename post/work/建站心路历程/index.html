@@ -120,7 +120,7 @@ hugo中默认的时间参数有如下几种
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-12-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-06T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
@@ -175,11 +175,11 @@ hugo中默认的时间参数有如下几种
   "keywords": [
     
   ],
-  "articleBody": "这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)\nGit搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all \u0026\u0026 git reset --hard origin/main\t。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行\n1 git config --global alias.cm '!f() { git add -A \u0026\u0026 git commit -m \"$@\"; }; f' 从myblog仓库推到bubblegits仓库出问题多半是因为token过期了，少数情况是workflow文件里的包版本太低，更新一下就好。\n初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo\nconfig文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。\n关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。\n时间 逝者如斯夫！不舍昼夜。\nhugo中默认的时间参数有如下几种\n1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。\n默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：\n1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。\n现在我的config里读取时间的方式是\n1 2 3 4 5 frontmatter: date: - publishDate - lastmod - createDate 数学公式 参考在Hugo中使用MathJax，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。\n页面布局 Hugo中，一个主题各部分的html样式位于themes\\layouts\\文件夹下，可以直接把layouts文件夹复制到根目录修改，hugo会自动根据根目录下的样式输出html。\n增加诗词api就是通过更改papermod主题的layouts\\partials\\home_info.html 和同一目录下的extended_head.html样式完成的，具体可以参考今日诗词的文档。其他脚本也都放在这个html里。\n通过assets/css目录可以编辑css，其中的main.css很常用。同样也把assets文件夹移到根目录。借助不蒜子Busuanzi可以统计访问量与阅读量，参考这里。\n字体 改字体的教程参考web引入和本地引入。网站目前使用的标题字体是Trajan和方正字迹-吕建德行楷繁体，其实书体坊的兰亭体更合我心，但这个字体没有标点支持。正文字体是Courier和霞鹜文楷。中文字体会遇上加载速度的问题，解决方法参考这个文章或者直接使用字蛛。Adobe fonts上的字体很贴心，给出了直接可用的web font，参考这里。\n留言功能 hugo生成的是静态网页，搭建留言系统需要外部数据库的协助，好在有一些现成的评论系统可供选择。Waline是一个在Valine基础上进行了安全性升级的系统，提供傻瓜式教学，注意在vercel中部署的时候要使用魔法。papermod主题在layouts文件夹里提供了专门的comments.html来控制评论区格式，需要在params.yaml里写入comments: true才会加载。\nvercel提供了能够直连的ip地址，但是vercel.app这个域名被墙了，所以需要另外拿一个自己的域名指向其ip。我参照这篇教程在namesilo上买了个域名并借助cloudflare将其托管。刚买了域名手有点痒，顺便给自己的博客换了域名，参考github给出的教程，生成的CNAME文件可以放到博客源文件夹的static目录下，在publish操作中，static目录中的文件会被转移到输出文件夹的根目录中。\n关于DNS和cloudflare的各种知识可以在cloudflare learning center上找到。在域名购买和DNS record配置上有许多问题需要注意，比如一般不在一级域名上设置CNAME，再比如说github这段善意的提醒：\nMake sure you add your custom domain to your GitHub Pages site before configuring your custom domain with your DNS provider. Configuring your custom domain with your DNS provider without adding your custom domain to GitHub could result in someone else being able to host a site on one of your subdomains.\nhtml和CSS 进一步的网页设计需要掌握html和CSS两种语言，这一部分准备单开新的博客文章介绍。\n",
-  "wordCount" : "166",
+  "articleBody": "这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)\nGit搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all \u0026\u0026 git reset --hard origin/main\t。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行\n1 git config --global alias.cm '!f() { git add -A \u0026\u0026 git commit -m \"$@\"; }; f' 从myblog仓库推到bubblegits仓库出问题多半是因为token过期了，少数情况是workflow文件里的包版本太低，更新一下就好。\n初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo\nconfig文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。\n关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。\n时间 逝者如斯夫！不舍昼夜。\nhugo中默认的时间参数有如下几种\n1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。\n默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：\n1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。\n现在我的config里读取时间的方式是\n1 2 3 4 5 frontmatter: date: - publishDate - lastmod - createDate 2023年1月6日：突然出现了一个问题，网页中本该显示时间的部分直接显示了html源代码，初步判断是post_meta.html的问题。\n数学公式 参考在Hugo中使用MathJax，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。\n页面布局 Hugo中，一个主题各部分的html样式位于themes\\layouts\\文件夹下，可以直接把layouts文件夹复制到根目录修改，hugo会自动根据根目录下的样式输出html。\n增加诗词api就是通过更改papermod主题的layouts\\partials\\home_info.html 和同一目录下的extended_head.html样式完成的，具体可以参考今日诗词的文档。其他脚本也都放在这个html里。\n通过assets/css目录可以编辑css，其中的main.css很常用。同样也把assets文件夹移到根目录。借助不蒜子Busuanzi可以统计访问量与阅读量，参考这里。\n字体 改字体的教程参考web引入和本地引入。网站目前使用的标题字体是Trajan和方正字迹-吕建德行楷繁体，其实书体坊的兰亭体更合我心，但这个字体没有标点支持。正文字体是Courier和霞鹜文楷。中文字体会遇上加载速度的问题，解决方法参考这个文章或者直接使用字蛛。Adobe fonts上的字体很贴心，给出了直接可用的web font，参考这里。\n留言功能 hugo生成的是静态网页，搭建留言系统需要外部数据库的协助，好在有一些现成的评论系统可供选择。Waline是一个在Valine基础上进行了安全性升级的系统，提供傻瓜式教学，注意在vercel中部署的时候要使用魔法。papermod主题在layouts文件夹里提供了专门的comments.html来控制评论区格式，需要在params.yaml里写入comments: true才会加载。\nvercel提供了能够直连的ip地址，但是vercel.app这个域名被墙了，所以需要另外拿一个自己的域名指向其ip。我参照这篇教程在namesilo上买了个域名并借助cloudflare将其托管。刚买了域名手有点痒，顺便给自己的博客换了域名，参考github给出的教程，生成的CNAME文件可以放到博客源文件夹的static目录下，在publish操作中，static目录中的文件会被转移到输出文件夹的根目录中。\n关于DNS和cloudflare的各种知识可以在cloudflare learning center上找到。在域名购买和DNS record配置上有许多问题需要注意，比如一般不在一级域名上设置CNAME，再比如说github这段善意的提醒：\nMake sure you add your custom domain to your GitHub Pages site before configuring your custom domain with your DNS provider. Configuring your custom domain with your DNS provider without adding your custom domain to GitHub could result in someone else being able to host a site on one of your subdomains.\nhtml和CSS 进一步的网页设计需要掌握html和CSS两种语言，这一部分准备单开新的博客文章介绍。\n",
+  "wordCount" : "167",
   "inLanguage": "en",
   "datePublished": "2022-12-14T00:00:00Z",
-  "dateModified": "2022-12-15T00:00:00Z",
+  "dateModified": "2024-01-06T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "张珙"
@@ -276,7 +276,7 @@ hugo中默认的时间参数有如下几种
     <h1 class="post-title">
       建站心路历程
     </h1>
-    <div class="post-meta">&lt;span title=&#39;2022-12-15 00:00:00 &#43;0000 UTC&#39;&gt;December 15, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙
+    <div class="post-meta">&lt;span title=&#39;2024-01-06 00:00:00 &#43;0000 UTC&#39;&gt;January 6, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙
 
 </div>
     
@@ -381,7 +381,8 @@ hugo中默认的时间参数有如下几种
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">createDate</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="数学公式">数学公式<a hidden class="anchor" aria-hidden="true" href="#数学公式">#</a></h2>
+</div><p>2023年1月6日：突然出现了一个问题，网页中本该显示时间的部分直接显示了html源代码，初步判断是<code>post_meta.html</code>的问题。</p>
+<h2 id="数学公式">数学公式<a hidden class="anchor" aria-hidden="true" href="#数学公式">#</a></h2>
 <p>参考<a href="https://note.qidong.name/2018/03/hugo-mathjax/">在Hugo中使用MathJax</a>，简单几步就可以实现数学公式支持。有些地方不知道为什么会出问题，比如积分号和花括号，凑合看吧。</p>
 <h2 id="页面布局">页面布局<a hidden class="anchor" aria-hidden="true" href="#页面布局">#</a></h2>
 <p>Hugo中，一个主题各部分的html样式位于<code>themes\layouts\</code>文件夹下，可以直接把<code>layouts</code>文件夹复制到根目录修改，hugo会自动根据根目录下的样式输出html。</p>
@@ -406,15 +407,10 @@ hugo中默认的时间参数有如下几种
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>biochemistry experiment</span>
-  </a>
-  <a class="next" href="https://bubblegits.github.io/post/reading/%E6%96%B0%E8%80%81%E8%91%A1%E8%90%84%E9%85%92%E9%97%AE%E9%A2%98/">
+  <a class="next" href="https://bubblegits.github.io/post/reading/%E5%AF%BC%E8%AF%BB%E6%8B%89%E5%BA%B7/">
     <span class="title">Next »</span>
     <br>
-    <span>新老葡萄酒问题</span>
+    <span>导读拉康</span>
   </a>
 </nav>
 
