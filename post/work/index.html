@@ -236,7 +236,8 @@ code.has-jax {
 网络相关问题 其实搭建过程中最折腾的是网络，倒逼我把各种网络知识学了一遍。配置ip地址的时候要用子网掩码确定网段，不在一个网段里的计算机不能相互通信，这点是最重要的，只要能把局域网上的计算机ping通，剩下的都好说。局域网中计算机的IP地址通常是由DHCP协议分配的，在windows系统下可以通过arp -a指令来查看。关于子网掩码的知识可以参考https://zh.wikipedia.org/wiki/%E5%AD%90%E7%BD%91。群晖初始化的原理估计是boot后的主机会在网络局域网上广播特定的包，synology assistant可以将其识别从而与之建立联系。由于寝室的有线网孔是坏的，我花40买了一个交换机，把自己的几台电脑连在一起。6.1.7版本的黑群晖比较老，支持的无线网卡大多停产了，淘了一张二手的D-link DWA-140显卡，下载最快也只有1Mb/s，不过够用就好，下载速度慢正好保护硬盘，秉持黄老之道，轻傜薄赋，与盘休息。
 初步使用 西数的紫盘是CMR，价格也不贵，买了一个装上，群晖会在每个硬盘里都装一套系统，所以硬盘要初始化一下，设置raid类型和分区等等，之后就可以使用了。在套件中心安装docker套件，按网上教程在docker中挂载transmission（端口9091）用来做BT下载，还挂载了calibre-web套件来管理书籍。calibre-web干净清爽，上传便捷，数据安全，支持书籍格式转换，几乎让我戒掉了买纸质书的陋习。有些epub可能没有封面，在其中加入cover.xhtml文件并输入
 1 2 3 4 5 6 7 &lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; xml:lang=&#34;en&#34;&gt;&lt;head&gt;&lt;title&gt;Cover&lt;/title&gt;&lt;style type=&#34;text/css&#34; title=&#34;override_css&#34;&gt; @page {padding: 0pt; margin:0pt} body { text-align: center; padding:0pt; margin: 0pt; } div { margin: 0pt; padding: 0pt; } &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt; &lt;img src=&#34;cover.jpg&#34; alt=&#34;cover&#34;/&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 然后添加封面图片为cover.jpg即可。
-一些问题 用了一段时间后遇到了无法安装套件的问题，尝试了很久也没法解决，另外docker上的transmission插件时不时和tracker断开连接。而且本来电脑有一个PCLe接口的无线网卡，由于驱动不支持也用不上，以致网速如此之慢。用了一段时间后决定改用</p>
+一些问题 用了一段时间后遇到了无法安装套件的问题，尝试了很久也没法解决，另外docker上的transmission插件时不时和tracker断开连接。而且本来电脑有一个PCLe接口的无线网卡，由于驱动不支持也用不上，以致网速如此之慢。用了一段时间后决定改用ubuntu
+转投Ubuntu 在清华</p>
   </div>
   <footer class="entry-footer">&lt;span title=&#39;2024-01-08 00:00:00 &#43;0000 UTC&#39;&gt;January 8, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 赛博扬子居记" href="https://bubblegits.github.io/post/work/%E8%B5%9B%E5%8D%9A%E6%89%AC%E5%AD%90%E5%B1%85%E8%AE%B0/"></a>
