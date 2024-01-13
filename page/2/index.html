@@ -196,6 +196,23 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>导读拉康
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>按：引文依重庆大学出版社2014年版《导读拉康》，肖默·霍恩 著，李新雨 译
+为什么是拉康？ 由此, 精神分析批评的对象，便不再是去搜寻阳具的象征， 也不再是去解释哈姆雷特之所以迟迟不报他的杀父之仇是因为 他压抑了自己对其母亲的性欲望 （见:Jones, 1949）,而是透过语 言去分析无意识的欲望在文本中借以表现出来的方式。因此, 拉康派批评的焦点 , 便不是集中在人物或作者的无意识之上 , 而 是集中在文本自身乃至文本与读者之间的关系上
+1 想象界 萨特指出， 自我意识在本质上即是“ 虚无” ( nothing), 而 自我则是由主体知觉到的世界上的一个对象。
+黑格尔曾把自我意识的出现解释为从自然到文化的过渡， 或者换一种说法， 即从动物存在( animal existence)到人类存在 ( human existence)的过渡，科耶夫对黑格尔的这种解释特别感 兴趣。根据黑格尔的观点， 自我意识是通过自我反思的活动发 展起来的， 自体性( self-hood )便由此过程呈现出来。为了人类 主体性的显现，一个人不仅必须意识到其自身的区分性， 而且还 必须被另一个人承认是一个人类主体。黑格尔曾把这一过程概 述为“统治与奴役” (Lordship and Bondage)的辩证法 ，而“ 主奴” (Master / Slave)辩证法则是更常见的说法。在此说明中，两个 主体—亦即 “主人”与“ 奴隶” ——皆明显受困于一种涉及承 认的相互关系。为了使主人作为一个主体, 就其本身而言，他必 须得到奴隶的承认;反过来，奴隶之所以知道自己是一个奴隶， 也是因为他被主人承认是一个奴隶。
+科耶夫认为，此种辩证法在本质上是一场有关欲望与承认的博弈。主人和奴隶都为了获得承认而受困于这场相互的斗 争:其中任何一方都无法离开他者的承认而存在，而同时他者也 需要获得对其自身的承认
+在 6 个月至 18 个月之 间，婴儿开始认出其自身在镜子中的形象(这并非意指一面真 正的镜子，而是意指任何反射性的表面,例如:母亲的面庞)，而 且该过程通常也都伴随着快乐。孩子迷恋上其自体的形象，并 试图去控制且摆弄这个形象。尽管孩子最初混淆了自己的形象 与现实，不过 ，它很快就会认识到此一形象具有其自体的性质， 并最终接受该形象就是其自体的形象——亦即:其自身的映像...</p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2023-11-22 00:00:00 &#43;0000 UTC&#39;&gt;November 22, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 导读拉康" href="https://bubblegits.github.io/post/reading/%E5%AF%BC%E8%AF%BB%E6%8B%89%E5%BA%B7/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>现象学导论
     </h2>
   </header>
@@ -263,21 +280,6 @@ notebookcheck这个网站上有针对各种硬件的专门文章，对其表现�
   </div>
   <footer class="entry-footer">&lt;span title=&#39;2023-10-13 00:00:00 &#43;0000 UTC&#39;&gt;October 13, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 10月13日" href="https://bubblegits.github.io/post/essay/10%E6%9C%8813%E6%97%A5/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>LaTeX使用指南
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2023年9月25日更新：最近从LaTeX转用Typst，方便许多，故下面这篇文章的历史使命已经完成了。
-自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
-一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 \documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1....</p>
-  </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-09-25 00:00:00 &#43;0000 UTC&#39;&gt;September 25, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to LaTeX使用指南" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

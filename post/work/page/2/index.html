@@ -218,6 +218,23 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>所以我放弃了Windows
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
+由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. </p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2023-07-18 00:00:00 &#43;0000 UTC&#39;&gt;July 18, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 所以我放弃了Windows" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>爬邺架
     </h2>
   </header>
@@ -284,22 +301,6 @@ In North America and Europe, water used in industry accounts for nearly half of 
   </div>
   <footer class="entry-footer">&lt;span title=&#39;2023-02-01 00:00:00 &#43;0000 UTC&#39;&gt;February 1, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 雅思作文练习" href="https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>修麦克风
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
-之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
-打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
-瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
-上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。</p>
-  </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-01-17 00:00:00 &#43;0000 UTC&#39;&gt;January 17, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 修麦克风" href="https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
