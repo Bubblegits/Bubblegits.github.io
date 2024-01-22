@@ -196,21 +196,6 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>LaTeX使用指南
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2023年9月25日更新：最近从LaTeX转用Typst，方便许多，故下面这篇文章的历史使命已经完成了。
-自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
-一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 \documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1....</p>
-  </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-09-25 00:00:00 &#43;0000 UTC&#39;&gt;September 25, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to LaTeX使用指南" href="https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2>用户你说句话啊
     </h2>
   </header>
@@ -333,6 +318,23 @@ mac上可以用.command文件做批处理，比如这个git.command
   </div>
   <footer class="entry-footer">&lt;span title=&#39;2023-08-28 00:00:00 &#43;0000 UTC&#39;&gt;August 28, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 鹿川有许多粪" href="https://bubblegits.github.io/post/reading/2023-08-29-09-26-08-%E9%B9%BF%E5%B7%9D%E6%9C%89%E8%AE%B8%E5%A4%9A%E7%B2%AA/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>所以我放弃了Windows
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
+由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
+Windows卿卿如晤：吾今以此书与汝永别矣！
+WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI的话别的需求基本上可以满足，印证了那句“Microsoft ♥ Linux”。
+首先在命令行中做相关设置
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. </p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2023-07-18 00:00:00 &#43;0000 UTC&#39;&gt;July 18, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 所以我放弃了Windows" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
