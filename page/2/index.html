@@ -166,12 +166,12 @@ Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只�
 1 git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 从myblog仓库推到bubblegits仓库出问题多半是因为token过期了，少数情况是workflow文件里的包版本太低，更新一下就好。
 初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
 config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
+这样一来，config.yaml里写入的是SITE.变量，如footer.html中的SITE.copyright变量值根据这一文件里的cpoyright: 张正瑞这一行确定，而param.yaml里写入的是SITE.params.变量
 关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
 时间 逝者如斯夫！不舍昼夜。
 hugo中默认的时间参数有如下几种
 1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
-默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
-1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。...</p>
+默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：...</p>
   </div>
   <footer class="entry-footer"><span title='2024-01-06 00:00:00 +0000 UTC'>January 6, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
@@ -264,7 +264,7 @@ notebookcheck这个网站上有针对各种硬件的专门文章，对其表现�
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://bubblegits.github.io/">张珙的博客</a></span>
+    <span>© 张正瑞</span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

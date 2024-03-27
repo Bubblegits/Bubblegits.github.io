@@ -11,6 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>© 张正瑞</copyright>
     <atom:link href="https://bubblegits.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
