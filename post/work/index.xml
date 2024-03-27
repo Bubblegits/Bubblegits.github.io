@@ -5,17 +5,18 @@
     <link>https://bubblegits.github.io/post/work/</link>
     <description>Recent content in 奇技淫巧 on 张珙的博客</description>
     <image>
+      <title>张珙的博客</title>
       <url>https://bubblegits.github.io/papermod-cover.png</url>
       <link>https://bubblegits.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://bubblegits.github.io/post/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>赛博扬子居记</title>
       <link>https://bubblegits.github.io/post/work/%E8%B5%9B%E5%8D%9A%E6%89%AC%E5%AD%90%E5%B1%85%E8%AE%B0/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E8%B5%9B%E5%8D%9A%E6%89%AC%E5%AD%90%E5%B1%85%E8%AE%B0/</guid>
       <description>节物风光不相待，桑田碧海须臾改。
 昔时金阶白玉堂，即今惟见青松在。
@@ -36,12 +37,10 @@
 首先在boot启动后选择安装menu里面光标移到install ubuntu，不要点回车，点e，进入grub编辑页面。
 把linux选项后面 quiet splash &amp;mdash; 改为 quite splash nomodeset</description>
     </item>
-    
     <item>
       <title>建站心路历程</title>
       <link>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/</guid>
       <description>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;amp;&amp;amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
@@ -55,24 +54,20 @@ hugo中默认的时间参数有如下几种
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
 1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。</description>
     </item>
-    
     <item>
       <title>LaTeX使用指南</title>
       <link>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
       <description>2023年9月25日更新：最近从LaTeX转用Typst，方便许多，故下面这篇文章的历史使命已经完成了。
 自从用了latex之后，夜夜笙歌，乐不思蜀，再也不想看word一眼。我终于可以告别莫名奇妙的自动编号，不知道哪里冒出来的横线竖线和牵一发而动全身的图片，而去清晰明了，一切尽在掌控的世界生活了。下面是latex使用过程中我总结出的一些经验。内容主要参考CTAN: Comprehensive TeX Archive Network，尤其是其中的lshort-zh-cn.pdf - 清华大学云盘 (tsinghua.edu.cn)。所有操作都是在Overleaf, Online LaTeX Editor中用XeLaTeX完成的。
 一套模板 经过短期摸索，弄出了一套日常适用的模板，记在下面
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 \documentclass{article} \usepackage[utf8]{inputenc} \usepackage{geometry}[a4paper, total={2in, 3in}] \usepackage{graphicx} \usepackage{caption} \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 标注参考文献为上标 \usepackage{xeCJK} \setCJKmainfont{AR PL UKai CN} % 修改字体 \newCJKfontfamily\songti{AR PL SungtiL GB} \usepackage{wrapfig} \linespread{1.</description>
     </item>
-    
     <item>
       <title>用户你说句话啊</title>
       <link>https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/</guid>
       <description>随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
 Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
@@ -85,12 +80,10 @@ homebrew常用的命令是brew install和brew info，大部分包如果安上之
 mac上可以用.command文件做批处理，比如这个git.command
 1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &amp;#34;refine&amp;#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &amp;#34;refine&amp;#34; git push exit 之后要用chmod +x filename赋可执行权限。</description>
     </item>
-    
     <item>
       <title>所以我放弃了Windows</title>
       <link>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/</guid>
       <description>人是铁逼是钢，一顿不装憋得慌，出于装逼的迫切需要本来想在电脑上试试linux，但糟糠之妻不下堂，windows陪伴我多年，我对它毕竟感情深厚，难以割舍。 春宵苦短，好景不长，天有不测风云，暑期学习报了一门讲生物信息学的课，教材上赫然写着
 由于历史原因，就生物信息数据分析而言，linux操作系统的软件生态比windows好得多，有很多生物信息的工具只支持linux系统。所以熟悉linux操作系统的使用对于学习生物信息是很有必要的。
@@ -99,24 +92,20 @@ WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI
 首先在命令行中做相关设置
 1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart # Deployment Image Servicing and Management (DISM.exe) is a command-line tool that can be used to service and prepare Windows images. </description>
     </item>
-    
     <item>
       <title>爬邺架</title>
       <link>https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/</link>
       <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/</guid>
       <description>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown+css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
 1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
 1 &amp;lt;img src=&amp;#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&amp;#34; alt = &amp;#34;douyin&amp;#34; style=&amp;#34;height:400px;width:300px&amp;#34;/&amp;gt; 下面这段是设置粗体颜色和标题位置的
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown+CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。</description>
     </item>
-    
     <item>
       <title>墨水屏阅读</title>
       <link>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</link>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E9%98%85%E8%AF%BB/</guid>
       <description>大家都知道我最喜欢的电子产品就是墨水屏了，现在我已经拥有墨水屏的手机，墨水屏的阅读器，墨水屏的显示器，但我还没有墨水屏的内裤&amp;hellip;
 我确实有墨水屏的手机，墨水屏的阅读器和墨水屏的显示器，对我娇嫩的双眼来说，墨水屏比LCD屏幕友好很多。而且热心的网友也开发了很多工具帮助提升墨水屏的使用体验，多数发布在mobilereads论坛。
@@ -130,12 +119,10 @@ koreader的高亮可以直接导出成markdown，不过格式不好看，可以�
 pdf阅读 koreader可以裁剪pdf并且自定义翻页方式，这样不需要太大的屏幕也能阅读pdf，不过在OCR上遇到了一点困难。github上开源的ocrmypdf用的是tesseract引擎，效果差强人意，以一个字体略有锯齿的《当代英雄》扫描版序言第一段为例
 不论 什么 书 ， 序 言 总 是 写 于 最 后 而 放 在 最 前。 它 或 者 用 来 说 明 写 作 的 目的 ， 或 者 作为 对 批评 的 答辩 。 但 读者一 般 并 不 关心 道德 的 宣扬 和 刊物 上 的 攻击 ， 因 此 他 们 不 看 序言 。 这 种 情况 很 使 人 感到 遗 盾 ， 特 别 是 在 我 们 这 儿 。 我 们 的 公众 还 很天 真 单纯 ，如 果 寅 言 的 结尾 不 来上几 句 训 论 ， 他们就 看 不 懂 。 他 们 体会不 出 戏 让 , 感 党 不 到 讽刺 ; 他 们 简直没有 受过 很 好 的 教育 。 他 们 还 不 知道 ， 在 规 规矩 抢 的 社会 里 和 规 规 矩 矩 的 书本 里 ,不 可 以 公然 误 骂 , 而 且 现代 文明 已 发 明了 一 种 比 误 骂 更 锋利 的 武器 一 一 这 种 武器 可 以 说 是 无 形 的 ， 因 此 也更 加 致命 ， 往 往 在 甜言蜜语 的 掩盖 下 给 人 以 无 法 抵抗 的 切中 要 害 的 打击 。 我 们 的 公众 好 象 外 省 居民 ， 昕 了 两 个 敢 对 宫廷 的 外 交官 的 谈话 ， 就 满 以 为 他们 由 于 私 谊 深厚 而 各 自在 欺骗 本 国 政府 。</description>
     </item>
-    
     <item>
       <title>影音相关</title>
       <link>https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/</guid>
       <description>缘起 闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
 观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了（2023年6.1更新：已经有NAS了，见《赛博扬子居记》） 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
@@ -147,22 +134,18 @@ iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来�
 与tmm相似的还有一个好东西叫Movie_Data_Capture,功能不便多说，一用便知。
 音乐库 人的生命是有限的，但折腾的事业是无限的，折腾完电影之后接着折腾音乐。mac上的music软件一大问题就是语言显示混乱，整理自己导入的音乐表现倒是不错，可以给专辑搜索封面，aiff格式用起来也挺顺耳。</description>
     </item>
-    
     <item>
       <title>雅思作文练习</title>
       <link>https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/</guid>
       <description>IELTS11 Test1 writing Task1 The figure shows water consumption for industrial, agricultural and domestic proposes in six areas around the world: North America, South America, Europe, Africa, Central Asia and Southeast Asia.
 In North America and Europe, water used in industry accounts for nearly half of total water consumption, and agriculture take up one-third of water. The percentage of domestic water consumption is around 15 percent, which ranks high among all the areas.</description>
     </item>
-    
     <item>
       <title>修麦克风</title>
       <link>https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/</link>
       <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/</guid>
       <description>电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
 之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
@@ -170,21 +153,17 @@ In North America and Europe, water used in industry accounts for nearly half of 
 瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
 上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。</description>
     </item>
-    
     <item>
       <title>biochemistry II</title>
       <link>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/</guid>
       <description>Chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction).</description>
     </item>
-    
     <item>
       <title>概率论与数理统计复习</title>
       <link>https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/</guid>
       <description>概率论是关于情形与概率对应的理论，随机变量描述了一个具体情形与数的对应，而分布函数（或者密度函数）描述了一个数与概率的对应。
 关于赌金分配问题 抛硬币，正面甲得一分，反面乙得一分，先得10分者获胜，现抛出8次正面，7次反面，问各自获胜概率为多少？
@@ -205,27 +184,22 @@ $$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
 注意X，Y相关并不意味着在联合密度函数的两个自变量之间存在函数关系。
 分布函数与密度函数 我从How is the minimum of a set of random variables distributed上找到一个关于分布函数和密度函数的有趣例子：</description>
     </item>
-    
     <item>
-      <title>更改账户名路径为英文</title>
+      <title>更改Windows用户名路径为英文</title>
       <link>https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/</guid>
       <description>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
 管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win+R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
 大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</description>
     </item>
-    
     <item>
       <title>biochemistry experiment</title>
       <link>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/</link>
       <pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/</guid>
       <description>Preparation &amp;amp; Separation The target protein used in biochemistry experiment usually comes from three kinds of source, natural tissue, recombinant protein in certain expression system or cell culture.
 Our research target may be natural or recombinant. If it is natural, the situation looks like this: I have some cell, and things I want (proteins, nuclear acid, etc.) are in the cell. I don&amp;rsquo;t need to be a genius to see that I need to break the cell.</description>
     </item>
-    
   </channel>
 </rss>

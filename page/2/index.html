@@ -11,7 +11,7 @@
 <meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.7c7524e44e3fa7dc1856b5eeddc73e6ba99bdd35abf450f259c871d6249b913c.css" integrity="sha256-fHUk5E4/p9wYVrXu3cc&#43;a6mb3TWr9FDyWchx1iSbkTw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8bb9dab08d3f290dfd612952112a48e90dc64ca4c2674c782c00deb6cd8e3f34.css" integrity="sha256-i7nasI0/KQ39YSlSESpI6Q3GTKTCZ0x4LADets2OPzQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://bubblegits.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://bubblegits.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://bubblegits.github.io/favicon-32x32.png">
@@ -39,7 +39,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -58,55 +58,15 @@
         }
 
     </style>
-</noscript>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" /> 
-
-<link rel="stylesheet" href="https://use.typekit.net/tyn8lot.css">
-
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"><script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[\[','\]\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style><meta property="og:title" content="张珙的博客" />
+</noscript><meta property="og:title" content="张珙的博客" />
 <meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bubblegits.github.io/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/>
+<meta property="og:url" content="https://bubblegits.github.io/" />
+<meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png" />
 <meta name="twitter:title" content="张珙的博客"/>
 <meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
 
@@ -162,8 +122,6 @@ code.has-jax {
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -199,7 +157,7 @@ code.has-jax {
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>建站心路历程
+    <h2 class="entry-hint-parent">建站心路历程
     </h2>
   </header>
   <div class="entry-content">
@@ -215,13 +173,13 @@ hugo中默认的时间参数有如下几种
 默认date的表示方式为“yyyy-MM-dd”，其他方式表达的时间不会被识别。对于一个post页面而言，date是一个环境变量，.md文件开头写的date:是一个frontmatter变量，环境里的date默认读取frontmatter里的date，但也可以通过config.yaml使其读取其他变量，如：
 1 2 3 4 frontmatter: date: - myDate - :default 表示优先读取myDate，若不存在则按默认方式顺序读取。...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2024-01-06 00:00:00 &#43;0000 UTC&#39;&gt;January 6, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <footer class="entry-footer"><span title='2024-01-06 00:00:00 +0000 UTC'>January 6, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>导读拉康
+    <h2 class="entry-hint-parent">导读拉康
     </h2>
   </header>
   <div class="entry-content">
@@ -235,13 +193,13 @@ hugo中默认的时间参数有如下几种
 拉康坚持认为，自我是被建立在整体性与主人性的虚幻形象的基础之上的 , 而且正是自我的功能在维持着这种一 致性与主人性的幻象。
 “在对他者形象的认同与对他者形象的 原始竞争之间存在着一种原初的冲突，正是这种冲突开启了一 种辩证的过程，从而把自我与更加复杂的社会情境联系了起 来” （ Benvonuto &amp; Kennedy 1986：58） o 为了存在, 一 必须得 到一个他者的承认。然而，这就意味着我们的形象 （等同于我 们自身） 是由他者的目光 （ gaze） 来中介的。于是,他者就成为了 我们自身的保证人。我们既依赖于他者作为我们自身存在的保 证人, 同时又是对这个他者充满仇恨的竞争者...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-11-22 00:00:00 &#43;0000 UTC&#39;&gt;November 22, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <footer class="entry-footer"><span title='2023-11-22 00:00:00 +0000 UTC'>November 22, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 导读拉康" href="https://bubblegits.github.io/post/reading/%E5%AF%BC%E8%AF%BB%E6%8B%89%E5%BA%B7/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>现象学导论
+    <h2 class="entry-hint-parent">现象学导论
     </h2>
   </header>
   <div class="entry-content">
@@ -256,13 +214,13 @@ hugo中默认的时间参数有如下几种
 但是，我们可以就要素本身来思考和谈论要素：我们可以不用 提及声音而谈论音调，可以不用提及颜色而谈论色调，也可以不用 提及眼睛而谈论视觉。当我们单单就要素本身来考察要素的时候， 它们就是抽象物 （abstracta）
 例如，这种人为的问题在有关心灵及其对象的问题上就出现 过。如同我们在第一章看到的那样，人们常常会把心灵当作是一个 自我封闭的领域，也就是说，当作一个实体性部分，能够从其自然 地而且是本质上所属的世界背景那里分离开。然后人们会问，心灵 如何能够来到它自己的外面，如何能够弄清楚世界上正在发生什么 事情。但是心灵不可能以这种方式被分离出来；心灵是世界和世上 万物的一个要素；心灵本质上与它的对象相关联。...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-11-22 00:00:00 &#43;0000 UTC&#39;&gt;November 22, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <footer class="entry-footer"><span title='2023-11-22 00:00:00 +0000 UTC'>November 22, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 现象学导论" href="https://bubblegits.github.io/post/reading/%E7%8E%B0%E8%B1%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>落幕
+    <h2 class="entry-hint-parent">落幕
     </h2>
   </header>
   <div class="entry-content">
@@ -270,13 +228,13 @@ hugo中默认的时间参数有如下几种
 观众们是最为无助的。在落幕之前，他们可以完全忘记自我，可这时他们关注的对象从舞台上回到了自身之中，重担再一次压在了肩上。这个时候最为通常的做法是表现地成熟而坚强，暗示自己刚刚的戏剧不过是现实生活中的小小调剂，说自己“虽不能至，心向往之”，也就算了。如果我们能把精神与现实完全区分开来，那也就不会遭到这么多痛苦，可是我们无法做到，所以转而要求戏剧与现实生活的同构。然而你从戏剧里只能看出一种令人厌恶的生活——实际上根本没有什么让你感到满意的生活方式，可是戏剧仍然对无趣的现实恋恋不舍。
 观看一个故事比起参与一个故事多了一个层级。如果说戏剧与生活同构，那么我们也可以说是在观看生活，并且借此摆脱生活。</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-10-29 00:00:00 &#43;0000 UTC&#39;&gt;October 29, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <footer class="entry-footer"><span title='2023-10-29 00:00:00 +0000 UTC'>October 29, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 落幕" href="https://bubblegits.github.io/post/essay/%E8%90%BD%E5%B9%95/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>探店奥利凡德
+    <h2 class="entry-hint-parent">探店奥利凡德
     </h2>
   </header>
   <div class="entry-content">
@@ -291,7 +249,7 @@ notebookcheck这个网站上有针对各种硬件的专门文章，对其表现�
 最后还是在为数不多的AMD笔记本里选择了thinkpad T14 gen4，毕竟原来thinkpad的键盘手感和小红点我都很喜欢，而且
 实际上，当然是魔杖在选择它的巫师呢。</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-10-15 00:00:00 &#43;0000 UTC&#39;&gt;October 15, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙</footer>
+  <footer class="entry-footer"><span title='2023-10-15 00:00:00 +0000 UTC'>October 15, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 探店奥利凡德" href="https://bubblegits.github.io/post/essay/%E6%8E%A2%E5%BA%97%E5%A5%A5%E5%88%A9%E5%87%A1%E5%BE%B7/"></a>
 </article>
 <footer class="page-footer">
@@ -317,23 +275,14 @@ notebookcheck这个网站上有针对各种硬件的专门文章，对其表现�
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><footer class="footer">
-  <span>
-    本作品由
-    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">张珙
-    </span>
-    采用
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">4.0 国际许可协议
-    </a>
-    进行许可。
-    <br />
-    <div align="center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-      <img alt="知识共享许可协议" style="border-width:0" align="center"src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-      </a>
-    </div>
-  </span>
-    
+</a>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" /> 
+
+<link rel="stylesheet" href="https://use.typekit.net/tyn8lot.css">
+
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 
 <script>
     let menu = document.getElementById('menu')

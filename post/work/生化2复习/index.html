@@ -10,7 +10,7 @@
 <meta name="description" content="Chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction).">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.7c7524e44e3fa7dc1856b5eeddc73e6ba99bdd35abf450f259c871d6249b913c.css" integrity="sha256-fHUk5E4/p9wYVrXu3cc&#43;a6mb3TWr9FDyWchx1iSbkTw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8bb9dab08d3f290dfd612952112a48e90dc64ca4c2674c782c00deb6cd8e3f34.css" integrity="sha256-i7nasI0/KQ39YSlSESpI6Q3GTKTCZ0x4LADets2OPzQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://bubblegits.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://bubblegits.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://bubblegits.github.io/favicon-32x32.png">
@@ -36,7 +36,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -55,57 +55,17 @@
         }
 
     </style>
-</noscript>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" /> 
-
-<link rel="stylesheet" href="https://use.typekit.net/tyn8lot.css">
-
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"><script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[\[','\]\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style><meta property="og:title" content="biochemistry II" />
+</noscript><meta property="og:title" content="biochemistry II" />
 <meta property="og:description" content="Chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/" /><meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png"/><meta property="article:section" content="post" />
+<meta property="og:url" content="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%962%E5%A4%8D%E4%B9%A0/" />
+<meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png" />
+<meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-01-08T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-01-08T00:00:00+00:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png"/>
-
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png" />
 <meta name="twitter:title" content="biochemistry II"/>
 <meta name="twitter:description" content="Chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction)."/>
 
@@ -149,7 +109,7 @@ code.has-jax {
   "articleBody": "Chapter 13 Bioenergetics and biochemical reaction types Recall a basic formula that defines free energy G in chemistry: $$ ΔG = ΔH-TΔS $$ where $H$ stands for enthalpy and $S$ stands for entropy. As for biological reactions, they happen in a relatively fixed range of temperature, and $ΔS$ is determined by reactants and products, so $ΔG$ value changes according to ΔH (which is often determined by the amount of ATP in the reaction).\ncatabolism represents the reactions that release energy, and anabolism includes reactions that needs energy.\nI’m not quite sure whether Schrödinge is the first one to raise the idea that the stuff of life is related to enthalpy. Anyway, this idea do seems amazing, but we will leave the amazing things for the physicists and go on with boring things.\nOur chemistry lesson didn’t finish here. Remember that $$ ΔG=ΔG^{‘o}+RTlnQ\\ ΔG^{‘o}=-RTlnK $$ Mind that $ΔG^{‘o}$ used in biology is measured under pH=7 environment. Since the reaction is affected by concentration of reactants and products, the $ΔG$ in real situation should be calculated as above. Approximately speaking, ΔG^{‘o}=-30.5kJ/mol can tell us whether a reaction releases free energy or receives free energy, but this is not accurate because the concentration is far from $1mol/L$.\nWe take a look at the famous reaction: $$ ATP+H_2O\\rightarrow ADP+Pi,ΔG^{‘o}=-30.5kJ/mol\\ 1cal=4.184J $$ This is an exergonic reaction (this fancy word means that this reaction releases energy).\nThough ATP act as source or storage of energy in most reactions, certain muscle tissue takes a different way. They store energy through phosphocreatine.\nPhosphocreatine act as a stable Pi carrier. Through this reaction, the cells control its ATP level in moderate concentration. A resting human consumes about 40 kg of ATP in 24 hours. Another interesting fact is that luciferase, an enzyme that produces fluorescent in fireflies consumes little ATP so they can measure ATP in a few picomoles (10^-12mol)\nNow we will talk about oxidation and reduction. Chemistry tell us that $$ ΔE=E_o-E_r\\ E=E^o+\\frac{RT}{nF}ln\\frac{[acceptor]}{[donor]} $$ and the connection between $ΔG$ and $ΔE$ is shown in this equation $$ ΔG=-nFΔE $$ Some of the energy released in reactions is directly stored in ATP, but other reaction (especially those that generate NADH, NADPH, and FADH_2) will create electrochemical potential and indirectly leads to ATP synthesis. Note that the vitamin form of NAD and NADP is niacin.\nA whole picture of metabolism looks like this:\nChapter 14 Glycolysis, the pentose phosphate pathway and the catabolism of glycogen Glycolysis is every biology student’s first love (or first hate). In glycolysis, glucose is degraded to pyruvate. Before talking about this metabolic pathway, first we have a look at the metabolic fate fo glucose\nAn important method to figure out a pathway (in ancient time) is radioactive label. This is highly restricted these days because there are many people doing experiment today\nImportant steps in glycolysis are the first step, the third step, the sixth step and the last step (in which ATP synthesis or consumption is involved).\nThe first step of glycolysis looks like this\nATP molecule needs Mg^2+ to neutralize the negative charge. So the reactant is actually MgATP^2- instead of ATP^4-. The cells phosphorylate these intermediates for good reasons. The charged molecule (due to phosphorylation) can’t diffuse out of the cell and the phosphoryl group will also help enzymes to recognize its substrate.\nThe third step of glycolysis is here:\nPFK-1 is a key enzyme in glycolysis regulation. We will talk about this later.\nThe sixth step is\nWhich is the only step in glycolysis that involves NADH synthesis. The next step of it is the so-called substrate level phosphorylation step contributes to ATP net gain in glycolysis, which makes it extremely important for anaerobic organisms.\nFinally the last step\nanother substrate level phosphorylation.\nA quick way to deal with the pyruvate is fermentation. In human beings, fermentation mainly happen in muscle.\nThe lactate is then transported to liver and go through gluconeogensis. The whole procedure that turns glycogen to lactate then back to glycogen is called the Cori Cycle.\nAnother fermentation pathway is ethanol fermentation.\nNow let’s come back to glycolysis. Not only glucose goes through glycolysis, other hexocarbonhydrate also goes through this pathway.\nSo where does glucose come from? Starch will be digested by Salivary α-amylase and Pancreatic α-amylase. Lactose intolerance syndrome, a common syndrome in Asian people, is caused by lack of lactase which turns lactase into D-galactose and D-glucose. The degradation of starch and glycogen involves phosphorolysis:\nGlucose 1-phosphate is then turned to Glucose 6-phosphate (by glucose 1-phosphate mutase) and joins Glycolysis.\nRibose is synthesized through pentose pathway, the overall reaction of this pathway is $$ Glucose-6-phosphate + 2NADP^+ + H_2O \\rightarrow ribose-5-phosphate +2NADPH+ CO2 + 2H^+ $$\nThis is not a important pathway so I don’t want to pay much attention to it (especially in the exam week)\nNow we take a look at the regulation of glycolysis. Recall some basic approaches of regulation through the following figure:\nThree regulatory enzymes in glycolysis are\nHexokinase Phosphofructokinase-1 (PFK-1) Pyruvate kinase They all catalyze exergonic and irreversible reactions, and regulated by allosteric (别构) effectors. The most important one among them is PFK-1\nCitrate is a chemical synthesized in TCA circle and can be transported to cytosol, fructose 2,6-bisphosphate has a long story and we will talk about it later.\nGlycogen breakdown is also regulated (Molecules are born free but everywhere is in chains). The glycogen phosphorylase has two isozymes, one in liver and one in muscle, but they are regulated similarly with different effectors:\nChapter 16 Citric acid cycle This is the hall of fame in metabolism because the intermediates in this cycle will appear many times in other metabolic pathways. CAC is also called tricarboxylic acid cycle (TCA) or Krebs cycle (named after the one who discovered it), occurs in eight steps in mitochondria.\nThe whole cycle can be divided into three stages. In stage I, all the fuel molecules (including pyruvate) are turned into acetyl-CoA. In the second stage, acetyl-CoA is completely oxidized. And in the last stage, oxidation phosphorylation happens.\nWe may intentionally bind TCA to glycolysis, but in fact TCA can be the downstream of many pathways.\nYet here we mainlly focus on how Acetyl-CoA is oxidized from pyruvate. This reaction is catalyzed by an enzyme called PDH, with the help of TPP.\nThe long lipoyllysine(硫辛酰赖氨酸) chain is responsible for the switch between different catalytic subunits.\nSo now we have acetyl-CoA, and we can start the cycle. The whole cycle looks like this.\nI don’t have much to say about this cycle. Just note the steps that synthesize GTP(ATP), NADH and FADH_2.\nThe complete oxidation of glucose generates 30 or 32 ATP, depending on the way of NADPH transfer.\nRemember that TCA is the hall of fame, the members in it has their own shining points.\nThis raises a question: where does the intermediates come from? A main source is from pyruvate or phosphoenolpyruvate.\nPyruvate needs biotin as a coenzyme.\nAccording to the usual procedure, now we should start talking about the regulation of TCA. We just take a look at the irreversible steps. They follow the general rule of negative feedback: inhibited by products and stimulated by ingredients.\nCa^2+ serves as the stimulation signal in muscle, so many catabolic reactions will be stimulated by Ca^2+.\nAnother cycle called glyoxylate cycle(乙醛酸循环), not present in vertebrates, can convert acetate into carbonhydrade. It uses two acetyl-CoA to synthesize a succinate.\nThe difference between this cycle and TCA lies in isocitrate lyase and malate synthase.\nChapter 17 Fatty Acid Catabolism Fatty acid is highly reduced and hydrophobic, so it releases much energy in oxidation and don’t need water in storage. Besides, it is quite stable and must be activated to join a chemical reaction.\nWe take in lots of triacylglycerol everyday. For dietary triacylglycerol, it will first be emulsified by bile salt (胆盐), then go through lipase digestion to be absorbed to intestinal mucosa (肠粘膜), reconverted into triacylglycerol and packed in chylomicrons.\nTriacylglycerol is digested again in capillary (毛细血管), then stored in myocyte or adipocyte.\nAs you can imagine, to distribute the stored triacylglycerol in adipocyte, hormone signals are needed. The hormones needed here are mainly epinephrine and glucagon which release the fatty acid to the target tissue. Glycerol can be converted to D-Glyceraldehyde 3-phosphate and join glycolysis.\nThe important thing here is the degradation of fatty acid, a long chain molecule. The earliest researches on this uses synthetic label, which is a technology before radioisotopes.\nFatty acids are first oxidized on the outer membrane of mitochondria.\nThe activation step will produce fatty acyl-CoA and this step requires ATP. In fact acyl-CoA is a common form of activated molecule, if we remember the acetyl-CoA in TCA.\nThe fatty acid-CoA is transported to the mitochondria through carnitine(肉毒碱) catalyzed by carnitine acyltransferase II. The transport process plays a role in regulation of fatty acid catabolism.\nFor odd-number fatty acid, once fatty acid-CoA enters the mitochondria matrix, β oxidation can begin. This oxidation procedure consists of four reactions:\nAn interesting fact is that acyl-CoA dehydrogenase has three isozymes for different length of fatty acid. This is actually a common pattern in metabolic reactions to introduce a carbonyl function in the β position (生成β酮酸的酰基化合物).\nWe can calculate the total number of ATP yield from palmitoyl-CoA, a 16-carbon fatty acid, a fatty acid that goes through 7 times of β-oxidation. The whole reaction looks like this: $$ Palmitoyl-CoA+7CoA+7FAD^++7NAD^++7H_2O\\rightarrow 8acetyl-CoA+7FADH_2+NADH+7H^+ $$ And the total ATP synthesis is calculated as follows.\nPalmitoyl is a fully saturated fatty acid, but remember that we also have unsaturated fatty acid. If we take a look at the β-oxidation process, we will find out that double bond will be generated, but in trans configuration. So we need isomerase to turn the cis conformation in unsaturated fatty acid into trans conformation.\nAs for polyunsaturated fatty acid, we need both isomerase and reductase.\nFor odd number fatty acid, when it go through β-oxidation, a three-carbon propionyl-CoA will be synthesized in the last step. The propionyl-CoA (in help of coenzyme B12) will be converted into succinyl-CoA and then join the TCA.\nAs we have already talked about before, the rate of β-oxidation is regulated by the entering rate of fatty acyl-CoA. An important regulator of this process is malonyl-CoA(丙二酸辅酶A).\nPlants have mitochondria(I thought that they don’t have mitochondria until i just googled it), but fatty acid oxidation mainly happens in peroxisomes(过氧化物酶体). The energy, however, will be released as heat, not ATP. And the acetyl-CoA generated will go through glyoxylate cycle, gluconeogenesis and be turned into glucose. Another interesting fact about β-oxidation in peroxisomes is that the whole process is catalyzed by one big complex.\nNext we will talk about ketone bodies. These chemicals are synthesized by acetyl-CoA in liver.\nThe reverse reaction of this can happen extrahepatically, so we can consider ketone bodies as a transport form of acetyl-CoA.\nChapter 18 Amino acid oxidation and the production of urea This catabolism pathway mainly happens in animals. The amino acids can be fully oxidized or converted to other storable fuels.\nFirst we take a look at the fate of dietary proteins. They are digested by enzymes like pepsin, trypsin, chymotrypsin and carboxypeptidase into small peptide chains.\nThe special thing about amino acid is that it has amino group. The amino group will be reused or excreted as ammonia (NH^4+), urea (CO(NH2)2) or uric acid. Carbon skeleton will be degraded through similar steps as fatty acid.\nFor vertebrates, liver is the major site of amino acid degradation. Amino groups are carried to liver mitochondria through Gln, Glu and Ala (from muscle) for further processing.\nThis figure shows how amino acids release their amino group. Ala (in help of α-ketoglutarate) and glutamine is turned into glutamate . Then glutamate takes off its amino group and turn back to α-ketoglutarate.\nPHP facilitate the transamination reactions. These reactions transfer the amino groups in amino acids to α-ketoglutarate, synthesizing glutamate. Glutamate collects free ammonia, turn to glutamine and goes to liver.\nFor human beings, the NH4+ in liver is converted into urea\nThis is another important cycle in metabolism, linked with TCA.\nThe urea cycle is controlled through the allosteric regulation. N-acetylglutamate stimulates carbamoyl phosphate synthetase I. There is also gene-level regulation. Genetic defects of the urea production can lead to hyperammonemia (高血氨症) and brain damage. These diseases can be treated through ingesting certain chemicals like benzoate.\nThe carbon skeletons of amino acid can be turned into different metabolism intermediates (based on their unique structure).\nSome simple transformations can be carried out by a removal of amino group\nAmino acid product Ala pyruvate Asp oxaloacetate Glu α-ketoglutarate Asn Asp Gln Glu Leu Ile and Val actually goes through a process that looks quite like β-oxidation. Note that these amino acids can’t be converted into glucose.\nChapter 19 Oxidation phosphorylation and photophosphorylation In oxidative phosphorylation, electron flows from NADH or FADH_2 to O2. On the other hand, in photophosphorylation, electron flows from H2O to NADPH.\nThough the flow of electrons seem different, they actually have similar mechanism. They create a proton gradient and synthesize ATP with it.\noxidation phosphorylation Oxidation phosphorylation happens in mitochondria. This guy looks like this:\nPay special attention to what the inner membrane contains, for this is where the oxidation phosphorylation happens. This inner membrane are folded into cristae and have large area.\nAs we have talked about before, the electrons from NADH and FADH2 will be released and transported to O2. In the whole process, four (really complicated) complex are involved and Coenzyme Q (also called Ubiquinone) often act as a mobile carrier of electron or proton. Some prosthetic (tool-like) groups are hemed and iron-sulfur clusters. The Fe here can act as a one-electron carrier.\nHow do we know the order of the complexes in the respiratory chain? A basic principle is that electrons transfer from low E to high E, we take a look at this.\nWe can also study this problem through specific inhibitors. Actually these inhibitors are still used in modern days. That means they may occur in the final exam.\nSo now we can start talking about the complexes. The first one is called NADH dehydrogenase. We can tell from the name that it receives electrons from NADH. It pumps four protons consuming one molecule of NADH. This guy looks like this.\nClever you will ask now: “How does FADH2 enter the respiratory chain?” They enter through succinate dehydrogenase (remember that turning succinate into fumarate is the only step that synthesize FADH2), and this enzyme doesn’t pump porton.\nWe see heme here.\nThese two enzymes all give their electrons to coenzyme Q, and the story of electrons goes on.\nQH2 now gives its electrons to cytochrome c through cytochrome bc1 complex, also called complex III. This guy consists of three subunits: cytochrome b, an Fe-S protein and cytochrome c1.\nNote that Q is and two-electron carrier, and cyt c is an one-electron carrier. The mechanism is quite interesting, detail can be found in figure 19-12 of the textbook.\nFinally, the electrons of Cyt c are transferred to O2 on cytochrome oxidase (complex IV).\nFour electrons are needed to oxidize a molecule of O2 to H2O, and 4H+ is pumped with it.\nNow we can take a thorough look at the respiratory chain.\nEach molecule of NADH will cause the chain to pump out 10 H+, for FADH2, the number is 6.\nIn early times, scientists have found that the electron transfer is coupled with ATP synthesize. Neither reaction occurs without the other. To explain this phenomenon, chemiosmotic model was proposed. This model introduced proton moving force.\nSome chemicals such as DNP and FCCP are able to dissipate the proton gradient, thus uncoupling electron tansfer and phosphorylation.\nIn this figure, venturicidin and oligomycin inhibits the activity of ATP synthase. We can see the coupling and uncoupling relationship clearly.\nNow lets focus on the ATP synthase. The F1 factor is the one discovered first, an amazing fact about it is that the ΔG of ATP synthesis on it is almost zero (a reversible reaction), and the energy produced from H+ gradient is used to release the ATP from the enzyme.\nThe F1 part consists of nine subunits of five types: 3α3βγδε. Aside from F1, ATP synthase also have a proton channel called Fo (not F zero), which have more than ten subunits in three types: ab2c10-12\nN side is the matrix side and P side is the intermembrane space.\nUnder the motivation of H+, Fo starts to rotate, causing conformational change in β subunits. each of them. take turns to take up ADP + Pi, synthesize ATP, and release ATP. It’s like three workers work in different times.\nGenerally speaking, 4 proton will motivate a 120 degree turn, synthesizing a molecule of ATP.\nThe H+ gradient have uses other than ATP synthesis. It is also used in transport of ATP or ADP+Pi, the rotary motion of the bacterial flagella and producing heat(especially in brown fat tissue).\nGlycolysis also generate NADPH, these NADPH in cytosol needs a way to enter the mitochondria. malate(苹果酸)-aspartate shuttle is often used.\nIn some conditions (such as skeletal muscle and brain), the NADPH goes through Glycerol-3-phosphate shuttle, turning to FADH2. This will cause energy loss.\nFor plants, they have external NADPH dehydrogenase (complex I), so they don’t need to concern about NADPH transport.\nThe whole ATP synthesis pathway, from glycolysis to TCA to respiratory chain, is tightly regulated.\nAn interesting (not NADPH or ATP) point in this figure is citrate. It inhibits citrate synthase and phosphofructokinase-1.\nBacteria has a much simpler respiratory chain that looks like this.\nphotophosphorylation Photophosphorylation happens in chloroplast and includes two processes, light-dependent reactions and light-independent reactions.\nFirst we will introduce chloroplast. This is an organelle, containing many thylakoids (means “like a pouch”) which gives it large membrane space. Thylakoids pile up to form grana, and the space between grana is called stroma.\nThe light-dependent reaction happens right on the stroma. The first step of light-dependent reaction is to absorb light. Common light absorption pigments are chlorophyll a, b (in plants) and bacteriochlorophyII (in bacteria). The former functions with Mg2+\nThese pigments come together with other proteins to form light-harvesting complexes (LHCs). Carotenoids and lutein are an important type of accessory pigment which makes the absorption range wider.\nChapter 25 DNA metabolism The deduced double helix structure indicated indicated that DNA has a semiconservative mechanism of replication. This is proved by a famous experiment conducted in E. coli cells. After labeling the DNA with $^{15}N$ which makes the chain heavier, they found that the newly synthesized DNA has H-H, H-L and L-L. Yet this is a rough understanding on DNA replication. Some details remains to be determined.\nDeep going study is carried out with autoadiography. As for E. coli whose chromosomal DNA is a huge circle, daughter strands are synthesized immediately after parental strands separate. No temporary creation of linear DNA occurred during replication of the circular DNA. DNA replication begin at specific sites and proceed bidirectionally. After this, the researchers purified the DNA polymerase and studied DNA polymerization in vitro.\nBasic information is that when DNA polymerase works in vitro, it needs DNA template, primer and dNTPs. The fundamental reaction for DNA synthesis is a nucleophilic attack by the 3’-OH group of the strand on the 5’ α-phosphorus of a incoming dNTP selected via base-pairing.\nDNases can be divided into exonuclease and endonuclease. The former remove the nucleotide one by one, either from 5’ to 3’ or from 3’ to 5’, while the latter can cut the DNA at any site. DNA pol I can be divided into two fragments.\nIn DNA pol I, 3’-\u003e5’ exonuclease activity is able to remove mismatched base pairs, in order to proofread the nucleotides, and 5’ -\u003e 3’ enables it to catalyze the nick translation process which removes RNA primers and can be used in DNA repair.\nThe synthesis of daughter DNA strands is semidiscontinuous. One of the strands (called leading strand) is synthesized continuously and the other one (called the lagging strand) discontinuously. Okazaki fragments occurs on the lagging strand. These Okazaki fragments will be join together by DNA lingase to form a complete strand.\nDespite all these discussions about DNA pol I, this enzyme is found not to be responsible for DNA replication. Its velocity is too low and it can only add about 50 nucleotide before it dissociates from the template. The one that is responsible for DNA replication is actually DNA pol III which have no 5’ -\u003e3’ exonuclease activity.\nDNA pol III has three main subunits. α subunit has polymerization activity, ε subunit has 3’ -\u003e 5’ proofreading exonuclease activity, and β subunit has clamp activity that binds the whole enzyme tightly to the DNA.\nAside from DNA polymerase III, many other proteins are also part of the replisome for DNA replication in E. coli, such as\nthe helicase (dnaB) that consumes ATP to separate the two strands. the topoisomerases that relieve the topological strains in the helical structure. the single strand binding protein (SSB) that binds to the single-stranded DNA generated. the primase (dnaG) that generates a short RNA primer. the DNA polymerase I (polA) that removes the primer and replace it by a DNA sequence. the DNA ligase for sealing nicks between the Okazaki fragments. In E. coli, the replication starts from a 245bp fragment called OriC. OriC contains 11 GATC sequences, the A can be methylated, replication is conducted once a time.\nThe whole process of E. coli chromosomal DNA replication has three stages: initiation, elongation and termination. Various enzymes are needed in initiation, and the synthesis of leading and lagging strand is believed to be conducted by a DNA pol III dimer. During termination stage, the two replication forks (moving in opposite direction) meet at the Ter sequence, and DNA topoisomerase IV separated the newly generated chromosome with the old one.\nproteins required in initiation\nProtein $M_r$ Number of subunits Function DnaA protein 52,000 1 Recognizes oriC sequence; opens duplex at specific sites in origin DnaB protein (helicase) 300,000 6 Unwinds DNA DnaC protein 174,000 6 Required for DnaB binding at origin HU 19,000 2 Histonelike protein; DNA-binding protein; stimulates initiation FIS 22,500 2 DNA-binding protein; stimulates initiation IHF 22,000 2 DNA-binding protein; stimulates initiation Primase (DnaG protein) 60,000 1 Synthesizes RNA primers Single-stranded DNA-binding protein (SSB) 75,000 4 Binds single-stranded DNA DNA gyrase (DNA topoisomerase II) 400,000 4 Relieves torsional strain generated by DNA unwinding Dam methylase 32,000 1 Methylates (5’)GATC sequences at oriC Chapter 26 RNA metabolism There are different types of RNA, some important types are rRNA (ribosome RNA), tRNA (transfer RNA) and mRNA (messanger RNA). RNA can also act as enzymes, there is a hypothesis that RNA catalyzes most of the metabolic reactions before protein occurred.\nThree types of RNA polymerase catalyze the transcription of most RNA.\nType Localization Transcript Effect towards α-amanitin I nucleolus 18S, 5.8S, 28S rRNA insecsitive II nucleopalsm mRNA, snRNA strongly sensitive III nucleopalsm tRNA, 5S rRNA inhibited by high concentration The mRNA that just come through transcription will be further processed before it goes into translation. The further process include 5’ end capping, removing introns (this is discovered by an interesting EM experiment), linking exons and 3’ end polyadenylating. tRNA will also be cleaved, spliced and modified.\nThere are four types of introns that are spliced through different mechanisms. A single mRNA can be spliced differently to encode different protein.\nA single pre-rRNA can generate different types of mature RNA in prokaryotic and eukaryotic cells.\n",
   "wordCount" : "3918",
   "inLanguage": "en",
-  "datePublished": "2023-01-08T00:00:00Z",
+  "image": "https://bubblegits.github.io/papermod-cover.png","datePublished": "2023-01-08T00:00:00Z",
   "dateModified": "2023-01-08T00:00:00Z",
   "author":{
     "@type": "Person",
@@ -208,8 +168,6 @@ code.has-jax {
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -246,13 +204,12 @@ code.has-jax {
 <article class="post-single">
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://bubblegits.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/">分类</a>&nbsp;»&nbsp;<a href="https://bubblegits.github.io/post/work/">奇技淫巧</a></div>
-    <h1 class="post-title">
+    <h1 class="post-title entry-hint-parent">
       biochemistry II
     </h1>
-    <div class="post-meta">&lt;span title=&#39;2023-01-08 00:00:00 &#43;0000 UTC&#39;&gt;January 8, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;张珙
+    <div class="post-meta"><span title='2023-01-08 00:00:00 +0000 UTC'>January 8, 2023</span>&nbsp;·&nbsp;张珙
 
 </div>
-    
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -263,7 +220,7 @@ code.has-jax {
                 <li>
                     <a href="#chapter-13-bioenergetics-and-biochemical-reaction-types" aria-label="Chapter 13 Bioenergetics and biochemical reaction types">Chapter 13 Bioenergetics and biochemical reaction types</a></li>
                 <li>
-                    <a href="#chapter-14-glycolysis-the-pentose-phosphate-pathway-and-the-catabolism-of-glycogen" aria-label="Chapter 14 Glycolysis, the pentose phosphate pathway and the catabolism of glycogen">Chapter 14 <strong>Glycolysis, the pentose phosphate pathway and the catabolism of glycogen</strong></a></li>
+                    <a href="#chapter-14-glycolysis-the-pentose-phosphate-pathway-and-the-catabolism-of-glycogen" aria-label="Chapter 14 Glycolysis, the pentose phosphate pathway and the catabolism of glycogen">Chapter 14 Glycolysis, the pentose phosphate pathway and the catabolism of glycogen</a></li>
                 <li>
                     <a href="#chapter-16-citric-acid-cycle" aria-label="Chapter 16 Citric acid cycle">Chapter 16 Citric acid cycle</a></li>
                 <li>
@@ -771,15 +728,7 @@ And the total ATP synthesis is calculated as follows.</p>
   </a>
 </nav>
 
-  </footer><div id="waline"></div>
-<script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-  init({
-    el: '#waline',
-    serverURL: 'https://www.bubblecomment.top/',
-  });
-</script>
+  </footer>
 </article>
     </main>
     
@@ -795,23 +744,14 @@ And the total ATP synthesis is calculated as follows.</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><footer class="footer">
-  <span>
-    本作品由
-    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">张珙
-    </span>
-    采用
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">4.0 国际许可协议
-    </a>
-    进行许可。
-    <br />
-    <div align="center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-      <img alt="知识共享许可协议" style="border-width:0" align="center"src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-      </a>
-    </div>
-  </span>
-    
+</a>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.0.0/style.css" /> 
+
+<link rel="stylesheet" href="https://use.typekit.net/tyn8lot.css">
+
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 
 <script>
     let menu = document.getElementById('menu')

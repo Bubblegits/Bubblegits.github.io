@@ -5,10 +5,12 @@
     <link>https://bubblegits.github.io/tags/</link>
     <description>Recent content in Tags on 张珙的博客</description>
     <image>
+      <title>张珙的博客</title>
       <url>https://bubblegits.github.io/papermod-cover.png</url>
       <link>https://bubblegits.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bubblegits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bubblegits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
