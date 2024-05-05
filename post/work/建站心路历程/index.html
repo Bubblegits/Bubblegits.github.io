@@ -65,7 +65,10 @@ hugo中默认的时间参数有如下几种
         }
 
     </style>
-</noscript><meta property="og:title" content="建站心路历程" />
+</noscript>
+  
+
+<meta property="og:title" content="建站心路历程" />
 <meta property="og:description" content="这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
 Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;&amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
 1 git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 从myblog仓库推到bubblegits仓库出问题多半是因为token过期了，少数情况是workflow文件里的包版本太低，更新一下就好。
@@ -403,7 +406,7 @@ hugo中默认的时间参数有如下几种
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://bubblegits.github.io/post/reading/2023-12-26-14-09-00-%E6%97%A0%E7%9F%A5%E7%9A%84%E6%95%99%E5%B8%88--%E6%99%BA%E5%8A%9B%E8%A7%A3%E6%94%BE%E4%BA%94%E8%AE%B2%E7%B2%BE%E7%B2%BE%E7%A5%9E%E8%AF%91%E4%B8%9B-%E6%B3%95%E9%9B%85%E5%85%8B%E6%9C%97%E8%A5%BF%E5%9F%83-z-library/">
+  <a class="prev" href="https://bubblegits.github.io/post/reading/%E6%97%A0%E7%9F%A5%E7%9A%84%E6%95%99%E5%B8%88--%E6%99%BA%E5%8A%9B%E8%A7%A3%E6%94%BE%E4%BA%94%E8%AE%B2/">
     <span class="title">« Prev</span>
     <br>
     <span>无知的教师——智力解放五讲</span>

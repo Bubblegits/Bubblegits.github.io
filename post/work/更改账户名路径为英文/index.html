@@ -57,7 +57,10 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="更改Windows用户名路径为英文" />
+</noscript>
+  
+
+<meta property="og:title" content="更改Windows用户名路径为英文" />
 <meta property="og:description" content="用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
 管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win&#43;R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
 大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。" />
