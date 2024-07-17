@@ -182,6 +182,55 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">影音相关
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>缘起 闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
+观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了（2023年6.1更新：已经有NAS了，见《赛博扬子居记》） 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
+kodi配置 kodi的前身是xbmc（Xbox media center），官网和插件库国内访问网络质量堪忧，即使扶墙也常常出问题，所以找个镜像比较方便。清华大学的镜像站用着总觉得没有中科大的顺手。访问Index of /xbmc/ (ustc.edu.cn)，在releases目录下下载安装包，安装完成后还要注意配置插件库，官方的插件库访问常常出问题，可以选择用镜像的插件库，或者用官方库霸王硬上弓，多试几次也能装上。
+kodi中可以通过PVR IPTV simple client来读m3u源，github上有一个可直连的m3u库https://github.com/fanmingming/live。iptv源可以搭配epg（electric program guide）使用，epg提供节目单从而在部分iptv源上实现回看功能。
+kodi变成中文需要先把字体改为arial base，否则无法显示汉字。
+iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来看，参考https://mozz.ie/posts/extracting-iptv-live-streams/
+影视信息刮削 此外kodi的一个非常拉风的功能是电影海报墙，通过刮削器获取电影简介、年代、海报、类型等相关信息并展示出来，有逼不装天理难容。但是kodi自带的刮削器常常遇到网络问题，可以选择3.x版本的tmm（tiny media manager）在影视文件夹中生成nfo文件，用kodi读取nfo文件从而生成海报墙。tmm的使用方法一目了然，除了刮削之外还可以用来整理电影文件，我的习惯是把电影放在以导演命名的文件夹下。
+与tmm相似的还有一个好东西叫Movie_Data_Capture,功能不便多说，一用便知。
+音乐库 人的生命是有限的，但折腾的事业是无限的，折腾完电影之后接着折腾音乐。mac上的music软件一大问题就是语言显示混乱，整理自己导入的音乐表现倒是不错，可以给专辑搜索封面，aiff格式用起来也挺顺耳。</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-01 00:00:00 +0000 UTC'>June 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 影音相关" href="https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">雅思作文练习
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>IELTS11 Test1 writing Task1 The figure shows water consumption for industrial, agricultural and domestic proposes in six areas around the world: North America, South America, Europe, Africa, Central Asia and Southeast Asia.
+In North America and Europe, water used in industry accounts for nearly half of total water consumption, and agriculture take up one-third of water. The percentage of domestic water consumption is around 15 percent, which ranks high among all the areas....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-02-01 00:00:00 +0000 UTC'>February 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 雅思作文练习" href="https://bubblegits.github.io/post/work/%E9%9B%85%E6%80%9D%E4%BD%9C%E6%96%87%E7%BB%83%E4%B9%A0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">修麦克风
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
+之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
+打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
+瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
+上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-17 00:00:00 +0000 UTC'>January 17, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 修麦克风" href="https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">biochemistry II
     </h2>
   </header>
@@ -220,37 +269,12 @@ $$ f(u,v)=\int^{\infin}{-\infin}f(u,v)du\int^{\infin}{-\infin}f(u,v)dv $$
   <footer class="entry-footer"><span title='2023-01-02 00:00:00 +0000 UTC'>January 2, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 概率论与数理统计复习" href="https://bubblegits.github.io/post/work/%E6%A6%82%E7%BB%9F/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">更改Windows用户名路径为英文
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>用Rstudio经常报错，研究了一下发现原因是工作目录在以用户名命名的路径下，而用户名是中文，导致在部分软件里路径不能被识别。简单几个步骤就可以修复问题。
-管理员身份打开cmd，输入命令net user administrator /active:yes，注销账户后进入administrator账户，修改C:\Users路径下中文文件名为英文，而后win&#43;R输入regedit进入注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist目录下把“数据”一栏为原先中文路径的项目改为与文件夹名匹配的英文路径。
-大功告成，切回原来账号之后记得net user administrator /active:no禁用adminstrator账号。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-20 00:00:00 +0000 UTC'>December 20, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 更改Windows用户名路径为英文" href="https://bubblegits.github.io/post/work/%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%90%8D%E8%B7%AF%E5%BE%84%E4%B8%BA%E8%8B%B1%E6%96%87/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">biochemistry experiment
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Preparation &amp; Separation The target protein used in biochemistry experiment usually comes from three kinds of source, natural tissue, recombinant protein in certain expression system or cell culture.
-Our research target may be natural or recombinant. If it is natural, the situation looks like this: I have some cell, and things I want (proteins, nuclear acid, etc.) are in the cell. I don’t need to be a genius to see that I need to break the cell....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-16 00:00:00 +0000 UTC'>December 16, 2022</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to biochemistry experiment" href="https://bubblegits.github.io/post/work/%E7%94%9F%E5%8C%96%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://bubblegits.github.io/post/work/page/2/">
       «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="https://bubblegits.github.io/post/work/page/4/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
