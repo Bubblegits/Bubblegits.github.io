@@ -8,15 +8,61 @@
 <title>用户你说句话啊 | 张珙的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
-Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+Windows Terminal（WT）
+Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
 windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
 在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &quot;false&quot;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
 windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
-1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
-Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+@echo off
+cd C:\Users\qipao\Desktop\myblog
+git pull
+git cmp refine
+cd C:\Users\qipao\Desktop\tiddlywiki
+git pull
+git cmp refine
+
+
+shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac
+Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
 homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
 mac上可以用.command文件做批处理，比如这个git.command
-1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+cd /Users/a_big_apple/Desktop/myblog
+git pull
+git cm &#34;refine&#34;
+git push
+cd /Users/a_big_apple/Desktop/tiddlywiki
+git pull
+git cm &#34;refine&#34;
+git push
+exit
+
+
+之后要用chmod &#43;x filename赋可执行权限。">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8bb9dab08d3f290dfd612952112a48e90dc64ca4c2674c782c00deb6cd8e3f34.css" integrity="sha256-i7nasI0/KQ39YSlSESpI6Q3GTKTCZ0x4LADets2OPzQ=" rel="preload stylesheet" as="style">
@@ -64,20 +110,63 @@ mac上可以用.command文件做批处理，比如这个git.command
         }
 
     </style>
-</noscript>
-  
-
-<meta property="og:title" content="用户你说句话啊" />
+</noscript><meta property="og:title" content="用户你说句话啊" />
 <meta property="og:description" content="随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
-Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+Windows Terminal（WT）
+Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
 windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
 在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &quot;false&quot;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
 windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
-1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
-Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+@echo off
+cd C:\Users\qipao\Desktop\myblog
+git pull
+git cmp refine
+cd C:\Users\qipao\Desktop\tiddlywiki
+git pull
+git cmp refine
+
+
+shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac
+Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
 homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
 mac上可以用.command文件做批处理，比如这个git.command
-1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。" />
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+cd /Users/a_big_apple/Desktop/myblog
+git pull
+git cm &#34;refine&#34;
+git push
+cd /Users/a_big_apple/Desktop/tiddlywiki
+git pull
+git cm &#34;refine&#34;
+git push
+exit
+
+
+之后要用chmod &#43;x filename赋可执行权限。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/" />
 <meta property="og:image" content="https://bubblegits.github.io/papermod-cover.png" />
@@ -89,15 +178,61 @@ mac上可以用.command文件做批处理，比如这个git.command
 <meta name="twitter:image" content="https://bubblegits.github.io/papermod-cover.png" />
 <meta name="twitter:title" content="用户你说句话啊"/>
 <meta name="twitter:description" content="随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
-Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+Windows Terminal（WT）
+Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
 windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
 在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &quot;false&quot;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
 windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
-1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
-Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+@echo off
+cd C:\Users\qipao\Desktop\myblog
+git pull
+git cmp refine
+cd C:\Users\qipao\Desktop\tiddlywiki
+git pull
+git cmp refine
+
+
+shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac
+Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
 homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
 mac上可以用.command文件做批处理，比如这个git.command
-1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。"/>
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+cd /Users/a_big_apple/Desktop/myblog
+git pull
+git cm &#34;refine&#34;
+git push
+cd /Users/a_big_apple/Desktop/tiddlywiki
+git pull
+git cm &#34;refine&#34;
+git push
+exit
+
+
+之后要用chmod &#43;x filename赋可执行权限。"/>
 
 
 <script type="application/ld+json">
@@ -132,7 +267,7 @@ mac上可以用.command文件做批处理，比如这个git.command
   "@type": "BlogPosting",
   "headline": "用户你说句话啊",
   "name": "用户你说句话啊",
-  "description": "随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”\nWindows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。\nwindows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。\n在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify \u0026quot;false\u0026quot;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。\nwindows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件\n1 2 3 4 5 6 7 @echo off cd C:\\Users\\qipao\\Desktop\\myblog git pull git cmp refine cd C:\\Users\\qipao\\Desktop\\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html\nTerminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command+shift+.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。\nhomebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。\nmac上可以用.command文件做批处理，比如这个git.command\n1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm \u0026#34;refine\u0026#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm \u0026#34;refine\u0026#34; git push exit 之后要用chmod +x filename赋可执行权限。",
+  "description": "随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”\nWindows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。\nwindows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。\n在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify \u0026quot;false\u0026quot;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。\nwindows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件\n1 2 3 4 5 6 7 @echo off cd C:\\Users\\qipao\\Desktop\\myblog git pull git cmp refine cd C:\\Users\\qipao\\Desktop\\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html\nTerminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command+shift+.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。\nhomebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。\nmac上可以用.command文件做批处理，比如这个git.command\n1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm \u0026#34;refine\u0026#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm \u0026#34;refine\u0026#34; git push exit 之后要用chmod +x filename赋可执行权限。\n",
   "keywords": [
     
   ],

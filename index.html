@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.131.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.134.3"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -58,10 +58,7 @@
         }
 
     </style>
-</noscript>
-  
-
-<meta property="og:title" content="张珙的博客" />
+</noscript><meta property="og:title" content="张珙的博客" />
 <meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bubblegits.github.io/" />
@@ -181,13 +178,40 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">解决koreader在阅读pdf中崩溃的问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>我在kobo上读pdf完全依赖koreader，但有些pdf文件在翻页的时候会把koreader弄崩溃。查看koreader根目录下的crash.log，得到如下报错信息
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: SimHei (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: ArialUnicodeMS (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) 08/19/24-01:11:18 WARN Running low on memory (~11%, ~59.21/495 MiB), evicting half of the cache... 08/19/24-01:11:22 WARN Running low on memory (~14%, ~70.57/495 MiB), evicting half of the cache... warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: AngsanaUPC (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) 08/19/24-01:11:41 WARN Running low on memory (~2%, ~14.48/495 MiB), evicting half of the cache... 08/19/24-01:11:43 WARN Running low on memory (~1%, ~9.49/495 MiB), evicting half of the cache... warning: ... repeated 2 times... warning: dropping unclosed PDF processor ./luajit: ./ffi/mupdf.lua:71: cannot calculate bbox for page: realloc (7661467 bytes) failed (0) non-embedded font using identity encoding意思是文件里有非内嵌字体在使用身份编码，估计是编码占了太多内存导致koreader崩溃了。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-19 00:00:00 +0000 UTC'>August 19, 2024</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 解决koreader在阅读pdf中崩溃的问题" href="https://bubblegits.github.io/post/work/%E8%A7%A3%E5%86%B3koreader%E5%9C%A8%E9%98%85%E8%AF%BBpdf%E4%B8%AD%E5%B4%A9%E6%BA%83%E7%9A%84%E9%97%AE%E9%A2%98/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">the ego and the id
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chapter 1 Conscious(Cs) and unconscious can be defined in a descriptive way: conscious has the things that we can precept, and others belong to unconscious. But the unconscious in this sense can be further divide into preconscious and unconscious, the former not being repressed and the latter being repressed. Yet a part of ego can also be found in the Ucs
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-18 00:00:00 +0000 UTC'>August 18, 2024</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to the ego and the id" href="https://bubblegits.github.io/post/reading/the-ego-and-the-id/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">伦理学
     </h2>
   </header>
   <div class="entry-content">
     <p>这本书给我很大的震动，引文依商务印书馆版本。
 第一部分 论神 界说 （一）自因（causa sui），我理解为这样的东西，它的本质（essentia）即包含存在（existentia），或者它的本性只能设想为存在着。
-（七）凡是仅仅由自身本性的必然性而存在、其行为仅仅由它自身决定的东西叫做自由（libera）。反之，凡一物的存在及其行为均按一定的方式为他物所决定，便叫做必然（necessaria，）或受制（coata）。
+（七）凡是仅仅由自身本性的必然性而存在、其行为仅仅由它自身决定的东西叫做自由（libera）。反之，凡一物的存在及其行为均按一定的方式为他物所决定，便叫做必然（necessaria），或受制（coata）。
 （八）永恒（aeternitas），我理解为存在的自身，就存在被理解为只能从永恒事物的界说中必然推出而言。
 ​	说明　因为这样的存在也可以设想为永恒的真理，有如事物的本质，因此不可以用绵延或时间去解释它，虽说绵延可以设想为无始无终。
 命题 命题十二　由实体的属性推出实体可分（divibilis），是对于实体的属性没有得到真正的认识。
@@ -201,7 +225,9 @@
 只要人们相信万物之所以存在都是为了人用，就必定认其中对人最有用的为最有价值，而对那能使人最感舒适的便最加重视。由于人们以这种成见来解释自然事物，于是便形成善恶、条理紊乱、冷热、美丑等观念；又因为有了人是自由的这个成见，便产生了如褒和贬、功和罪等观念。
 一般人所习于用来解释自然的那些观念，都不过是些想象的产品罢了；除了仅足以表示想象的情况以外，再也不能表明事物的本性。因为这些观念具有名称，好像是表示那离想象而独立存在的事物，所以我只好称它们为想象的存在，而非理性的存在。
 要判断事物的圆满与否，只须以事物的本性及力量为标准，因此事物的圆满与否，与其是否娱人的耳目、益人的身心无关。
-第二部分 论心灵的性质和起源 界说 （五）绵延就是存在的不确定的延续。
+第二部分 论心灵的性质和起源 界说 （三）观念，我理解为心灵所形成的概念，因为心灵是能思的东西。
+说明：我说概念而不说知觉（perceptio），因为知觉这个名词似乎表示心灵之于对象是被动的，而概念一词则表示心灵的主动。
+（五）绵延就是存在的不确定的延续。
 （六）实在性和圆满性我理解为同一的。
 公则 （一）人的本质不包含必然的存在，这就是说，依自然法则，这人或那人的存在或不存在，都同样可以发生。
 命题 命题二　广延是神的一个属性，换言之，神是一个有广延的东西。
@@ -221,28 +247,11 @@
 按：海德格尔在《荷尔德林与诗的本质》的开头，也表达了相似的观点。
 命题三十八　只有为一切事物所共同具有的，且同等存在于部分内及全体内的东西才可正确地被认识。
 按：这里斯宾诺莎似乎在做类似于“纯粹理性批判”的工作，探讨“我们能知道什么”
-从上面所说的看来，显然我们知觉许多事物，并且形成许多普遍的观念。
-第一，从通过感官片断地、混淆地和不依理智的秩序而呈现给我们的个体事物得来的观念（参看第二部分命题二十九绎理）。因此我常称这样的知觉为从泛泛经验得来的知识。
-第二，从记号得来的观念；例如，当我们听得或读到某一些字，便同时回忆起与它们相应的事物，并形成与它们类似的观念，借这些观念来想象事物（参看第二部分命题十八附释）。这两种考察事物的方式，我此后将称为第一种知识、意见或想象。第三，从对于事物的特质（propria）具有共同概念和正确观念而得来的观念（参看第二部分命题三十八绎理，命题三十九及其绎理和命题四十）。这种认识事物的方式，我将称为理性或第二种知识。...</p>
+命题四十 附释一 但是我也不想省略为我们所必须知道的事项，我将简略指出许多叫做“先验”的名词，如“存在”、“事物”，“某物”等所以起源的原因。这些名词的起源乃因人的身体，既是有限，只能够同时明晰地形成一定数目的形象（至于什么是形象我在第二部分命题十七的附释里已经说明）。如果逾越这个限度，则这些形象便会混淆起来。如果将人体所能同时明晰地形成的形象的数量，超过的太多，则所有的形象便将全体相互混同起来。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-07-17 00:00:00 +0000 UTC'>July 17, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 伦理学" href="https://bubblegits.github.io/post/reading/%E4%BC%A6%E7%90%86%E5%AD%A6/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">讲座记录
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2024-05-08 重返“灵魂”——弗洛伊德与现代社会的抑郁 应该考虑的几个问题：
-弗洛伊德所谈及问题的永恒性
-弗洛伊德与成为人？与爱？
-“从天堂穿过人间直到地狱”，对于理解这一段最关键的是在第二部出现的浮士德的海伦戏。
-2024-05-27 Refugee situation and UNHCR (China) Mastering 2 UN languages is needed if you want to get into the UN. For Mr. Steven O’Brown, He started his work in UN by doing volunteer jobs for homeless people. He’s career in the UN begin with working in South Africa when there was still racial segregation, and later turned to conflict in Europe and genocide in Rwanda....</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-07-17 00:00:00 +0000 UTC'>July 17, 2024</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 讲座记录" href="https://bubblegits.github.io/post/work/%E8%AE%B2%E5%BA%A7%E8%AE%B0%E5%BD%95/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -283,7 +292,8 @@
 马勒 谢鹏老师对马勒评价不高，认为“他的伟大有水分”，主要是按指挥思维作曲，优点在于声响效果好。1897年-1907年是马勒最痛苦的几年，也是他的创作生涯最辉煌的几年，期间创作了《亡儿之歌》。马勒主要创作交响曲和艺术歌曲，这使得其交响乐有歌曲化的特征。谢鹏老师认为他成就最高的作品就是第五交响曲的第四乐章。美国电影音乐喜爱用圆号，有时用多至8把齐奏，很可能是受马勒影响。
 理查 施特劳斯 理查 施特劳斯喜爱创作标题音乐，他对铜管的运用非常出彩。他的代表作是《死与净化》和《查拉图斯特拉如是说》，《查》的引子“日出”及其壮阔雄伟，其中可以听到对二和弦（七和弦的第三转位）的运用。
 拉赫马尼诺夫 拉赫不仅是作曲家，也是非常出名的钢琴演奏家，演奏时手形像霍洛韦茨。他的代表作品是第二钢协、第三钢协、帕格尼尼主题狂想曲、第二交响。第二钢协的一乐章相当感人，开头的柱式和弦后的第二句极长。帕格尼尼主题狂想最有名的是第18变奏，运用了导引手法，把主题上下翻转过来。第二交响的三乐章是模进的教科书。
-二十世纪交响乐 这一时期交响乐的特点是抽离、夸张、变形、自我。...</p>
+二十世纪交响乐 这一时期交响乐的特点是抽离、夸张、变形、自我。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-07-03 00:00:00 +0000 UTC'>July 3, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 交响音乐赏析课程笔记" href="https://bubblegits.github.io/post/work/%E4%BA%A4%E5%93%8D%E9%9F%B3%E4%B9%90%E8%B5%8F%E6%9E%90%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"></a>
@@ -304,27 +314,11 @@
 在韦吉斯待上一个星期后，我仍然隐约希望历史以瑞士特性作为其终结。
 结语 满足一个长期被需要的需求 我马上意识到，他是一个原型。到处都有人有和他类似的不安，有同样迷失方向的被背叛的感觉。这个世界的空气中有某种发热的东西，像是即将高烧一场。美国成为一个可以随心所欲的强权，这件事里包含着某种有威胁和不健康的东西。科学似乎正在胡乱地修补那些几乎拥有超自然意味的问题（一个埃及学生郑重其事地向我保证，要不了多久，人类就能够掌握创造生命的奥秘），关于它，有某种不祥的东西。说到互联网，这个渗入私宅的通灵的存在，它有某种叫人毛骨悚然的东西。
 最令新时代的精神迷失方向的基本上是每一天每一分钟都在不断扩大的带来阻碍与挫折的鸿沟，它横在富人和穷人之间，酒足饭饱者与饥肠辘辘者之间，横在拥有很多并且希望拥有更多的那些人与几乎什么也没有并且什么更好的也指望不到的那些人之间。
-多年来，一代接一代的老顽固与傻老头想让我相信世界正在走向衰落，我对他们始终是嗤之以鼻。到如今，我开始害怕他们可能一直是对的。我所感觉到的，并非朝向启示录般灾变的猛冲，而是将我们到处乱扔乱掷的一大堆彼此分离、相互矛盾的力量，颇像是我们偶尔听说过的，宇宙自身从一个飘浮的气体的大杂烩中旋转着产生时的样子。</p>
+多年来，一代接一代的老顽固与傻老头想让我相信世界正在走向衰落，我对他们始终是嗤之以鼻。到如今，我开始害怕他们可能一直是对的。我所感觉到的，并非朝向启示录般灾变的猛冲，而是将我们到处乱扔乱掷的一大堆彼此分离、相互矛盾的力量，颇像是我们偶尔听说过的，宇宙自身从一个飘浮的气体的大杂烩中旋转着产生时的样子。
+</p>
   </div>
   <footer class="entry-footer"><span title='2024-05-04 00:00:00 +0000 UTC'>May 4, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 《世界：二十世纪的道别》" href="https://bubblegits.github.io/post/reading/%E4%B8%96%E7%95%8C20%E4%B8%96%E7%BA%AA%E7%9A%84%E9%81%93%E5%88%AB/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">《青春》
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>按：11月份看的，只看了开头的一点，库切的生活还是太艺术家了。
-有时他想象一个穿白色衣裙的漂亮女孩信步走进阅览室，闭馆的时间到了以后仍心不在焉地逗留其中；他想象带着她去参观书籍装订室和目录室里的秘密，然后和她一起出现在星光闪闪的黑夜中。这样的事情从来没有发生过。
-他身材细长，四肢柔软灵活，不过也很不结实。他很想有吸引力，可是知道自己不吸引人。他缺乏某种关键的东西，线条清晰的脸形。小孩子的某些特点仍残留在他脸上。要多久他才不再是个小孩子？什么东西能够治好他的孩童气，使他成为—个男人？ 能够治好他的东西，如果来到的话，那将会是爱情。他也许不相信上帝，但是他确实相信爱情和爱情的力量。那个他所爱的人，命中注定的人，将会立刻透过他呈现出的怪的，甚至单调的外表，看到他内心燃烧着的烈火。同时，单调和样子怪是他为了有朝一日出现在光明之中——爱之光，艺术之光——所必须经过的炼狱的一个部分。因为他将会成为一个艺术家，这是早就已经确定了的。如果目前他必须是微贱可笑的，那是因为艺术家的命运就是要忍受微贱和嘲笑，直到他显示出真正的能力，讥笑和嘲弄的人不再做声的那一天。
-事实上他做梦也不会想到要去做心理治疗。心理治疗的目的是让人幸福。这样做有什么用？幸福的人太乏味。最好还是接受不幸福的重负，试图将它转变成有价值的东西，诗歌或音乐或绘画：这是他的信念。
-这种恋爱关系的开始不是他的主意，继续下去也不是他的主意。但是现在他既然已在其中，他也没有精力从中摆脱出来。他被一种宿命论所控制。如果和杰奎琳的共同生活是一种疾病的话，就让这病顺其自然地发展下去吧。
-是为了摆脱家庭的压抑他才离家的。现在他很少见到父母。尽管他们住的地方走着去都很近，他不去看望他们。他从来没有带保罗去看过他们，也没有带别的朋友去过，更不要说杰奎琳了。现在他既已有了自己的收入，他利用自己的独立把父母排除在了他的生活之外。他知道自己的冷淡使母亲很难过，他一生都以这冷淡来回应她的爱。在他一生中母亲都想无微不至地照料他，他一生都在反抗。尽管他一再告诉她，她还是不相信他有足够的钱生活。只要看见他，她总是试图塞点钱在他的口袋里，一张一两个英镑的纸币。她管这个叫“就是一点点什么而已”。只要给她一点机会，她就会为他的公寓缝窗帘，给他洗衣服。他必须硬起心肠来对待她。现在不是放松警惕的时候。</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-05-04 00:00:00 +0000 UTC'>May 4, 2024</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 《青春》" href="https://bubblegits.github.io/post/reading/%E9%9D%92%E6%98%A5/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

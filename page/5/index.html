@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.131.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.134.3"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -58,10 +58,7 @@
         }
 
     </style>
-</noscript>
-  
-
-<meta property="og:title" content="张珙的博客" />
+</noscript><meta property="og:title" content="张珙的博客" />
 <meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bubblegits.github.io/" />
@@ -160,6 +157,28 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">用户你说句话啊
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>随着我在github上摸爬滚打的经验增加，现阶段我信息技术成长方面的主要矛盾已经转变为日益增长的命令语句使用需要以及我不娴熟的命令语句使用技巧之间的矛盾。命令语句有种在和电脑说话的感觉，用起来很方便，习惯了以后感觉以前依赖图形界面的操作方式像是《百年孤独》所说：“世界新生伊始，许多事物还没有名字，提到的时候尚需用手指指点点。”
+Windows Terminal（WT） Windows Terminal颜值比cmd高出不少，而且有点图形界面，更加易用，装些脚本用着还是很舒服的。WT中常用的shell是window powershell,关于Terminal，shell等等用词之间的区别可以参考https://www.zhihu.com/question/21711307/answer/2231006377。不过WT的一个麻烦之处在于安装很多环境的时候不会自动添加Path变量，要手动添加一下才能用，可以用$env:path查看环境变量。
+windows上可以用winget管理安装包，但我感觉没什么必要，因为windows有分区，本来用两三级就可以写出来的程序路径一用winget就变得老长，反而麻烦。自己装一下python，node.js和git也就基本够用了。
+在使用git clone时可能会遇到git clone: error setting certificate verify locations这样的错误提示，此时只要设置git config --global http.sslverify &#34;false&#34;跳过ssl认证就好了，不过这个解决方案有点鸵鸟，有空还是应该把证书文件更新一下。有的时候在pip install中还会弹出关于ssl的警告，十有八九是代理的问题，关了就好。
+windows上可以写bat批处理文件来自动执行一系列命令，比如我为了一键同步git仓库写了一个git.bat文件
+1 2 3 4 5 6 7 @echo off cd C:\Users\qipao\Desktop\myblog git pull git cmp refine cd C:\Users\qipao\Desktop\tiddlywiki git pull git cmp refine shell 的使用的时候要注意提示符，参考http://c.biancheng.net/view/734.html
+Terminal on Mac Mac上自带了终端，颜值大概介于cmd和WT之间吧。Homebrew很好用，因为我本来就没心情去管mac的文件系统，正好homebrew帮我包办代替了，不过有的时候还是不得不找些文件，mac的文件目录可以参考https://www.cnblogs.com/gujiande/p/9447006.html。我的mac默认使用zsh shell，配置文件在用户的家目录下，通过command&#43;shift&#43;.查看隐藏文件就能看到，通常修改.zshrc文件。一些常用命令可以通过alias来快速输入，句法是alias A=B，注意在使用shell的时候不要随便加空格。
+homebrew常用的命令是brew install和brew info，大部分包如果安上之后有问题，可以brew info看一下简介，比如装java过后要设定一个路径，在brew info java里提供了可以直接照抄的代码。
+mac上可以用.command文件做批处理，比如这个git.command
+1 2 3 4 5 6 7 8 9 cd /Users/a_big_apple/Desktop/myblog git pull git cm &#34;refine&#34; git push cd /Users/a_big_apple/Desktop/tiddlywiki git pull git cm &#34;refine&#34; git push exit 之后要用chmod &#43;x filename赋可执行权限。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0000 UTC'>September 24, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 用户你说句话啊" href="https://bubblegits.github.io/post/work/%E7%94%A8%E6%88%B7%E4%BD%A0%E8%AF%B4%E5%8F%A5%E8%AF%9D%E5%95%8A/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">酒吧长谈
     </h2>
   </header>
@@ -202,7 +221,8 @@
 “我那时太单纯，太傻，总以为倒点儿霉就会锻炼成为一个坚强的人，安布罗修。”圣地亚哥说道。
 是我现在不恨他了，他既然已经死了，我也就不恨他了。”圣地亚哥说道，“他生前是个小人，但他本人并未察觉，他是无意的。再说，在我们这个国家里小人多如牛毛，而且我相信他也为此付出了代价，安布罗修。”
 “我那时还以为他心目中只有大学部和革命呢，”圣地亚哥说道，“但是，突然这一切都成假的了，卡利托斯。原来他和你、我一样，也是个普普通通的人。”
-他站起来，抓起阿伊达的胳臂，向她指了指椅子。阿伊达坐了下来。圣地亚哥回想：她把双手放在膝上，那漆黑的睫毛湿润了，颈上的头发乱蓬蓬的，耳朵也仿佛是冰冷的。他回想：我当时真想抬起手，再放下来，抚摸她的脖颈，梳顺她的乱发，把手指插进她的头发，慢慢地梳理，放开手，再梳理。唉，小萨呀。...</p>
+他站起来，抓起阿伊达的胳臂，向她指了指椅子。阿伊达坐了下来。圣地亚哥回想：她把双手放在膝上，那漆黑的睫毛湿润了，颈上的头发乱蓬蓬的，耳朵也仿佛是冰冷的。他回想：我当时真想抬起手，再放下来，抚摸她的脖颈，梳顺她的乱发，把手指插进她的头发，慢慢地梳理，放开手，再梳理。唉，小萨呀。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-14 00:00:00 +0000 UTC'>September 14, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 酒吧长谈" href="https://bubblegits.github.io/post/reading/%E9%85%92%E5%90%A7%E9%95%BF%E8%B0%88/"></a>
@@ -225,7 +245,8 @@
 你的滑落总是发生在这样的时刻——你面临选择，同时又面临诱惑。波德莱尔：
 所有人都是从谢吕班那样的年纪过来的：那时候，由于见不到山林女神，人们拥抱橡树也不反感。这是爱情的第一阶段。在第二阶段，就开始选择了。有了慎重考虑的能力，其实已经是堕落了。
 “我被诱惑”已经不见了，只剩下“我选择”。你几乎不假思索地凭本能作出选择，也就是说，选择安逸、保守、放弃主权。为什么不选择危险？危险胜在真实。
-真实和表象对立，我们对真实的信念越来越不坚定。表象之表象，或者说表象的结构？总之不能停留在破碎的表象。</p>
+真实和表象对立，我们对真实的信念越来越不坚定。表象之表象，或者说表象的结构？总之不能停留在破碎的表象。
+</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-06 00:00:00 +0000 UTC'>September 6, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 9月6日" href="https://bubblegits.github.io/post/essay/9%E6%9C%886%E6%97%A5/"></a>
@@ -257,7 +278,8 @@
 是啊，到底什么是生活呢？俊植肩上扛着玻璃箱，拼命忍受着小腹的疼痛，如此反问着自己。以后我要以什么样子继续生活，直到死去呢？虽然之前并非完全没有考虑过这些，像今天这样深刻思考却是第一次。仔细考虑过之后，自己的未来显而易见。在未来的二十年间，他只能继续在现在的学校当老师。一成不变地上班，一成不变地上课，每个班数十次重复着同样的话，听着校长同样的唠叨，对孩子们重复着同样的唠叨，不会有任何改变。说不定会当上主任，开上私家车，或者搬到稍微宽敞一点的公寓。然而，如此一来到底会有什么改变呢？如此这般老去，等待死亡的人生，又有什么意义呢？
 俊植从卫生间出来，重新把鱼缸扛在了肩上。已经扛到这里了，只能扛到最后。与母亲一样，对俊植来说，所谓生活，华丽、宏伟、高尚永远遥不可及，卑鄙、肮脏、疲倦却总是持续不断。就像是一场没有尽头的跨栏比赛，自始至终无法逃避。虽然偶尔会走运，品到一点轻松与成就感，仔细想来却也只是水湾里漂来漂去、终究会破碎的泡沫罢了。 终于到家了。妻子接过鱼缸，几乎面无表情。 “你怎么提了几条死金鱼回来？” 妻子如此说道。金鱼果然已经死了。塑料袋不知道什么时候破了，水渗掉多半。金鱼翻着白肚皮，却依然呆呆地瞪着眼睛仰望着俊植，依然是那怜悯的眼神。
 7 “洪老师，洪老师的生活乐趣是什么呢？” 金东浩醉得满脸通红，问完俊植，还不等他回话，又自己回答起来。 “我啊，不知道怎么回事，生活变得没有意思了。不论怎么想，生活都太没意思了。” “生活没意思？呵，这问题可不一般呐。” 坐在对面的梁九晚插了一句。 “年纪轻轻的就觉得生活没意思了，算是完啦。明白吗？完蛋了！” 俊植看到，金东浩望着梁九晚的那一瞬间双眼冒着火花。金东浩以那种眼神默默地盯着梁九晚看了五六秒钟，他手里握着酒杯，好像要用尽全身力气猛扇梁九晚两巴掌。扇他，俊植在心里说道。这小子，怎么就那么直直地看着？扇啊，你都没脾气的吗？ “怎么了？金老师，我说错什么了吗？” 梁九晚歪着头，咧嘴笑道。这时，金东浩握着酒杯的手突然完全泄力。 “哦，没什么。您说得对。其实，我也是这样想的。”
-8 “理解？那你们怎么不理解理解我呢？是，我不懂什么是人生，没有梦想也没有理想，活得像只虫子。我只能自甘堕落、卑鄙地活着。不过，你怎么能如此道德高尚呢？为什么只有你还这么道德高尚地活着呢？” 玟宇依然面色苍白、默不作声地听着俊植无休止的质问。用俊植的话说，他也对自己说出口的话感到震惊。除了课堂时间，不，就算在课堂上，他也从来没有如此激烈地辩论过。不过，真正发泄过后，却也有种畅快的感觉。 “我早就看你不顺眼了。你凭什么那么理直气壮？你怎么到了这个年纪还在为正义和道德而战？你为什么不像我这样为了养家糊口，为了职场奋斗而四处看人脸色？你有什么资格高高在上，超越一切？” “大哥，对不起。” 玟宇终于低声说了一句。 “大哥有大哥的生活方式，这是我的生活方式。”...</p>
+8 “理解？那你们怎么不理解理解我呢？是，我不懂什么是人生，没有梦想也没有理想，活得像只虫子。我只能自甘堕落、卑鄙地活着。不过，你怎么能如此道德高尚呢？为什么只有你还这么道德高尚地活着呢？” 玟宇依然面色苍白、默不作声地听着俊植无休止的质问。用俊植的话说，他也对自己说出口的话感到震惊。除了课堂时间，不，就算在课堂上，他也从来没有如此激烈地辩论过。不过，真正发泄过后，却也有种畅快的感觉。 “我早就看你不顺眼了。你凭什么那么理直气壮？你怎么到了这个年纪还在为正义和道德而战？你为什么不像我这样为了养家糊口，为了职场奋斗而四处看人脸色？你有什么资格高高在上，超越一切？” “大哥，对不起。” 玟宇终于低声说了一句。 “大哥有大哥的生活方式，这是我的生活方式。”
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-08-28 00:00:00 +0000 UTC'>August 28, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 鹿川有许多粪" href="https://bubblegits.github.io/post/reading/%E9%B9%BF%E5%B7%9D%E6%9C%89%E8%AE%B8%E5%A4%9A%E7%B2%AA/"></a>
@@ -278,21 +300,6 @@ WSL 其实也算不上永别，在windows上装wsl还是很方便，不需要GUI
   </div>
   <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0000 UTC'>July 18, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 所以我放弃了Windows" href="https://bubblegits.github.io/post/work/%E6%89%80%E4%BB%A5%E6%88%91%E6%94%BE%E5%BC%83%E4%BA%86windows/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">爬邺架
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
-1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
-1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0000 UTC'>July 6, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 爬邺架" href="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

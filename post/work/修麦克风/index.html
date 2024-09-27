@@ -10,7 +10,11 @@
 <meta name="description" content="电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
 之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
 打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
+
+
 瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
+
+
 上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。">
 <meta name="author" content="张珙">
 <link rel="canonical" href="https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/">
@@ -59,14 +63,15 @@
         }
 
     </style>
-</noscript>
-  
-
-<meta property="og:title" content="修麦克风" />
+</noscript><meta property="og:title" content="修麦克风" />
 <meta property="og:description" content="电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
 之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
 打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
+
+
 瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
+
+
 上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bubblegits.github.io/post/work/%E4%BF%AE%E9%BA%A6%E5%85%8B%E9%A3%8E/" />
@@ -81,7 +86,11 @@
 <meta name="twitter:description" content="电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。
 之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。
 打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.
+
+
 瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。
+
+
 上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。"/>
 
 
@@ -117,7 +126,7 @@
   "@type": "BlogPosting",
   "headline": "修麦克风",
   "name": "修麦克风",
-  "description": "电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。\n之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。\n打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.\n瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。\n上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。",
+  "description": "电脑的麦克风总是出问题，有的时候声音太小，有的时候又有莫名其妙的背景噪音。今天下午痛下杀手，把这个问题彻底解决了。\n之前买过外接麦克风，对解决问题没什么帮助，所以初步判断问题应该是出在声卡上。设备管理器里查看声卡型号需要一些设置。\n打开设备管理器的声音、视频与游戏控制器一栏，发现声卡是msi板载的realtek声卡，但看不到具体型号。右键点开属性-详细信息，把属性一栏改为硬件id，查看DEV_后数字。如图得到声卡型号为realtek ALC298.\n瑞昱官方给声卡配置设计的图形交互软件是Realtek High Definition Audio Manager，小时候在电脑上见过，但现在官方给出的驱动基本上都不包含这个软件了。尝试下载了一个包含manager的古早版本驱动，发现manager虽然可以用但声音质量很差，于是作罢。\n上msi官网查询发现，官方给的装法是首先装only driver的驱动程序，然后装nahimic作为配置声卡的图形程序。之前用nahimic的时候经常声音微弱，后来把nahimic连驱动一起卸了。通过只装only driver驱动，最终解决了问题。\n",
   "keywords": [
     
   ],
