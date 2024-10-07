@@ -157,6 +157,28 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">建站心路历程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这个博客网页是依赖hugo搭建在github上的。从建站到修缮，前前后后遇到了很多问题，期间还从mac转到了Windows。但本人凭借高超的智慧与坚定的毅力，种种困难被一一克服，在这里把战果总结一下。过程中主要参考Hugo Documentation | Hugo (gohugo.io)，PaperMod | Hugo Themes (gohugo.io)
+Git搭建 mac上的git是我在捣鼓vscode的时候意外装上的。由于只有我一个人管理博客网站，所以git操作起来简单很多。上传时在git add .,git commit -m之后直接用git push --force覆盖远程就好，不会出现冲突。从云端同步的话可以直接用git fetch --all &amp;&amp; git reset --hard origin/main	。不过偶尔会有在某一端编辑了之后忘记同步的情况，或许可以考虑为不同设备创建不同branch，但长期计划是把博客迁移到自建服务器上，所以目前还是不折腾了。git add, commit如果想的话包括git push都可以通过alias合成一行
+1 git config --global alias.cm &#39;!f() { git add -A &amp;&amp; git commit -m &#34;$@&#34;; }; f&#39; 从myblog仓库推到bubblegits仓库出问题多半是因为token过期了，少数情况是workflow文件里的包版本太低，更新一下就好。
+初步搭建 参考hugo博客搭建，评论系统可以参考https://www.cestlavie.moe/posts/hello-hugo
+config文件 .yml(或.yaml)格式比.toml易读很多，推荐使用。可以直接使用根目录的config.yaml，也可以创建config文件夹方便管理。在config文件夹内，默认使用的路径是config\_default，可以通过与_default平行的不同文件夹来储存多套设置文件。文件夹内除config.yaml外，还可以存放其他文件，如param.yaml，此时在config.yaml里无需写入param相关设置，param.yaml里直接写入param相关设置，无需在第一级加param:。
+这样一来，config.yaml里写入的是SITE.变量，如footer.html中的SITE.copyright变量值根据这一文件里的cpoyright: 张正瑞这一行确定，而param.yaml里写入的是SITE.params.变量
+关于yaml文件的使用还有一些需要注意的地方，可以参考这篇文章（不知道为什么这个网页总跳一刀999的广告），主要的几点包括缩进格式、文本段格式等等。
+时间 逝者如斯夫！不舍昼夜。
+hugo中默认的时间参数有如下几种
+1 2 3 4 - date - publishDate - lastmod - expiryDate hugo在生成网页时会忽略publishDate晚于现在和expiryDate早于现在的文档。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-01-06 00:00:00 +0000 UTC'>January 6, 2024</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 建站心路历程" href="https://bubblegits.github.io/post/work/%E5%BB%BA%E7%AB%99%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">导读拉康
     </h2>
   </header>
@@ -235,22 +257,6 @@ notebookcheck这个网站上有针对各种硬件的专门文章，对其表现�
   </div>
   <footer class="entry-footer"><span title='2023-10-15 00:00:00 +0000 UTC'>October 15, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 探店奥利凡德" href="https://bubblegits.github.io/post/essay/%E6%8E%A2%E5%BA%97%E5%A5%A5%E5%88%A9%E5%87%A1%E5%BE%B7/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">10月13日
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>将近半个月没有动笔，加上刚刚从伯克利回来，应该写长一点，好好总结一下过去的思考。不如先从主权问题开始。之前我谈过认识的统治，这个说法不太准确，应该说是对认识的统治，进一步地，是我对我的认识的统治。我之前太习惯于把认识这样的重要领域交给别人，常常是交给多数人，或者是随便交给见到的什么人，心甘情愿地拾人牙慧而逃避艰巨且关键的认识任务。仔细想想就会发现，这导致我的认识太大略而且浮于表面，以致于摇摆不定而且自以为是。在幼稚的信念坍塌之后，我一度完全放弃了主权，这导致了我的徘徊。我要掌控自身的认识世界，可这里还有一个问题，一个“我在说谎”的悖论。对于认识的自指，也就是反思，反过来攻击我自己。肯定性的权力以及否定性的权力，我失去了前者而交出了后者。
-于是我们就谈到选择。为什么我肯定一个选项而否定另外一个选项？大多数情况下，我仓促地选择保守的那一项。选择保守的方面本身并不成为问题，问题是我没有给自己足够的犹豫。犹豫是一个选择里最为温柔动人的部分，甚至比选择的结果还要动人，许多时候我们并不犹豫，只是通过逃避来拖延时间，而后与之前一样无知地作出选择。厌恶犹豫以及缺少主权，这两者共同造成了保守的结局。
-我们已经了解到，权力的获得并不是靠声称，而是靠夺取。所以说你要抓住选择中夺权的机遇以夺取权力，而机遇意味着向可能性敞开。选择更具有可能性的一项，并不是因为这一项更好——“好”这样的判断总是依赖于羸弱的标准，而是因为它可以把斗争揭露出来，以帮助你恢复对自身的主权。然后我们才开始谈自由。
-以上是我们的纲领，还应该说说我们的现状。分裂影响着我思考的尺度，导致我总是关注极端琐碎或者极端宏大的问题，而它们都一样徒劳。要么是夸大个人心理的创伤以追求强烈的情感体验，要么是在漫长的历史、广袤的空间以及熙攘的人群中消解自身。疾病与治疗的道理，你自己病入膏肓，所以需要把自己完全摧毁来治病，但实际上既没有疾病也没有治愈。这就是现状。“人类的苦难可怕而又神秘，但正是它给了我们尊严。”你要停止用如同警察一般的目光来审视自身。可是我们又该如何面对个人和宏大？说起个人和宏大，我们好像是在说一个最底层与一个最高层的系统，我们失落了的处理方式就像我们的自然语言一样，穿梭其中，充满循环与自指。穿梭意味着主动、清醒的进入与退缩。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-13 00:00:00 +0000 UTC'>October 13, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 10月13日" href="https://bubblegits.github.io/post/essay/10%E6%9C%8813%E6%97%A5/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
