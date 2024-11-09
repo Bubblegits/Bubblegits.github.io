@@ -157,6 +157,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">解决koreader在阅读pdf中崩溃的问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>我在kobo上读pdf完全依赖koreader，但有些pdf文件在翻页的时候会把koreader弄崩溃。查看koreader根目录下的crash.log，得到如下报错信息
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: SimHei (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: ArialUnicodeMS (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-GB1-UCS2) 08/19/24-01:11:18 WARN Running low on memory (~11%, ~59.21/495 MiB), evicting half of the cache... 08/19/24-01:11:22 WARN Running low on memory (~14%, ~70.57/495 MiB), evicting half of the cache... warning: ... repeated 2 times... warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: AngsanaUPC (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-Japan1-UCS2) warning: non-embedded font using identity encoding: MingLiU (mapping via Adobe-CNS1-UCS2) 08/19/24-01:11:41 WARN Running low on memory (~2%, ~14.48/495 MiB), evicting half of the cache... 08/19/24-01:11:43 WARN Running low on memory (~1%, ~9.49/495 MiB), evicting half of the cache... warning: ... repeated 2 times... warning: dropping unclosed PDF processor ./luajit: ./ffi/mupdf.lua:71: cannot calculate bbox for page: realloc (7661467 bytes) failed (0) non-embedded font using identity encoding意思是文件里有非内嵌字体在使用身份编码，估计是编码占了太多内存导致koreader崩溃了。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-19 00:00:00 +0000 UTC'>August 19, 2024</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 解决koreader在阅读pdf中崩溃的问题" href="https://bubblegits.github.io/post/work/%E8%A7%A3%E5%86%B3koreader%E5%9C%A8%E9%98%85%E8%AF%BBpdf%E4%B8%AD%E5%B4%A9%E6%BA%83%E7%9A%84%E9%97%AE%E9%A2%98/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">伦理学
     </h2>
   </header>
@@ -289,47 +303,6 @@
   </div>
   <footer class="entry-footer"><span title='2024-05-04 00:00:00 +0000 UTC'>May 4, 2024</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 《青春》" href="https://bubblegits.github.io/post/reading/%E9%9D%92%E6%98%A5/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">自然与快乐：伊壁鸠鲁的哲学
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>按：只看了前半本伊壁鸠鲁文存（其弟子背诵的格言与纲要，并非本人所著），后半本是卢克莱修的《物性论》，卢克莱修也是伊壁鸠鲁学派的。大部分是在犹他大学的课上看的。我总是把伊壁鸠鲁和斯多葛搞混。
-一、致希罗多德信(论自然纲要) 再者，必须完全遵循感觉，也就是直接印象，无论它是理智的还是其他某种感官的;同样，要遵循直接的［苦乐］感受，以便在遇到有待证明的和不明白的事情时，可以有解决它们的方法。
-再者，事物总体是无限的。因为有限的东西都有边界，而边界只有通过与其他事物相邻才能够看出来，［事物总体却不是通过与其他事物的比较而被认识的。］没有边界的事物也就没有界限，而没有界限的事物也就是无限的，而非被限定的。
-三、致梅瑙凯信(伦理学纲要) 但是，它们不是大众所认为的那样，因为大众不知道在这件事上首尾一贯地坚持自己的看法。不虔敬的人不是否认大众关于神的看法的人，而是信奉大众关于神的看法的人。因为那些看法不是真实概念，只是错误的假设，比如他们认为神会给恶人带来最大的恶，会给好人带来最大的好处，因为神垂青自己的同类，喜欢与自己近似的人，而排斥和自己不一样的人，视其为异己。
-要习惯于相信死亡与我们无关，因为一切的好与坏都在感觉之中，而死亡是感觉的剥夺。只要正确地认识到死亡与我们无关，我们就能甚至享受生命的有死性一面——这不是依靠给自己添加无穷的时间，而是依靠消除对于永生不死的渴望。
-那些说自己之所以害怕死亡，不是因为其到来会使人伤心，而是在想到其将要到来时感到伤心的人，是十分愚蠢的。所有实际来临后不会使人烦恼的事情，在人们的事前展望中引起的悲伤也都是空洞不实的。
-所以，所有坏事中最大的那个——死亡——与我们毫不相干，因为当我们活着的时候，死亡还没有来临;当死亡来临的时候，我们已经不在。
-所以死亡既与活着的人无关，又与死去的人无关;因为对于生者，死还不存在;至于死者，他们本身已经不存在了。
-大众有的时候把死亡当成最大的坏事而拼命逃避，有的时候又选择死亡，把它看成生活中的悲惨遭遇的避难所。贤人既不苦苦求生，也不惧怕生活的终止。生活对于他既非一种障碍，死亡也不被他看成是一种恶。就像在食品当中，他不会只是选择更多数量的、而是选择更为令人愉快的，同样，贤人在采摘时间之果上，也不是挑选那些更长的时间，而是更加愉快的时刻。
-要记住:未来既不是完全在我们的掌握之中，也不是完全不受我们的把握。因此我们既不要绝对地相信未来一定会如此发生，也不要丧失希望，认为它一定不会如此发生。
-我们做的其他一切事情，都是为了这个目的:免除身体的痛苦和灵魂的烦恼。当我们获得这一切后，灵魂的所有风暴就平息了，人们就不再被匮乏所驱动而四处寻找其他什么“好事”来满足灵魂和身体。所以，只有当我们在缺少快乐就感到痛苦时，快乐才对我们有益处。当我们不再痛苦时，我们也就不再需要快乐了。正是因为此，我们说快乐是幸福生活的开端和目的，因为我们认为快乐是首要的好，以及天生的好。我们的一切追求和规避都开始于快乐，又回到快乐，因为我们凭借感受判断所有的好。
-一切自然的，都是容易获得的;一切难以获得的，都是空虚无价值的(不自然的)。
-我们讲的是身体的无痛苦和灵魂的无烦恼。快乐并不是无止境的宴饮狂欢，也不是享用美色，也不是大鱼大肉什么的或美味佳肴带来的享乐生活，而是运用清醒的理性研究和发现所有选择和规避的原因，把导致灵魂最大恐惧的观念驱赶出去。
-这个人关于神有虔敬的观念，对于死毫不惧怕，他仔细思考过自然的目的，知道“好”的生活很容易获得;他知道坏事不会持续很久，强度也不会很大;他嘲笑被人们视为万物的主宰的东西——所谓命运。他认为有的事情由于必然性而发生，有的来自偶然性，有的是因为我们自己。
-六、伊壁鸠鲁基本要道 如果带来放荡快乐的东西真的能够解除内心对于天象的、死亡的和痛苦的恐惧，如果它们能够教导人明白欲望的界限，那么我们也就看不出有什么指责他们的必要了，因为他们沉醉在一片快乐中，一点也不感到身体的痛苦和心灵的悲伤(这些就是恶)。
-如果不清楚地认识整个自然，一个人就不能在最关键的事情上消除恐惧，就会生活在神话造成的惧怕中。所以，如果没有自然科学的话，就不能获得纯净的快乐。
-身以为快乐的界限是无限，并且认为快乐需要无限的时间。可是心灵用理性的思考来确定肉身的目的和界限，去掉人对于未来的恐惧，使人获得圆满的生活，因此再也不需要无穷的时间。不过，这样的人也不回避快乐。即使在外部环境把他带到死亡面前时，他也不缺乏对最好的生活的享受。
-如果一个人排斥所有的感觉，如果他不区分有待证明的意见和已经被感觉、感受以及心灵的直观所把握了的呈现，那就会由于愚蠢的意见而把其他感觉也都混起来，结果丢掉了一切标准。另一方面，如果一个人仓猝接受思想中那些尚待证实的东西和没有被证实的东西，那么他还是无法避开错误;因为那样的话，他在分辨对错时就会模棱两可、无法评判。
-智慧给整个一生的幸福带来的各种帮助中，最大的是获得友谊。
-不正义并非本身就是恶［自在的恶］，它的恶在于焦虑地害怕被奉命惩罚不正义的官员所抓住。
-伊壁鸠鲁认为，自然的和必然的欲望是去除痛苦的，比如渴的时候想要喝水;自然的但不是必然的欲望只不过是种类变化的快乐，而不是为了去除痛苦的，比如奢侈的宴饮。那些既不是自然的也不是必然的欲望的例子是:戴上王冠，被竖立雕像。
-七、《梵蒂冈馆藏格言集》 有的人终其一生忙于给自己增加生活用品，却不知道我们每一个人在出生的时候都领受了饮食，足够凡人享用的了。
-肉身的呼喊催促我们避开饥渴和寒冷，谁能避开这些困扰并一直保持下去，其幸福将不亚于天神。
-究自然并不会使人大话连篇或是炫耀公众所推崇的那些学识成就;它只会使人蔑视俗见、独立特行，为自己的德性而非外部财产的价值而骄傲。
-九、奥依诺安达的第欧根尼铭文残篇选 按：此第欧根尼不是对亚历山大说“你挡住我的阳光了”的第欧根尼，而是公元2世纪人，伊壁鸠鲁派。
-我们看到别人的财富和捞到的东西那么多时，只要记住我们并不受这些欲望的干扰，也不会为满足这些需求而当牛当马，我们就可以获得很大的满足。
-这些就是所有的坏事的根子——害怕神，害怕死亡，害怕痛苦，以及欲望超出了自然为幸福生活所要求的东西的界限。
-第三卷 ［灵魂的本性］ 人们被虚假的恐惧所追赶，企图从死亡之门前远远逃开，躲得越远越好，于是他们通过血腥屠杀同胞来贪婪地聚敛财富，谋杀不断;他们对着同胞的惨死残忍地放声大笑，他们憎恨并害怕亲友对自己的热情款待。
-下面我要的说是，心灵和灵魂紧密联结在一起并组成了一种共同的本性;但是我们所说的“首脑”也就是统治着整个身体的东西，则是我们称之为心灵(mind)和智力(intelligence)的理性(understanding)。它位于我们胸膛的中央地带;因为这个地方才会感觉到恐惧和害怕，也能感觉到欢乐和愉悦，所以这里就是智力和心灵所在之处。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-05-04 00:00:00 +0000 UTC'>May 4, 2024</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 自然与快乐：伊壁鸠鲁的哲学" href="https://bubblegits.github.io/post/reading/%E8%87%AA%E7%84%B6%E4%B8%8E%E5%BF%AB%E4%B9%90%E4%BC%8A%E5%A3%81%E9%B8%A0%E9%B2%81%E7%9A%84%E5%93%B2%E5%AD%A6/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
