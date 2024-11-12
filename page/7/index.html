@@ -157,6 +157,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">爬邺架
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>邺架轩公众号原来的推送不知道是怎么做的，底下的宣传信息迁移的时候经常出问题，于是我决定用markdown&#43;css的方法重新做一个模版，从互联网上到处借鉴，做出了一个百纳衣css，把其中比较关键的几段在下面作个解释。
+1 2 3 4 5 6 img { width: 200px; height: 300px; margin: auto; display: block; } 这一段是控制图片大小和居中的，img元素必须要变成block之后才能作调整。如果有某几张图片有特殊要求，可以通过html单独设置格式，比如抖音账号二维码被我设置成了
+1 &lt;img src=&#34;http://mmbiz.qpic.cn/mmbiz_jpg/icIibcZIFTavvVMe1cxvPNvyK3nzVgWeR9CQRpwE3Un9wD3r3lAjIkcpaib9plqN14JC0CGRV6pDkB8Kpm62Xx56g/0&#34; alt = &#34;douyin&#34; style=&#34;height:400px;width:300px&#34;/&gt; 下面这段是设置粗体颜色和标题位置的
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 strong { color: #FF992A; } h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; text-align: center; } 用markdown&#43;CSS有一个问题，markdown导入图片默认使用的是本地url，要发布到微信公众号必须把图片挂载到公众号的图床。这篇文章给出了完美的解决方案，注意typora必须在设置界面测试图床才能看到报错信息。
+每周新书Word文档的格式要做一些调整看着才比较舒服，把Word文档复制到typora之后通常需要如下几个正则替换
+1 2 3 4 **** -&gt; ** ** ^(space) -&gt; (null) ^\n -&gt; (null) \) -&gt; )\n #执行若干次以控制段间距 </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0000 UTC'>July 6, 2023</span>&nbsp;·&nbsp;张珙</footer>
+  <a class="entry-link" aria-label="post link to 爬邺架" href="https://bubblegits.github.io/post/work/%E7%88%AC%E9%82%BA%E6%9E%B6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">呕吐、梦境与火车
     </h2>
   </header>
@@ -285,27 +302,6 @@ pdf阅读 koreader可以裁剪pdf并且自定义翻页方式，这样不需要�
   </div>
   <footer class="entry-footer"><span title='2023-06-04 00:00:00 +0000 UTC'>June 4, 2023</span>&nbsp;·&nbsp;张珙</footer>
   <a class="entry-link" aria-label="post link to 过于喧嚣的孤独" href="https://bubblegits.github.io/post/reading/%E8%BF%87%E4%BA%8E%E5%96%A7%E5%9A%A3%E7%9A%84%E5%AD%A4%E7%8B%AC/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">影音相关
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>缘起 闲来无事捣鼓家里的投影仪，拿了一个闲置的笔记本电脑作为解码器，想要实现以下功能：
-观看电视节目直播和回放 从pt站下载电影并播放 如果能把笔记本变成nas给其他设备用就再好不过了（2023年6.1更新：已经有NAS了，见《赛博扬子居记》） 为了让整个解决方案的造型不太简陋，选择了kodi作为播放器。在kodi的配置之中遇到的一些问题如下：
-kodi配置 kodi的前身是xbmc（Xbox media center），官网和插件库国内访问网络质量堪忧，即使扶墙也常常出问题，所以找个镜像比较方便。清华大学的镜像站用着总觉得没有中科大的顺手。访问Index of /xbmc/ (ustc.edu.cn)，在releases目录下下载安装包，安装完成后还要注意配置插件库，官方的插件库访问常常出问题，可以选择用镜像的插件库，或者用官方库霸王硬上弓，多试几次也能装上。
-kodi中可以通过PVR IPTV simple client来读m3u源，github上有一个可直连的m3u库https://github.com/fanmingming/live。iptv源可以搭配epg（electric program guide）使用，epg提供节目单从而在部分iptv源上实现回看功能。
-kodi变成中文需要先把字体改为arial base，否则无法显示汉字。
-iptv源 网上的iptv源良莠不齐，可以自己从机顶盒抓取iptv源来看，参考https://mozz.ie/posts/extracting-iptv-live-streams/
-影视信息刮削 此外kodi的一个非常拉风的功能是电影海报墙，通过刮削器获取电影简介、年代、海报、类型等相关信息并展示出来，有逼不装天理难容。但是kodi自带的刮削器常常遇到网络问题，可以选择3.x版本的tmm（tiny media manager）在影视文件夹中生成nfo文件，用kodi读取nfo文件从而生成海报墙。tmm的使用方法一目了然，除了刮削之外还可以用来整理电影文件，我的习惯是把电影放在以导演命名的文件夹下。
-与tmm相似的还有一个好东西叫Movie_Data_Capture,功能不便多说，一用便知。
-音乐库 人的生命是有限的，但折腾的事业是无限的，折腾完电影之后接着折腾音乐。mac上的music软件一大问题就是语言显示混乱，整理自己导入的音乐表现倒是不错，可以给专辑搜索封面，aiff格式用起来也挺顺耳。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-01 00:00:00 +0000 UTC'>June 1, 2023</span>&nbsp;·&nbsp;张珙</footer>
-  <a class="entry-link" aria-label="post link to 影音相关" href="https://bubblegits.github.io/post/work/%E5%BD%B1%E9%9F%B3%E7%B3%BB%E7%BB%9F/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
